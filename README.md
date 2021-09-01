@@ -1,6 +1,6 @@
 # ChenGrant.github.io
 
-Note to self: To update website, go to html file and make changes on github.
+Note to self: CSS updates will occur, they just take a very long time.
 
 Description: This website outlines who I am, my projects, education, experiences, and contact information.
 

@@ -1,5 +1,7 @@
 # ChenGrant.github.io
 
+Note to self: To update website, go to html file and make changes on github.
+
 Description: This website outlines who I am, my projects, education, experiences, and contact information.
 
 ![Alt Text](https://github.com/ChenGrant/ChenGrant.github.io/blob/8aae29c89390c9579c62447344bc2d590d7a8820/about/gif.gif)

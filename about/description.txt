@@ -1,0 +1,5 @@
+Description: This website outlines who I am, my projects, education, experiences, and contact information.
+
+Website Link: http://grantchen.me/
+
+Technologies Used: HTML, CSS, Sass, JavaScript, jQuery

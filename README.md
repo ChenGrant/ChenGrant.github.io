@@ -1,6 +1,6 @@
 # ChenGrant.github.io
 
-Note to self: CSS updates will occur, they just take a very long time.
+Note to self: CSS updates will occur, they just take a very long time since the browser cache and cookies need to reset. Go on incognito to see changes.
 
 Description: This website outlines who I am, my projects, education, experiences, and contact information.
 

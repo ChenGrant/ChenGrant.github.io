@@ -8,7 +8,7 @@ Website Link: http://grantchen.me/
 
 QR Code:
 
-![Alt Text](https://github.com/ChenGrant/ChenGrant.github.io/blob/00a4b20991983b7adfe2159d0237e496432f8989/about/qr%20code.png)
+![Alt Text](https://github.com/ChenGrant/ChenGrant.github.io/blob/0e63a1103b4459b0ac39ce3f6c8a1ddaa4ececea/about/qr%20code.png)
 
 Video Demo: https://youtu.be/lNDUV5L2bZg
 

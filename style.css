@@ -310,7 +310,7 @@ body {
     justify-content: center;
   }
   .body_container .coding_journey .timeline .content_container .languages .language_images img {
-    height: min(3vw, 40%);
+    height: min(2.5vw, 40%);
     margin: 5px;
   }
   .body_container .coding_journey .timeline .content_container:hover {
@@ -967,7 +967,7 @@ body {
     justify-content: center;
   }
   .body_container .background_color .coding_journey .timeline .content_container .languages .language_images img {
-    height: 6vh;
+    height: 4vh;
     margin: 5px;
   }
   .body_container .background_color .coding_journey .timeline .content_container:hover {

@@ -888,9 +888,13 @@ body {
     padding: 2.5%;
     color: white;
   }
+  .body_container .background_color .about_me_div .selfie {
+    display: flex;
+    justify-content: center;
+  }
   .body_container .background_color .about_me_div .selfie img {
-    width: 90%;
-    margin: 5%;
+    width: min(300px, 90%);
+    margin-top: 5%;
     border-radius: 10px;
   }
   .body_container .background_color .about_me_div .selfie img:hover {

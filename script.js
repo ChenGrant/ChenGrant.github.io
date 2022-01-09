@@ -112,7 +112,17 @@ const react_meetups = {
   file: 'https://github.com/ChenGrant/React-Meetups'
 };
 
-let projects = [chatify, react_meetups, math_graphing_calculator,
+const shopify_intern_challenge = {
+  name: 'Shopify Intern Challenge',
+  description: 'This project is for the Shopify Backend Developer Intern Challenge - Summer 2022. This is an inventory tracking web application for a logistics company. Specifically, CRUD functionality is implemented as this website can create, edit, delete, and view inventory items. Moreover, the additional feature that was implemented was the feature to push a button that exported product data to a CSV file.',
+  technologies: 'Python, Django, HTML, CSS, Heroku',
+  date_created: 'January 2022',
+  gif: "resources/gifs/shopify_intern_challenge.gif",
+  video_demo: 'https://youtu.be/ueANxC66lc0',
+  file: 'https://github.com/ChenGrant/Grant-Shopify-Backend-Intern-Challenge-Summer-2022'
+};
+
+let projects = [chatify, shopify_intern_challenge, react_meetups, math_graphing_calculator,
   sorting_algorithm_visualizer,
   flappy_bird,
   rocket_blaster,

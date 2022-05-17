@@ -13,7 +13,7 @@ const LargeNavBar = ({ headers }) => {
         display="flex"
         justifyContent="space-between"
         alignItems="center"
-        height="70px"
+        height="80px"
         bgcolor="transparent"
         position="fixed"
         sx={{ backdropFilter: "blur(10px)" }}

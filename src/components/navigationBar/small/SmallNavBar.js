@@ -4,12 +4,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Clear";
 import { v4 as uuidv4 } from "uuid";
 import useDelay from "../../customHooks/useDelay";
-import { useTheme } from "@mui/styles";
+import bubbles from "../../../assets/images/bubbles.png";
 
 const SmallNavBar = ({ headers }) => {
   const navBarIsVisible = useDelay(1000);
   const [panelIsOpen, setPaneIsOpen] = useState(false);
-  const theme = useTheme();
   return (
     <>
       <Slide direction="right" in={navBarIsVisible} timeout={1000}>
@@ -19,7 +18,6 @@ const SmallNavBar = ({ headers }) => {
           alignItems="center"
           height="70px"
           position="fixed"
-          //sx={{ backdropFilter: "blur(10px)" }}
           width="100%"
         >
           <IconButton
@@ -34,15 +32,17 @@ const SmallNavBar = ({ headers }) => {
       <Slide direction="left" in={panelIsOpen} timeout={400}>
         <Box
           position="fixed"
-          width={"70%"}
-          maxWidth={"500px"}
+          width="70%"
+          maxWidth="500px"
           right={0}
           height="100vh"
-          padding={"30px"}
+          padding="30px"
           sx={{
             zIndex: 2,
             boxShadow: 13,
-            backgroundImage: `linear-gradient(120deg, white, ${theme.palette.secondary.light})`,
+            backgroundImage: `url(${bubbles})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
           }}
         >
           <Stack>
@@ -70,7 +70,8 @@ const SmallNavBar = ({ headers }) => {
                   }}
                   key={uuidv4()}
                   fontWeight={500}
-                  my={"15px"}
+                  my="15px"
+                  width="min-content"
                   fontSize={15}
                   color="primary.veryDark"
                 >

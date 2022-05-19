@@ -8,6 +8,10 @@ const App = () => {
     <>
       <NavBar />
       <Hero/>
+      <ul>
+        <li>Maybe underline on nav bar when hovered? (for both large and mobile)</li>
+        <li>Make it more responsive now that i got breakpoints</li>
+      </ul>
       <Box height = '100vh' ></Box>
     </>
   );

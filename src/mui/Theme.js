@@ -12,7 +12,19 @@ const theme = createTheme({
     },
     secondary: {
       light: "#989ee2",
-      main: "#313bac",
+      main: "#263DA7",
+    },
+    tertiary : {
+      main: '#FDB049ff'
+    }
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 957,
+      lg: 1200,
+      xl: 1536,
     },
   },
 });

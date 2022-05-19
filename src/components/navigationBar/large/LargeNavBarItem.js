@@ -19,7 +19,7 @@ const LargeNavBarItem = ({ children, ...rest }) => {
           visibility={navBarItemIsHovered ? "visible" : "hidden"}
           height={hoverDotHeight}
           width={hoverDotHeight}
-          bgcolor="secondary.main"
+          bgcolor="tertiary.main"
           borderRadius={100}
         />
       </Slide>
@@ -28,9 +28,9 @@ const LargeNavBarItem = ({ children, ...rest }) => {
         px={1.5}
         pb={hoverDotHeight + distanceBetweenHoverDotAndHeader + "px"}
         pt={distanceBetweenHoverDotAndHeader + "px"}
-        fontWeight={500}
-        fontSize={15}
-        color="primary.veryDark"
+        fontWeight={600}
+        //fontSize={15}
+        color="secondary.main"
         textAlign="center"
         onMouseEnter={() => setNavBarItemIsHovered(true)}
         onMouseLeave={() => setNavBarItemIsHovered(false)}

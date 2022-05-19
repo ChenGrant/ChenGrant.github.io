@@ -89,7 +89,7 @@ const Hero = () => {
         //bgcolor="red"
         height={!largeScreen ? "50%" : null}
       >
-        <img src={hero} height={largeScreen ? "50%" : '275px'} />
+        <img alt = 'hero' src={hero} height={largeScreen ? "50%" : '275px'} />
       </Box>
     </Box>
   );

@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Clear";
 import { v4 as uuidv4 } from "uuid";
-import useDelay from "../../customHooks/useDelay";
+//import useDelay from "../../customHooks/useDelay";
 import bubbles from "../../../assets/images/bubbles.png";
 
 const SmallNavBar = ({ headers }) => {
-  const navBarIsVisible = useDelay(1000);
+  //const navBarIsVisible = useDelay(1000);
   const [panelIsOpen, setPaneIsOpen] = useState(false);
   return (
     <>

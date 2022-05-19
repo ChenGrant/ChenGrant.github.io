@@ -2,11 +2,11 @@ import { Box } from "@mui/system";
 import React from "react";
 import LargeNavBarItem from "./LargeNavBarItem";
 import { v4 as uuidv4 } from "uuid";
-import { Slide } from "@mui/material";
-import useDelay from "../../customHooks/useDelay";
+//import { Slide } from "@mui/material";
+//import useDelay from "../../customHooks/useDelay";
 
 const LargeNavBar = ({ headers }) => {
-  const navBarIsVisible = useDelay(1000);
+  //const navBarIsVisible = useDelay(1000);
   return (
     <Box
       display="flex"

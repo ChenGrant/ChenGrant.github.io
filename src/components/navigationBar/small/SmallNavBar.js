@@ -10,18 +10,20 @@ const SmallNavBar = ({ headers }) => {
   //const navBarIsVisible = useDelay(1000);
   const [panelIsOpen, setPaneIsOpen] = useState(false);
   return (
-    <>
+    <Box width = '100%'>
       <Box
         display="flex"
-        justifyContent="right"
+        //justifyContent="right"
         alignItems="center"
         height="70px"
         position="fixed"
+        //bgcolor = 'blue'
         width="100%"
+        zIndex="200000"
       >
         <IconButton
           aria-label="delete"
-          sx={{ margin: " 0px 20px"}}
+          sx={{ position: "fixed", margin: " 0px 20px", right: '0px'}}
           onClick={() => setPaneIsOpen(true)}
           size = 'large'
         >
@@ -37,7 +39,7 @@ const SmallNavBar = ({ headers }) => {
           height="100vh"
           padding="30px"
           sx={{
-            zIndex: 2,
+            zIndex: 200001,
             boxShadow: 13,
             backgroundImage: `url(${bubbles})`,
             backgroundRepeat: "no-repeat",
@@ -81,7 +83,7 @@ const SmallNavBar = ({ headers }) => {
           </Stack>
         </Box>
       </Slide>
-    </>
+    </Box>
   );
 };
 

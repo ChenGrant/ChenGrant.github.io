@@ -5,16 +5,14 @@ import NavBar from "./navigationBar/NavBar";
 import Skills from "./skills/Skills";
 import { useTheme } from "@mui/styles";
 import { CustomSettingsProvider } from "../context/CustomSettings";
-import useScreenSize from "./customHooks/useScreenSize";
 
 const App = () => {
-  const {desktop} = useScreenSize()
   const theme = useTheme();
 
   const initialCustomSettings = {
     navBarHeight: "70px",
     navBarZIndex: Math.max(...Object.values(theme.zIndex)) + 1,
-    heroPadding : desktop ? '80px' : '70px'
+    heroPadding : '80px'
   };
 
   return (
@@ -49,6 +47,7 @@ const App = () => {
           <li>Have lazy load in</li>
           <li>Figure out what text will be h1, small, large etc. i think hero text should be the only h1</li>
           <li>Center 'frontend' text for mobile</li>
+          <li>Make smallNavBar not have 400ms animation time if its on phone (maybe have it on tablet if it works on ipads)</li>
         </ul>
       </Box>
       <Box height="100vh"></Box>

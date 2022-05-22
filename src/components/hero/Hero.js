@@ -3,7 +3,6 @@ import { Box } from "@mui/system";
 import React, { useContext } from "react";
 import bubblesImgSrc from "../../assets/images/bubbles.png";
 import heroImgSrc from "../../assets/images/hero.png";
-import JSLogoImgSrc from "../../assets/images/JSLogo.png";
 import { CustomSettingsContext } from "../../context/CustomSettings";
 import useScreenSize from "../customHooks/useScreenSize";
 
@@ -66,12 +65,14 @@ const Hero = () => {
       <Box
         display="flex"
         alignItems="center"
-        height={tablet || phone ? "50%" : null}
+        justifyContent='center'
+        height={tablet || phone ? "50%" : 'auto'}
       >
         <img
           alt="hero"
-          src={desktop ? heroImgSrc : tablet ? JSLogoImgSrc : heroImgSrc}
-          height={desktop ? "50%" : "275px"}
+          src={heroImgSrc}
+          height={desktop ? "50%" : tablet ? "100%" : 'auto'}
+          width={phone ? '90%': 'auto'}
         />
       </Box>
     </Box>

@@ -5,9 +5,11 @@ import ClearIcon from "@mui/icons-material/Clear";
 import { v4 as uuidv4 } from "uuid";
 import bubbles from "../../../assets/images/bubbles.png";
 import { CustomSettingsContext } from "../../../context/CustomSettings";
+import useScreenSize from "../../customHooks/useScreenSize";
 
 const SmallNavBar = ({ navBarItems }) => {
   const customSettings = useContext(CustomSettingsContext);
+  const {tablet} = useScreenSize()
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   const navBarItemClickHandler = (headerNavigation) => {
@@ -32,7 +34,7 @@ const SmallNavBar = ({ navBarItems }) => {
           <MenuIcon fontSize="inherit" color="secondary" />
         </IconButton>
       </Box>
-      <Slide direction="left" in={menuIsOpen} timeout={400}>
+      <Slide direction="left" in={menuIsOpen} timeout={tablet ? 400 : 0}>
         <Box
           position="fixed"
           right={0}

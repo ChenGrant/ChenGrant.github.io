@@ -27,14 +27,13 @@ const skills = {
     Sass: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
     jQuery:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
-    Formik:
-      "https://img.stackshare.io/service/8846/preview.png",
+    Formik: "https://img.stackshare.io/service/8846/preview.png",
   },
   backend: {
     "Node.js":
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     "Express.js":
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     Django:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
     MySQL:

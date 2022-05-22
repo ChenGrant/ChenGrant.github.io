@@ -28,6 +28,9 @@ const App = () => {
             Change use window context to simply let us know what screen size we
             are in
           </li>
+          <li>make custom settings also include skills and navigation functions?</li>
+          <li>Choose better font sizes</li>
+          <li>when coding for phone: galaxy fold</li>
           <li>
             Maybe underline and make header transition up a bit on nav bar when
             hovered? (for both large and mobile)

@@ -3,8 +3,7 @@ import { Box } from "@mui/system";
 import React from "react";
 import SkillItem from "./SkillItem";
 import { v4 as uuidv4 } from "uuid";
-import useWindowDimensions from "../customHooks/useWindowDimensions";
-import { useTheme } from "@mui/styles";
+import useScreenSize from "../customHooks/useScreenSize";
 
 const skills = {
   languages: {
@@ -56,58 +55,55 @@ const skills = {
 };
 
 const Skills = () => {
-  const { width } = useWindowDimensions();
-  const theme = useTheme();
-  const largeScreen = width > theme.breakpoints.values.md;
+  const { desktop, tablet, phone } = useScreenSize();
   return (
     <Box display="flex" flexDirection="column" alignItems="center" p={3} py={7}>
-      <Typography variant="h1" gutterBottom>
-        Skills
-      </Typography>
+      <Typography variant="h1">Skills</Typography>
       <Box
         display="flex"
         flexDirection="column"
-        flexWrap={"wrap"}
+        flexWrap="wrap"
         justifyContent="center"
+        mt={desktop ? 4 : 3}
       >
-        {Object.entries(skills).map((item) => {
+        {Object.entries(skills).map((technologyGroup) => {
+          const [technologyGroupName, technologyGroupList] = technologyGroup;
           return (
             <Box
               display="flex"
-              flexDirection={largeScreen ? "row" : "column"}
+              flexDirection={desktop ? "row" : "column"}
               alignItems="center"
-              pt={largeScreen ? "0px" : "50px"}
               my={3}
               key={uuidv4()}
+              gap={desktop && "50px"}
             >
               <Box
                 display="flex"
-                justifyContent={largeScreen ? "right" : "center"}
+                justifyContent={desktop ? "right" : "center"}
                 alignItems="right"
-                width={largeScreen && "200px"}
-                pr={largeScreen ? "50px" : "0px"}
+                width={desktop && "200px"}
               >
                 <Typography
                   color="secondary.main"
-                  fontWeight="500"
-                  fontSize={"30px"}
-                  mb={largeScreen ? "0px" : "30px"}
+                  variant="h4"
+                  mb={(tablet || phone) && "30px"}
                 >
-                  {item[0]}
+                  {technologyGroupName}
                 </Typography>
               </Box>
               <Box
                 display="flex"
                 flexDirection="row"
                 flexWrap={"wrap"}
-                justifyContent={largeScreen ? "left" : "center"}
+                justifyContent={desktop ? "left" : "center"}
               >
-                {Object.entries(item[1]).map((technology) => {
+                {Object.entries(technologyGroupList).map((technology) => {
+                  const [technologyName, technologyImgSrc] = technology;
                   return (
                     <SkillItem
                       key={uuidv4()}
-                      name={technology[0]}
-                      src={technology[1]}
+                      name={technologyName}
+                      src={technologyImgSrc}
                     />
                   );
                 })}

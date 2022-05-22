@@ -1,35 +1,35 @@
 import { Box, Typography } from "@mui/material";
-import React from "react";
-import useWindowDimensions from "../customHooks/useWindowDimensions";
-import { useTheme } from "@mui/styles";
+import React, { useContext } from "react";
+import { CustomSettingsContext } from "../../context/CustomSettings";
+import useScreenSize from "../customHooks/useScreenSize";
 
 const SkillItem = ({ name, src }) => {
-  const { width } = useWindowDimensions();
-  const theme = useTheme();
-  const largeScreen = width > theme.breakpoints.values.md;
-  //const smallScreen = width > theme.breakpoints.values.sm;
-
-  const iconHeight = '50%'
-  const outlineHeight = '80px'
+  const { tablet, phone } = useScreenSize();
+  const customSettings = useContext(CustomSettingsContext);
   return (
     <Box
       display="flex"
       justifyContent="center"
       alignItems="center"
       flexDirection="column"
-      px={"15px"}
-      mb={largeScreen ? "0px" : "20px"}
+      width = '120px'
+      mb={(tablet || phone) && "20px"}
     >
       <Box
-        width={outlineHeight}
-        height={outlineHeight}
+        width={customSettings.skillItemCircleHeight}
+        height={customSettings.skillItemCircleHeight}
         display="grid"
         sx={{ placeItems: "center" }}
         bgcolor="primary.main"
         borderRadius="100%"
         boxShadow={3}
       >
-        <img src={src} alt={name} width={iconHeight} height={iconHeight} />
+        <img
+          src={src}
+          alt={name}
+          width={customSettings.skillItemIconHeight}
+          height={customSettings.skillItemIconHeight}
+        />
       </Box>
       <Typography pt="5px">{name}</Typography>
     </Box>

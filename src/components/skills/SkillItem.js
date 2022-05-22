@@ -1,4 +1,4 @@
-import { Box, Paper, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
 import useWindowDimensions from "../customHooks/useWindowDimensions";
 import { useTheme } from "@mui/styles";
@@ -7,7 +7,7 @@ const SkillItem = ({ name, src }) => {
   const { width } = useWindowDimensions();
   const theme = useTheme();
   const largeScreen = width > theme.breakpoints.values.md;
-  const smallScreen = width > theme.breakpoints.values.sm;
+  //const smallScreen = width > theme.breakpoints.values.sm;
 
   const iconHeight = '50%'
   const outlineHeight = '80px'

@@ -1,6 +1,6 @@
-import { Button, Typography } from "@mui/material";
+import { Button, Grow, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import bubblesImgSrc from "../../assets/images/bubbles.png";
 import heroImgSrc from "../../assets/images/hero.png";
 import { CustomSettingsContext } from "../../context/CustomSettings";
@@ -10,6 +10,7 @@ const Hero = () => {
   const { desktop, tablet, phone } = useScreenSize();
   const customSettings = useContext(CustomSettingsContext);
 
+  const [checked, setChecked] = useState(false)
   return (
     <Box
       height={`calc(100vh - 2 * ${customSettings.heroPadding})`}
@@ -32,27 +33,32 @@ const Hero = () => {
         flexDirection="column"
         alignItems={desktop ? "space-between" : "center"}
       >
-        <Typography
-          variant="h1"
-          gutterBottom
-          textAlign={(tablet || phone) && "center"}
-        >
-          Hey, I'm{" "}
-          <Typography variant="h1" component="span" color="secondary">
-            Grant
-          </Typography>
-          .
-        </Typography>
-        <Typography
-          variant="h1"
-          textAlign={(tablet || phone) && "center"}
-          gutterBottom
-        >
-          I'm a full stack developer.
-        </Typography>
+        <Grow in = {checked}>
+          <Box>
+            <Typography
+              variant="h1"
+              gutterBottom
+              textAlign={(tablet || phone) && "center"}
+            >
+              Hey, I'm{" "}
+              <Typography variant="h1" component="span" color="secondary">
+                Grant
+              </Typography>
+              .
+            </Typography>
+            <Typography
+              variant="h1"
+              textAlign={(tablet || phone) && "center"}
+              gutterBottom
+            >
+              I'm a full stack developer.
+            </Typography>
+          </Box>
+        </Grow>
         <Button
           variant="contained"
           color="secondary"
+          onClick={() =>setChecked(true)}
           sx={{
             width: "max-content",
             p: "20px",
@@ -65,14 +71,14 @@ const Hero = () => {
       <Box
         display="flex"
         alignItems="center"
-        justifyContent='center'
-        height={tablet || phone ? "50%" : 'auto'}
+        justifyContent="center"
+        height={tablet || phone ? "50%" : "auto"}
       >
         <img
           alt="hero"
           src={heroImgSrc}
-          height={desktop ? "50%" : tablet ? "100%" : 'auto'}
-          width={phone ? '90%': 'auto'}
+          height={desktop ? "50%" : tablet ? "100%" : "auto"}
+          width={phone ? "90%" : "auto"}
         />
       </Box>
     </Box>

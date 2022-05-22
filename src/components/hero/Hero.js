@@ -1,16 +1,21 @@
-import { Button, Grow, Typography } from "@mui/material";
+import { Button, Fade, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import bubblesImgSrc from "../../assets/images/bubbles.png";
 import heroImgSrc from "../../assets/images/hero.png";
 import { CustomSettingsContext } from "../../context/CustomSettings";
+import useDelay from "../customHooks/useDelay";
 import useScreenSize from "../customHooks/useScreenSize";
+import { keyframes } from "@mui/system";
 
 const Hero = () => {
   const { desktop, tablet, phone } = useScreenSize();
   const customSettings = useContext(CustomSettingsContext);
 
-  const [checked, setChecked] = useState(false)
+  const reveal = keyframes` 
+    from {transform: translate3d(-40px, 0px, 0px)} 
+    to {transform: none}`;
+
   return (
     <Box
       height={`calc(100vh - 2 * ${customSettings.heroPadding})`}
@@ -33,8 +38,15 @@ const Hero = () => {
         flexDirection="column"
         alignItems={desktop ? "space-between" : "center"}
       >
-        <Grow in = {checked}>
-          <Box>
+        <Fade
+          in={useDelay(customSettings.heroTypographyDelay)}
+          timeout={customSettings.heroFadeDuration}
+        >
+          <Box
+            sx={{
+              animation: `${reveal} 1s ease ${customSettings.heroTypographyDelay}s`,
+            }}
+          >
             <Typography
               variant="h1"
               gutterBottom
@@ -54,19 +66,24 @@ const Hero = () => {
               I'm a full stack developer.
             </Typography>
           </Box>
-        </Grow>
-        <Button
-          variant="contained"
-          color="secondary"
-          onClick={() =>setChecked(true)}
-          sx={{
-            width: "max-content",
-            p: "20px",
-            borderRadius: "10px",
-          }}
+        </Fade>
+        <Fade
+          in={useDelay(customSettings.heroButtonDelay)}
+          timeout={customSettings.heroFadeDuration}
         >
-          Let's get in touch
-        </Button>
+          <Button
+            variant="contained"
+            color="secondary"
+            sx={{
+              width: "max-content",
+              p: "20px",
+              borderRadius: "10px",
+              animation: `${reveal} 1s ease ${customSettings.heroButtonDelay}s`,
+            }}
+          >
+            Let's get in touch
+          </Button>
+        </Fade>
       </Box>
       <Box
         display="flex"

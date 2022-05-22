@@ -11,9 +11,9 @@ const Hero = () => {
   const theme = useTheme();
   const largeScreen = width > theme.breakpoints.values.md;
   const smallScreen = width > theme.breakpoints.values.sm;
-  const extraSmallScreen = width > theme.breakpoints.values.xs;
+  //const extraSmallScreen = width > theme.breakpoints.values.xs;
 
-  console.log(largeScreen, smallScreen, extraSmallScreen, theme.breakpoints.values.xs)
+  //console.log(largeScreen, smallScreen, extraSmallScreen, theme.breakpoints.values.xs)
 
   const largeFontSize = "56px";
   const smallFontSize = "40px";

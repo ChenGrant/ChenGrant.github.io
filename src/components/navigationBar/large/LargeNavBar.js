@@ -1,33 +1,31 @@
 import { Box } from "@mui/system";
-import React from "react";
+import React, { useContext } from "react";
 import LargeNavBarItem from "./LargeNavBarItem";
 import { v4 as uuidv4 } from "uuid";
-//import { Slide } from "@mui/material";
-//import useDelay from "../../customHooks/useDelay";
+import { CustomSettingsContext } from "../../../context/CustomSettings";
 
-const LargeNavBar = ({ headers }) => {
-  //const navBarIsVisible = useDelay(1000);
+const LargeNavBar = ({ navBarItems }) => {
+  const customSettings = useContext(CustomSettingsContext);
   return (
     <Box
       display="flex"
       justifyContent="space-between"
       alignItems="center"
-      height="80px"
-      bgcolor="transparent"
       position="fixed"
-      zIndex="200000"
-      sx={{ backdropFilter: "blur(10px)" }}
+      height={customSettings.navBarHeight}
       width="100%"
+      zIndex={customSettings.navBarZIndex}
+      sx={{ backdropFilter: "blur(10px)" }}
     >
       <LargeNavBarItem px={5} visibility="hidden">
         RESUME
       </LargeNavBarItem>
-      <Box display="flex" justifyContent={"center"}>
-        {headers.map((header) => {
-          const [headerLabel, headerNavigation] = header;
+      <Box display="flex" justifyContent="center" >
+        {navBarItems.map((navBarItem) => {
+          const [navBarItemLabel, navBarItemNavigation] = navBarItem;
           return (
-            <LargeNavBarItem key={uuidv4()} onClick={headerNavigation}>
-              {headerLabel}
+            <LargeNavBarItem key={uuidv4()} onClick={navBarItemNavigation}>
+              {navBarItemLabel}
             </LargeNavBarItem>
           );
         })}

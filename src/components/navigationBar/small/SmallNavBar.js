@@ -1,63 +1,61 @@
-import { Box, IconButton, Slide, Stack, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { Box, IconButton, Slide, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Clear";
 import { v4 as uuidv4 } from "uuid";
-//import useDelay from "../../customHooks/useDelay";
 import bubbles from "../../../assets/images/bubbles.png";
+import { CustomSettingsContext } from "../../../context/CustomSettings";
 
-const SmallNavBar = ({ headers }) => {
-  //const navBarIsVisible = useDelay(1000);
-  const [panelIsOpen, setPaneIsOpen] = useState(false);
+const SmallNavBar = ({ navBarItems }) => {
+  const customSettings = useContext(CustomSettingsContext);
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+
+  const navBarItemClickHandler = (headerNavigation) => {
+    setMenuIsOpen(false);
+    headerNavigation();
+  };
+
   return (
-    <Box width = '100%'>
+    <>
       <Box
+        height={customSettings.navBarHeight}
         display="flex"
-        //justifyContent="right"
         alignItems="center"
-        height="70px"
         position="fixed"
-        //bgcolor = 'blue'
-        width="100%"
-        zIndex="200000"
+        zIndex={customSettings.navBarZIndex}
       >
         <IconButton
-          aria-label="delete"
-          sx={{ position: "fixed", margin: " 0px 20px", right: '0px'}}
-          onClick={() => setPaneIsOpen(true)}
-          size = 'large'
+          sx={{ position: "fixed", margin: " 0px 20px", right: "0px" }}
+          onClick={() => setMenuIsOpen(true)}
+          size="large"
         >
-          <MenuIcon fontSize = 'inherit' color = 'secondary'/>
+          <MenuIcon fontSize="inherit" color="secondary" />
         </IconButton>
       </Box>
-      <Slide direction="left" in={panelIsOpen} timeout={400}>
+      <Slide direction="left" in={menuIsOpen} timeout={400}>
         <Box
           position="fixed"
-          width="70%"
-          maxWidth="500px"
           right={0}
           height="100vh"
+          width="70vw"
+          maxWidth="500px"
           padding="30px"
           sx={{
-            zIndex: 200001,
+            zIndex: customSettings.navBarZIndex,
             boxShadow: 13,
             backgroundImage: `url(${bubbles})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
         >
-          <Stack>
-            <Box
-              display="flex"
-              justifyContent="right"
-              onClick={() => setPaneIsOpen(false)}
-            >
-              <IconButton size = 'large'>
-                <ClearIcon color="secondary" fontSize = 'inherit'/>
-              </IconButton>
-            </Box>
-            {headers.map((header) => {
-              const [headerLabel, headerNavigation] = header;
+          <Box onClick={() => setMenuIsOpen(false)}>
+            <IconButton size="large">
+              <ClearIcon color="secondary" fontSize="inherit" />
+            </IconButton>
+          </Box>
+          <Box ml="17px">
+            {navBarItems.map((navBarItem) => {
+              const [navBarItemLabel, navBarItemNavigation] = navBarItem;
               return (
                 <Typography
                   sx={{
@@ -65,25 +63,21 @@ const SmallNavBar = ({ headers }) => {
                       cursor: "pointer",
                     },
                   }}
-                  onClick={() => {
-                    setPaneIsOpen(false);
-                    headerNavigation();
-                  }}
+                  onClick={() => navBarItemClickHandler(navBarItemNavigation)}
                   key={uuidv4()}
-                  fontWeight={600}
-                  my="15px"
                   width="min-content"
-                  //fontSize={15}
-                  color="secondary.main"
+                  fontWeight="bold"
+                  color="secondary"
+                  my="30px"
                 >
-                  {headerLabel}
+                  {navBarItemLabel}
                 </Typography>
               );
             })}
-          </Stack>
+          </Box>
         </Box>
       </Slide>
-    </Box>
+    </>
   );
 };
 

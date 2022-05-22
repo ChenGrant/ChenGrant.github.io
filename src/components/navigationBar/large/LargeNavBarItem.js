@@ -20,17 +20,16 @@ const LargeNavBarItem = ({ children, ...rest }) => {
           height={hoverDotHeight}
           width={hoverDotHeight}
           bgcolor="tertiary.main"
-          borderRadius={100}
+          borderRadius='100%'
         />
       </Slide>
       <Typography
         sx={{ "&:hover": { cursor: "pointer" } }}
         px={1.5}
-        pb={hoverDotHeight + distanceBetweenHoverDotAndHeader + "px"}
-        pt={distanceBetweenHoverDotAndHeader + "px"}
-        fontWeight={600}
-        //fontSize={15}
-        color="secondary.main"
+        pb={`${hoverDotHeight + distanceBetweenHoverDotAndHeader}px`}
+        pt={`${distanceBetweenHoverDotAndHeader}px`}
+        fontWeight='bold'
+        color="secondary"
         textAlign="center"
         onMouseEnter={() => setNavBarItemIsHovered(true)}
         onMouseLeave={() => setNavBarItemIsHovered(false)}

@@ -9,7 +9,8 @@ const NavBar = () => {
   const theme = useTheme();
 
   const placeholderFunction = () => console.log("placeholder");
-  const headers = [
+
+  const navBarItems = [
     ["HOME", placeholderFunction],
     ["SKILLS", placeholderFunction],
     ["EXPERIENCES", placeholderFunction],
@@ -21,9 +22,9 @@ const NavBar = () => {
   return (
     <>
       {width > theme.breakpoints.values.md ? (
-        <LargeNavBar headers={headers} />
+        <LargeNavBar navBarItems={navBarItems} />
       ) : (
-        <SmallNavBar headers={headers} />
+        <SmallNavBar navBarItems={navBarItems} />
       )}
     </>
   );

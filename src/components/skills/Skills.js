@@ -84,6 +84,7 @@ const Skills = () => {
               alignItems="center"
               pt={largeScreen ? "0px" : "50px"}
               my={3}
+              key={uuidv4()}
             >
               <Box
                 display="flex"
@@ -106,7 +107,6 @@ const Skills = () => {
                 flexDirection="row"
                 flexWrap={"wrap"}
                 justifyContent={largeScreen ? "left" : "center"}
-                key={uuidv4()}
               >
                 {Object.entries(item[1]).map((technology) => {
                   return (

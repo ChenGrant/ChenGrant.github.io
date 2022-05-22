@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import Skill from "./Skill";
+import SkillItem from "./SkillItem";
 import { v4 as uuidv4 } from "uuid";
 import useWindowDimensions from "../customHooks/useWindowDimensions";
 import { useTheme } from "@mui/styles";
@@ -60,14 +60,9 @@ const Skills = () => {
   const { width } = useWindowDimensions();
   const theme = useTheme();
   const largeScreen = width > theme.breakpoints.values.md;
-  const largeFontSize = "56px";
-  const smallFontSize = "40px";
   return (
     <Box display="flex" flexDirection="column" alignItems="center" p={3} py={7}>
-      <Typography
-        fontSize={largeScreen ? largeFontSize : smallFontSize}
-        fontWeight={600}
-      >
+      <Typography variant="h1" gutterBottom>
         Skills
       </Typography>
       <Box
@@ -110,7 +105,7 @@ const Skills = () => {
               >
                 {Object.entries(item[1]).map((technology) => {
                   return (
-                    <Skill
+                    <SkillItem
                       key={uuidv4()}
                       name={technology[0]}
                       src={technology[1]}

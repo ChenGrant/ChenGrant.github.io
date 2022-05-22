@@ -33,9 +33,12 @@ const theme = createTheme({
   },
 });
 
-theme.typography.h1[theme.breakpoints.up("md")] = { fontSize: "56px" }
-theme.typography.h1[theme.breakpoints.only("sm")] = { fontSize: "40px" }
-theme.typography.h1[theme.breakpoints.only("xs")] = { fontSize: "30px" }
+theme.typography.h1[theme.breakpoints.up("md")] = { fontSize: "56px", fontWeight: 700}
+theme.typography.h1[theme.breakpoints.only("sm")] = { fontSize: "40px", fontWeight: 700 }
+theme.typography.h1[theme.breakpoints.only("xs")] = { fontSize: "30px" , fontWeight: 700}
+theme.typography.button[theme.breakpoints.up("md")] = {fontSize: '25px'}
+theme.typography.button[theme.breakpoints.only("sm")] = {fontSize: '20px'}
+theme.typography.button[theme.breakpoints.only("xs")] = {fontSize: '15px'}
 
 console.log('my theme object looks like: ', theme);
 

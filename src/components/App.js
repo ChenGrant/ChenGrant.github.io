@@ -39,13 +39,15 @@ const App = () => {
             Make it more responsive now that i got breakpoints, test out the
             different breakpoints
           </li>
-          <li>Fade in hero text</li>
+          <li>Fade in hero text like danny</li>
           <li>Make image width/heigth 100% and apply css on its BOx instead</li>
           <li>Make hero image an svg</li>
           <li>
             make font size consistent across different components and different
             screen sizes
           </li>
+          <li>Have lazy load in</li>
+          <li>Figure out what text will be h1, small, large etc. i think hero text should be the only h1</li>
           <li>Center 'frontend' text for mobile</li>
         </ul>
       </Box>

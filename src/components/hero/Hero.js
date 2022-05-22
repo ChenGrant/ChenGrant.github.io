@@ -35,17 +35,11 @@ const Hero = () => {
       >
         <Typography
           variant="h1"
-          fontWeight="bold"
           gutterBottom
           textAlign={(tablet || phone) && "center"}
         >
           Hey, I'm{" "}
-          <Typography
-            variant="h1"
-            component="span"
-            fontWeight="bold"
-            color="secondary"
-          >
+          <Typography variant="h1" component="span" color="secondary">
             Grant
           </Typography>
           .
@@ -53,7 +47,6 @@ const Hero = () => {
         <Typography
           variant="h1"
           textAlign={(tablet || phone) && "center"}
-          fontWeight="bold"
           gutterBottom
         >
           I'm a full stack developer.
@@ -65,7 +58,6 @@ const Hero = () => {
             width: "max-content",
             p: "20px",
             borderRadius: "10px",
-            fontSize: "20px",
           }}
         >
           Let's get in touch

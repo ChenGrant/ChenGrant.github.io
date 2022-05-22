@@ -4,16 +4,17 @@ import Hero from "./hero/Hero";
 import NavBar from "./navigationBar/NavBar";
 import Skills from "./skills/Skills";
 import { useTheme } from "@mui/styles";
-import useWindowDimensions from "./customHooks/useWindowDimensions";
 import { CustomSettingsProvider } from "../context/CustomSettings";
+import useScreenSize from "./customHooks/useScreenSize";
 
 const App = () => {
-  const { width } = useWindowDimensions();
+  const {desktop} = useScreenSize()
   const theme = useTheme();
 
   const initialCustomSettings = {
     navBarHeight: "70px",
     navBarZIndex: Math.max(...Object.values(theme.zIndex)) + 1,
+    heroPadding : desktop ? '80px' : '70px'
   };
 
   return (

@@ -14,6 +14,8 @@ const skills = {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     C: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
     Java: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg",
+    HTML: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    CSS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
   },
   frontend: {
     "React.js":
@@ -36,7 +38,7 @@ const skills = {
     Django:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
     Firebase:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+      "https://www.gstatic.com/mobilesdk/160503_mobilesdk/logo/2x/firebase_28dp.png",
     MySQL:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
   },
@@ -58,10 +60,8 @@ const Skills = () => {
   const { width } = useWindowDimensions();
   const theme = useTheme();
   const largeScreen = width > theme.breakpoints.values.md;
-  const smallScreen = width > theme.breakpoints.values.sm;
   const largeFontSize = "56px";
   const smallFontSize = "40px";
-  const extraSmallFontSize = '30px';
   return (
     <Box display="flex" flexDirection="column" alignItems="center" p={3} py={7}>
       <Typography

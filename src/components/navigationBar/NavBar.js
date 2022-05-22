@@ -1,33 +1,23 @@
 import React from "react";
-import useWindowDimensions from "../customHooks/useWindowDimensions";
-import { useTheme } from "@mui/styles";
+import useScreenSize from "../customHooks/useScreenSize";
 import LargeNavBar from "../navigationBar/large/LargeNavBar";
 import SmallNavBar from "../navigationBar/small/SmallNavBar";
 
 const NavBar = () => {
-  const { width } = useWindowDimensions();
-  const theme = useTheme();
-
-  const placeholderFunction = () => console.log("placeholder");
+  const { desktop, tablet, phone } = useScreenSize();
 
   const navBarItems = [
-    ["HOME", placeholderFunction],
-    ["SKILLS", placeholderFunction],
-    ["EXPERIENCES", placeholderFunction],
-    ["PROJECTS", placeholderFunction],
-    ["EDUCATION", placeholderFunction],
-    ["CONTACT", placeholderFunction],
+    ["HOME", () => console.log("HOME")],
+    ["SKILLS", () => console.log("SKILLS")],
+    ["EXPERIENCES", () => console.log("EXPERIENCES")],
+    ["PROJECTS", () => console.log("PROJECTS")],
+    ["EDUCATION", () => console.log("EDUCATION")],
+    ["CONTACT", () => console.log("CONTACT")],
   ];
 
-  return (
-    <>
-      {width > theme.breakpoints.values.md ? (
-        <LargeNavBar navBarItems={navBarItems} />
-      ) : (
-        <SmallNavBar navBarItems={navBarItems} />
-      )}
-    </>
-  );
+  if (desktop) return <LargeNavBar navBarItems={navBarItems} />;
+  if (tablet || phone) return <SmallNavBar navBarItems={navBarItems} />;
+  return null;
 };
 
 export default NavBar;

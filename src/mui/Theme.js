@@ -2,11 +2,11 @@ import { createTheme } from "@mui/material";
 
 const theme = createTheme({
   typography: {
-    fontFamily: ["Montserrat", "sans-serif"].join(","),
+    fontFamily: "Montserrat,sans-serif",
     fontWeightLight: 300,
     fontWeightRegular: 400,
     fontWeightMedium: 500,
-    fontWeightBold : 700,
+    fontWeightBold: 700,
   },
   palette: {
     primary: {
@@ -18,19 +18,25 @@ const theme = createTheme({
       light: "#989ee2",
       main: "#263DA7", // blue
     },
-    tertiary : {
-      main: '#FDB049ff' // orange-yellow
-    }
+    tertiary: {
+      main: "#FDB049ff", // orange-yellow
+    },
   },
   breakpoints: {
     values: {
       xs: 0, //phone
       sm: 480, // tablet
-      md: 957, // monitor
-      lg: 1200, 
+      md: 1055, // monitor
+      lg: 1200,
       xl: 1536,
     },
   },
 });
+
+theme.typography.h1[theme.breakpoints.up("md")] = { fontSize: "56px" }
+theme.typography.h1[theme.breakpoints.only("sm")] = { fontSize: "40px" }
+theme.typography.h1[theme.breakpoints.only("xs")] = { fontSize: "30px" }
+
+console.log('my theme object looks like: ', theme);
 
 export default theme;

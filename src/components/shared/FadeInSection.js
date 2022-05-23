@@ -26,7 +26,7 @@ const FadeInSection = ({ children }) => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => entry.isIntersecting && setVisible(true));
-    });
+    }, {threshold: 0.5});
     observer.observe(ref.current);
     const refCurrentCopy = ref.current;
     return () => observer.unobserve(refCurrentCopy);

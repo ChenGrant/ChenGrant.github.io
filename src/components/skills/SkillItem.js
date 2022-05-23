@@ -12,7 +12,7 @@ const SkillItem = ({ name, src }) => {
       justifyContent="center"
       alignItems="center"
       flexDirection="column"
-      width = '120px'
+      width = '110px'
       mb={(tablet || phone) && "20px"}
     >
       <Box

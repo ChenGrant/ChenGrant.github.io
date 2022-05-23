@@ -4,6 +4,7 @@ import React from "react";
 import SkillItem from "./SkillItem";
 import { v4 as uuidv4 } from "uuid";
 import useScreenSize from "../customHooks/useScreenSize";
+import FadeInSection from "../shared/FadeInSection";
 
 const skills = {
   languages: {
@@ -69,46 +70,47 @@ const Skills = () => {
         {Object.entries(skills).map((technologyGroup) => {
           const [technologyGroupName, technologyGroupList] = technologyGroup;
           return (
-            <Box
-              display="flex"
-              flexDirection={desktop ? "row" : "column"}
-              alignItems="center"
-              my={3}
-              key={uuidv4()}
-              gap={desktop && "50px"}
-            >
+            <FadeInSection key={uuidv4()}>
               <Box
                 display="flex"
-                justifyContent={desktop ? "right" : "center"}
-                alignItems="right"
-                width={desktop && "200px"}
+                flexDirection={desktop ? "row" : "column"}
+                alignItems="center"
+                my={3}
+                gap={desktop && "50px"}
               >
-                <Typography
-                  color="secondary.main"
-                  variant="h4"
-                  mb={(tablet || phone) && "30px"}
+                <Box
+                  display="flex"
+                  justifyContent={desktop ? "right" : "center"}
+                  alignItems="right"
+                  width={desktop && "200px"}
                 >
-                  {technologyGroupName}
-                </Typography>
+                  <Typography
+                    color="secondary.main"
+                    variant="h4"
+                    mb={(tablet || phone) && "30px"}
+                  >
+                    {technologyGroupName}
+                  </Typography>
+                </Box>
+                <Box
+                  display="flex"
+                  flexDirection="row"
+                  flexWrap={"wrap"}
+                  justifyContent={desktop ? "left" : "center"}
+                >
+                  {Object.entries(technologyGroupList).map((technology) => {
+                    const [technologyName, technologyImgSrc] = technology;
+                    return (
+                      <SkillItem
+                        key={uuidv4()}
+                        name={technologyName}
+                        src={technologyImgSrc}
+                      />
+                    );
+                  })}
+                </Box>
               </Box>
-              <Box
-                display="flex"
-                flexDirection="row"
-                flexWrap={"wrap"}
-                justifyContent={desktop ? "left" : "center"}
-              >
-                {Object.entries(technologyGroupList).map((technology) => {
-                  const [technologyName, technologyImgSrc] = technology;
-                  return (
-                    <SkillItem
-                      key={uuidv4()}
-                      name={technologyName}
-                      src={technologyImgSrc}
-                    />
-                  );
-                })}
-              </Box>
-            </Box>
+            </FadeInSection>
           );
         })}
       </Box>

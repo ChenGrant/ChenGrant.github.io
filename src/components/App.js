@@ -36,6 +36,7 @@ const App = () => {
               Maybe underline and make header transition up a bit on nav bar
               when hovered? (for both large and mobile)
             </li>
+            <li>https://github.com/enigosi/react-single-page-navigation</li>
             <li>Make all images local to prevent fetching time</li>
             <li>
               Make image width/heigth 100% and apply css on its BOx instead

@@ -4,6 +4,7 @@ import NavBar from "./navigationBar/NavBar";
 import Skills from "./skills/Skills";
 import { useTheme } from "@mui/styles";
 import { CustomSettingsProvider } from "../context/CustomSettings";
+import Experience from "./experiences/Experience";
 
 const App = () => {
   const theme = useTheme();
@@ -24,6 +25,7 @@ const App = () => {
       <NavBar />
       <Hero />
       <Skills />
+      <Experience/>
       <div style={{backgroundColor : 'gray'}}>
           <ul>
             <li>

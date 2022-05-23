@@ -62,6 +62,7 @@ const App = () => {
             <li>Wait till font has loaded in, then render page </li>
             <li>https://www.youtube.com/watch?v=huVJW23JHKQ&t=383s</li>
             <li>Center 'frontend' text for mobile</li>
+            <li>add technology icons for experience</li>
             <li>
               Make smallNavBar not have 400ms animation time if its on phone
               (maybe have it on tablet if it works on ipads)

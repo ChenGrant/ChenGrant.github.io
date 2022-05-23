@@ -1,13 +1,15 @@
 import { Box } from "@mui/system";
 import React, { useEffect, useRef, useState } from "react";
+import useScreenSize from "../customHooks/useScreenSize";
 
 const FadeInSection = ({ children }) => {
-  const [isVisible, setVisible] = useState(false);
+  const {desktop} = useScreenSize()
+  const [isVisible, setVisible] = useState(!desktop);
   const ref = useRef();
 
   const section = {
     opacity: 0,
-    transform: "translateX(20vh)",
+    transform: "translateX(200px)",
     visibility: "hidden",
     transition: "opacity 0.6s ease-out, transform 1.2s ease-out",
     willChange: "opacity, visibility",

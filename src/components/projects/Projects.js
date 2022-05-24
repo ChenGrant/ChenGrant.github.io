@@ -106,9 +106,9 @@ const Projects = () => {
                   >
                     <GitHubIcon fontSize="inherit" sx={{ color: "black" }} />
                   </IconButton>
-                  <IconButton size="large">
-                    <YouTubeIcon fontSize="inherit" sx={{ color: "red" }} />
-                  </IconButton>
+                  {/* <IconButton size="large">
+                    <YouTubeIcon fontSize="inherit" />
+                  </IconButton> */}
                 </Box>
               </Box>
               <Box flex="1" display="grid" sx={{ placeItems: "center" }}>
@@ -117,7 +117,6 @@ const Projects = () => {
                   alt={project.name}
                   width="100%"
                   style={{
-                    borderRadius: "10px",
                     boxShadow: theme.shadows[4],
                   }}
                 />

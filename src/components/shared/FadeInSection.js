@@ -2,14 +2,14 @@ import { Box } from "@mui/system";
 import React, { useEffect, useRef, useState } from "react";
 import useScreenSize from "../customHooks/useScreenSize";
 
-const FadeInSection = ({ children }) => {
-  const {desktop} = useScreenSize()
+const FadeInSection = ({ direction = "left", children, ...rest}) => {
+  const { desktop } = useScreenSize();
   const [isVisible, setVisible] = useState(!desktop);
   const ref = useRef();
 
   const section = {
     opacity: 0,
-    transform: "translateX(200px)",
+    transform: `translateX(${direction === "left" ? "" : "-"}200px)`,
     visibility: "hidden",
     transition: "opacity 0.6s ease-out, transform 1.2s ease-out",
     willChange: "opacity, visibility",
@@ -24,16 +24,19 @@ const FadeInSection = ({ children }) => {
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => entry.isIntersecting && setVisible(true));
-    }, {threshold: 0.5});
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => entry.isIntersecting && setVisible(true));
+      },
+      { threshold: 0.5 }
+    );
     observer.observe(ref.current);
     const refCurrentCopy = ref.current;
     return () => observer.unobserve(refCurrentCopy);
   }, []);
 
   return (
-    <Box style={isVisible ? sectionIsVisible : section} ref={ref}>
+    <Box style={isVisible ? sectionIsVisible : section} ref={ref} {...rest}>
       {children}
     </Box>
   );

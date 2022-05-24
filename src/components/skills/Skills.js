@@ -55,6 +55,12 @@ const skills = {
   },
 };
 
+export const getSkillImgURL = (skillName) => {
+  for (const skillGroup in skills) {
+    if (skills[skillGroup][skillName]) return skills[skillGroup][skillName];
+  }
+};
+
 const Skills = () => {
   const { desktop, tablet, phone } = useScreenSize();
   return (

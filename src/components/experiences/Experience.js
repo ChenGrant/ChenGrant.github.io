@@ -8,7 +8,7 @@ const experiencesList = [
   {
     companyName: "Spotwork",
     role: "Full Stack Developer Intern",
-    timePeriod: "May 2022 - August 2022",
+    timePeriod: "May 2022 - Present",
     techStack: ["React.js", "Redux", "Material UI", "Formik", "Firebase"],
   },
   {

@@ -11,7 +11,7 @@ const NavBar = () => {
     ["SKILLS", () => console.log("SKILLS")],
     ["EXPERIENCES", () => console.log("EXPERIENCES")],
     ["PROJECTS", () => console.log("PROJECTS")],
-    ["EDUCATION", () => console.log("EDUCATION")],
+    //["EDUCATION", () => console.log("EDUCATION")],
     ["CONTACT", () => console.log("CONTACT")],
   ];
 

@@ -5,6 +5,7 @@ import Skills from "./skills/Skills";
 import { useTheme } from "@mui/styles";
 import { CustomSettingsProvider } from "../context/CustomSettings";
 import Experience from "./experiences/Experience";
+import Projects from "./projects/Projects";
 
 const App = () => {
   const theme = useTheme();
@@ -26,6 +27,7 @@ const App = () => {
       <Hero />
       <Skills />
       <Experience/>
+      <Projects/>
       <div style={{backgroundColor : 'gray'}}>
           <ul>
             <li>
@@ -40,6 +42,9 @@ const App = () => {
             </li>
             <li>https://github.com/enigosi/react-single-page-navigation</li>
             <li>Make all images local to prevent fetching time</li>
+            <li>Remove fade in animation for hero text on mobile</li>
+            <li>Make projects fade in alternating, starting with fading in from left</li>
+            <li>put theme provider in app</li>
             <li>
               Make image width/heigth 100% and apply css on its BOx instead
             </li>
@@ -58,6 +63,7 @@ const App = () => {
               https://dev.to/selbekk/how-to-fade-in-content-as-it-scrolls-into-view-10j4
               in shared/component
             </li>
+            <li>Maybe try making just the icons fade in and not the 'frontend' text</li>
             <li>Align icons (material UI text too large)</li>
             <li>Wait till font has loaded in, then render page </li>
             <li>https://www.youtube.com/watch?v=huVJW23JHKQ&t=383s</li>

@@ -3,7 +3,7 @@ import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import FadeInSection from "../shared/FadeInSection";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import YouTubeIcon from "@mui/icons-material/YouTube";
+//import YouTubeIcon from "@mui/icons-material/YouTube";
 import { useTheme } from "@mui/styles";
 import useScreenSize from "../customHooks/useScreenSize";
 
@@ -117,7 +117,7 @@ const Projects = () => {
                   alt={project.name}
                   width="100%"
                   style={{
-                    boxShadow: theme.shadows[4],
+                    boxShadow: theme.shadows[10],
                   }}
                 />
               </Box>

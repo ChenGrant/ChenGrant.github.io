@@ -49,8 +49,4 @@ theme.typography.h4[theme.breakpoints.only("xs")] = { fontSize: "24px" , fontWei
 theme.typography.body1[theme.breakpoints.only("xs")] = { fontSize: "16px"}
 theme.typography.button[theme.breakpoints.only("xs")] = {fontSize: '18px'}
 
-
-console.log(theme)
-
-
 export default theme;

@@ -5,6 +5,7 @@ import { Button } from "@mui/material";
 import { Form, Formik } from "formik";
 import * as Yup from "yup";
 import FormikControl from "../formik/FormikControl";
+import emailjs from "emailjs-com";
 
 const initialValues = {
   name: "",
@@ -18,7 +19,22 @@ const validationSchema = Yup.object({
   message: Yup.string().required("Required"),
 });
 
-const onSubmit = (values) => console.log(values);
+const onSubmit = async (values) => {
+  try {
+    const response = await emailjs.send(
+      "service_8mjuqfu",
+      "template_djmptbs",
+      values,
+      "Ui6zfCjou32r1fYyq"
+    );
+
+    console.log(response);
+    throw "sample";
+  } catch (err) {
+    console.log('error')
+    console.log(err);
+  }
+};
 
 const Contact = () => {
   const mb = "20px";

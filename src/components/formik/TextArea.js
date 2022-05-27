@@ -1,36 +1,41 @@
 import { Box, TextField } from "@mui/material";
+import { useTheme } from "@mui/styles";
 import { ErrorMessage, Field } from "formik";
-import React, { useState } from "react";
+import React from "react";
 import InputError from "./InputError";
 
 const TextArea = ({ name, label, ...rest }) => {
-  // const [margin, setMargin] = useState("34px");
+  const theme = useTheme();
   return (
-    <Box
-      width="100%"
-      // mb={margin}
-      {...rest}
-    >
+    <Box width="100%" {...rest}>
       <Field name={name}>
-        {({ field, form }) => {
-          //console.log(form)
-          // if (form.errors[name]) {
-          //   setMargin("10px");
-          // } else {
-          //   setMargin("34px");
-          // }
+        {({ field }) => {
           return (
-            <Box >
+            <Box boxShadow={5} sx={{ borderRadius: "10px" }}>
               <TextField
+                multiline
+                rows={15}
                 variant="outlined"
                 label={label}
-                minRows={6}
-                maxRows={10}
-                color="secondary"
                 fullWidth
-                multiline
+                color="secondary"
                 InputProps={{
-                  sx: { backgroundColor: "white"},
+                  sx: {
+                    borderRadius: "10px",
+                    backgroundColor: "white",
+                  },
+                }}
+                sx={{
+                  "& .MuiOutlinedInput-root": {
+                    "& > fieldset": {
+                      borderColor: "white",
+                    },
+                  },
+                  "& .MuiOutlinedInput-root:hover": {
+                    "& > fieldset": {
+                      border: `2px solid ${theme.palette.secondary.main}`,
+                    },
+                  },
                 }}
                 {...field}
               />

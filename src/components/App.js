@@ -37,6 +37,7 @@ const App = () => {
             </li>
             <li>Choose better font sizes</li>
             <li>Make on load better, load all the shit first</li>
+            <li>fix fade in happening on screen change (such as when downloading resume)</li>
             <li>when coding for phone: galaxy fold</li>
             <li>
               Maybe underline and make header transition up a bit on nav bar

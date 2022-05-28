@@ -1,19 +1,15 @@
 import { Box } from "@mui/system";
 import React, { useContext } from "react";
-import LargeNavBarItem from "./LargeNavBarItem";
+import NavBarItem from "../NavBarItem";
 import { v4 as uuidv4 } from "uuid";
 import { CustomSettingsContext } from "../../../context/CustomSettings";
 import { saveAs } from "file-saver";
+import { Grid } from "@mui/material";
 
 const LargeNavBar = ({ navBarItems }) => {
-  const customSettings = useContext(CustomSettingsContext);
-
-  const downloadResume = () => {
-    saveAs(
-      "https://raw.githubusercontent.com/ChenGrant/ChenGrant.github.io/adb983dd9434a779172609a5c2880cc7700652a3/about/description.txt",
-      "GrantResume.txt"
-    );
-  };
+  const { resume, navBarHeight, navBarZIndex } = useContext(
+    CustomSettingsContext
+  );
 
   return (
     <Box
@@ -21,27 +17,30 @@ const LargeNavBar = ({ navBarItems }) => {
       justifyContent="space-between"
       alignItems="center"
       position="fixed"
-      height={customSettings.navBarHeight}
+      height={navBarHeight}
       width="100%"
-      zIndex={customSettings.navBarZIndex}
+      zIndex={navBarZIndex}
       sx={{ backdropFilter: "blur(10px)" }}
     >
-      <LargeNavBarItem px={5} visibility="hidden">
-        RESUME
-      </LargeNavBarItem>
-      <Box display="flex" justifyContent="center">
-        {navBarItems.map((navBarItem) => {
-          const { label, link } = navBarItem;
-          return (
-            <LargeNavBarItem key={uuidv4()} link={link}>
-              {label}
-            </LargeNavBarItem>
-          );
-        })}
-      </Box>
-      <LargeNavBarItem px={5} onClick={downloadResume}>
-        RESUME
-      </LargeNavBarItem>
+      <Grid container>
+        <Grid item xs />
+        <Grid item xs>
+          <Box display="flex" justifyContent="center">
+            {navBarItems.map(({ label, link }) => (
+              <NavBarItem key={uuidv4()} link={link}>
+                {label}
+              </NavBarItem>
+            ))}
+          </Box>
+        </Grid>
+        <Grid item xs>
+          <Box display="flex" justifyContent="right" pr={5}>
+            <NavBarItem onClick={() => saveAs(resume.fileURL, resume.fileName)}>
+              RESUME
+            </NavBarItem>
+          </Box>
+        </Grid>
+      </Grid>
     </Box>
   );
 };

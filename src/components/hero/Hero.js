@@ -6,16 +6,17 @@ import heroImgSrc from "../../assets/images/hero.png";
 import { CustomSettingsContext } from "../../context/CustomSettings";
 import useDelay from "../customHooks/useDelay";
 import useScreenSize from "../customHooks/useScreenSize";
-import { keyframes } from "@mui/system";
+import { keyframes } from "@emotion/react";
 import InternalLink from "../shared/InternalLink";
 
 const Hero = () => {
   const { desktop, tablet, phone } = useScreenSize();
   const customSettings = useContext(CustomSettingsContext);
 
-  const reveal = keyframes` 
-    from {transform: translate3d(-40px, 0px, 0px)} 
-    to {transform: none}`;
+  const reveal = keyframes({
+    from: { transform: "translate3d(-40px, 0px, 0px)" },
+    to: { transform: "none" },
+  });
 
   return (
     <Box
@@ -68,7 +69,7 @@ const Hero = () => {
             </Typography>
           </Box>
         </Fade>
-        <InternalLink link = "#contact">
+        <InternalLink link="#contact">
           <Fade
             in={useDelay(customSettings.heroButtonDelay)}
             timeout={customSettings.heroFadeDuration}

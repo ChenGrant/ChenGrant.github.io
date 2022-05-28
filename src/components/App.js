@@ -19,6 +19,33 @@ const App = () => {
     heroFadeDuration: 800,
     skillItemIconHeight: "60%",
     skillItemCircleHeight: "80px",
+    navBarItems: [
+      {
+        label: "HOME",
+        link: "#",
+      },
+      {
+        label: "SKILLS",
+        link: "#skills",
+      },
+      {
+        label: "EXPERIENCES",
+        link: "#experiences",
+      },
+      {
+        label: "PROJECTS",
+        link: "#projects",
+      },
+      {
+        label: "CONTACT",
+        link: "#contact",
+      },
+    ],
+    resume: {
+      fileName: "GrantResume.txt",
+      fileURL:
+        "https://raw.githubusercontent.com/ChenGrant/ChenGrant.github.io/adb983dd9434a779172609a5c2880cc7700652a3/about/description.txt",
+    },
   };
 
   return (
@@ -30,14 +57,21 @@ const App = () => {
         <Experience />
         <Projects />
         <Contact />
-        <div style={{ display : 'none', backgroundColor: "gray" }}>
+        <div style={{ backgroundColor: "gray" }}>
           <ul>
+            <li>
+              no need to make initial custom settings a context, just make it an
+              exportable object
+            </li>
             <li>
               make custom settings also include skills and navigation functions?
             </li>
             <li>Choose better font sizes</li>
             <li>Make on load better, load all the shit first</li>
-            <li>fix fade in happening on screen change (such as when downloading resume)</li>
+            <li>
+              fix fade in happening on screen change (such as when downloading
+              resume)
+            </li>
             <li>when coding for phone: galaxy fold</li>
             <li>
               Maybe underline and make header transition up a bit on nav bar
@@ -47,11 +81,6 @@ const App = () => {
             <li>Make all images local to prevent fetching time</li>
             <li>Remove fade in animation for hero text on mobile</li>
             <li>
-              Make projects fade in alternating, starting with fading in from
-              left
-            </li>
-            <li>put theme provider in app</li>
-            <li>
               Make image width/heigth 100% and apply css on its BOx instead
             </li>
             <li>Make hero image an svg</li>
@@ -59,7 +88,6 @@ const App = () => {
               make font size consistent across different components and
               different screen sizes
             </li>
-            <li>Change fav icon</li>
             <li>Have lazy load in</li>
             <li>
               Figure out what text will be h1, small, large etc. i think hero
@@ -71,10 +99,6 @@ const App = () => {
               in shared/component
             </li>
             <li>Add process.env for emailjs</li>
-            <li>
-              Maybe try making just the icons fade in and not the 'frontend'
-              text
-            </li>
             <li>Align icons (material UI text too large)</li>
             <li>Wait till font has loaded in, then render page </li>
             <li>https://www.youtube.com/watch?v=huVJW23JHKQ&t=383s</li>

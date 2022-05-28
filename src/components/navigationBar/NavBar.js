@@ -1,36 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CustomSettingsContext } from "../../context/CustomSettings";
 import useScreenSize from "../customHooks/useScreenSize";
 import LargeNavBar from "../navigationBar/large/LargeNavBar";
 import SmallNavBar from "../navigationBar/small/SmallNavBar";
 
-const navBarItems = [
-  {
-    label: "HOME",
-    link: "#",
-  },
-  {
-    label: "SKILLS",
-    link: "#skills",
-  },
-  {
-    label: "EXPERIENCES",
-    link: "#experiences",
-  },
-  {
-    label: "PROJECTS",
-    link: "#projects",
-  },
-  {
-    label: "CONTACT",
-    link: "#contact",
-  },
-];
-
 const NavBar = () => {
-  const { desktop, tablet, phone } = useScreenSize();
+  const { desktop } = useScreenSize();
+  const { navBarItems } = useContext(CustomSettingsContext);
+
   if (desktop) return <LargeNavBar navBarItems={navBarItems} />;
-  if (tablet || phone) return <SmallNavBar navBarItems={navBarItems} />;
-  return null;
+  return <SmallNavBar navBarItems={navBarItems} />;
 };
 
 export default NavBar;

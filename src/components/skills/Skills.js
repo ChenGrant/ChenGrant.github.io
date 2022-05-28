@@ -83,28 +83,30 @@ const Skills = () => {
         {Object.entries(skills).map((technologyGroup) => {
           const [technologyGroupName, technologyGroupList] = technologyGroup;
           return (
-            <FadeInSection key={uuidv4()}>
+            <Box
+              display="flex"
+              flexDirection={desktop ? "row" : "column"}
+              alignItems="center"
+              my={3}
+              gap={desktop && "50px"}
+              key={uuidv4()}
+            >
               <Box
                 display="flex"
-                flexDirection={desktop ? "row" : "column"}
-                alignItems="center"
-                my={3}
-                gap={desktop && "50px"}
+                justifyContent={desktop ? "right" : "center"}
+                alignItems="right"
+                width={desktop && "200px"}
               >
-                <Box
-                  display="flex"
-                  justifyContent={desktop ? "right" : "center"}
-                  alignItems="right"
-                  width={desktop && "200px"}
+                <Typography
+                  color="secondary.main"
+                  variant="h4"
+                  mb={(tablet || phone) && "30px"}
                 >
-                  <Typography
-                    color="secondary.main"
-                    variant="h4"
-                    mb={(tablet || phone) && "30px"}
-                  >
-                    {technologyGroupName}
-                  </Typography>
-                </Box>
+                  {technologyGroupName}
+                </Typography>
+              </Box>
+
+              <FadeInSection >
                 <Box
                   display="flex"
                   flexDirection="row"
@@ -122,8 +124,8 @@ const Skills = () => {
                     );
                   })}
                 </Box>
-              </Box>
-            </FadeInSection>
+              </FadeInSection>
+            </Box>
           );
         })}
       </Box>

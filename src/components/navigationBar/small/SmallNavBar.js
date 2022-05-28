@@ -1,33 +1,29 @@
 import React, { useContext, useState } from "react";
-import { Box, IconButton, Slide, Typography } from "@mui/material";
+import { Box, IconButton, Slide } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Clear";
 import { v4 as uuidv4 } from "uuid";
 import bubbles from "../../../assets/images/bubbles.png";
 import { CustomSettingsContext } from "../../../context/CustomSettings";
 import useScreenSize from "../../customHooks/useScreenSize";
+import NavBarItem from "../NavBarItem";
 
 const SmallNavBar = ({ navBarItems }) => {
-  const customSettings = useContext(CustomSettingsContext);
-  const {tablet} = useScreenSize()
+  const { navBarHeight, navBarZIndex } = useContext(CustomSettingsContext);
+  const { tablet } = useScreenSize();
   const [menuIsOpen, setMenuIsOpen] = useState(false);
-
-  const navBarItemClickHandler = (headerNavigation) => {
-    setMenuIsOpen(false);
-    headerNavigation();
-  };
 
   return (
     <>
       <Box
-        height={customSettings.navBarHeight}
+        height={navBarHeight}
         display="flex"
         alignItems="center"
         position="fixed"
-        zIndex={customSettings.navBarZIndex}
+        zIndex={navBarZIndex}
       >
         <IconButton
-          sx={{ position: "fixed", margin: " 0px 20px", right: "0px" }}
+          sx={{ position: "fixed", margin: "0px 20px", right: "0px" }}
           onClick={() => setMenuIsOpen(true)}
           size="large"
         >
@@ -43,7 +39,7 @@ const SmallNavBar = ({ navBarItems }) => {
           maxWidth="500px"
           padding="30px"
           sx={{
-            zIndex: customSettings.navBarZIndex,
+            zIndex: navBarZIndex,
             boxShadow: 13,
             backgroundImage: `url(${bubbles})`,
             backgroundRepeat: "no-repeat",
@@ -55,27 +51,13 @@ const SmallNavBar = ({ navBarItems }) => {
               <ClearIcon color="secondary" fontSize="inherit" />
             </IconButton>
           </Box>
-          <Box ml="17px">
-            {navBarItems.map((navBarItem) => {
-              const { label, link }  = navBarItem;
-              return (
-                <Typography
-                  sx={{
-                    "&:hover": {
-                      cursor: "pointer",
-                    },
-                  }}
-                  key={uuidv4()}
-                  width="min-content"
-                  fontWeight="bold"
-                  color="secondary"
-                  my="30px"
-                >
-                  {label}
-                </Typography>
-              );
-            })}
-          </Box>
+          {navBarItems.map(({ label, link }) => (
+            <Box display="flex" mt={2.5} key={uuidv4()}>
+              <NavBarItem link={link} onClick={() => setMenuIsOpen(false)}>
+                {label}
+              </NavBarItem>
+            </Box>
+          ))}
         </Box>
       </Slide>
     </>

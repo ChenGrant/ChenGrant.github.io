@@ -55,6 +55,7 @@ const App = () => {
             make font size consistent across different components and different
             screen sizes
           </li>
+          <li>Change fav icon</li>
           <li>Have lazy load in</li>
           <li>
             Figure out what text will be h1, small, large etc. i think hero text
@@ -65,6 +66,7 @@ const App = () => {
             https://dev.to/selbekk/how-to-fade-in-content-as-it-scrolls-into-view-10j4
             in shared/component
           </li>
+          <li>Add process.env for emailjs</li>
           <li>
             Maybe try making just the icons fade in and not the 'frontend' text
           </li>
@@ -77,6 +79,9 @@ const App = () => {
             Make smallNavBar not have 400ms animation time if its on phone
             (maybe have it on tablet if it works on ipads)
           </li>
+          <li>Make websites load faster</li>
+          <li>Make sure responsive, make images load fast</li>
+          <li>disable form when sending email, have ui to tell user if email was sent/not sent</li>
         </ul>
       </div>
     </CustomSettingsProvider>

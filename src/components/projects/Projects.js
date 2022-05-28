@@ -49,6 +49,7 @@ const Projects = () => {
       justifyContent="center"
       p={3}
       py={7}
+      id = "projects"
     >
       <Typography variant="h1">projects</Typography>
       {projects.map((project, index) => {

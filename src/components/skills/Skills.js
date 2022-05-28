@@ -64,7 +64,14 @@ export const getSkillImgURL = (skillName) => {
 const Skills = () => {
   const { desktop, tablet, phone } = useScreenSize();
   return (
-    <Box display="flex" flexDirection="column" alignItems="center" p={3} py={7}>
+    <Box
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      p={3}
+      py={7}
+      id="skills"
+    >
       <Typography variant="h1">skills</Typography>
       <Box
         display="flex"

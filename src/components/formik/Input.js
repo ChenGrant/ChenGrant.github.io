@@ -4,7 +4,7 @@ import { ErrorMessage, Field } from "formik";
 import React from "react";
 import InputError from "./InputError";
 
-const Input = ({ label, name, type, ...rest }) => {
+const Input = ({ label, name, type, disabled, ...rest }) => {
   const theme = useTheme();
   return (
     <Box width="100%" {...rest}>
@@ -17,6 +17,7 @@ const Input = ({ label, name, type, ...rest }) => {
                 label={label}
                 fullWidth
                 color="secondary"
+                disabled = {disabled}
                 InputProps={{
                   sx: {
                     borderRadius: "10px",

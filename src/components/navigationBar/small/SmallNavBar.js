@@ -57,7 +57,7 @@ const SmallNavBar = ({ navBarItems }) => {
           </Box>
           <Box ml="17px">
             {navBarItems.map((navBarItem) => {
-              const [navBarItemLabel, navBarItemNavigation] = navBarItem;
+              const { label, link }  = navBarItem;
               return (
                 <Typography
                   sx={{
@@ -65,14 +65,13 @@ const SmallNavBar = ({ navBarItems }) => {
                       cursor: "pointer",
                     },
                   }}
-                  onClick={() => navBarItemClickHandler(navBarItemNavigation)}
                   key={uuidv4()}
                   width="min-content"
                   fontWeight="bold"
                   color="secondary"
                   my="30px"
                 >
-                  {navBarItemLabel}
+                  {label}
                 </Typography>
               );
             })}

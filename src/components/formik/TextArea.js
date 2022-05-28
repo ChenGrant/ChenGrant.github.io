@@ -4,7 +4,7 @@ import { ErrorMessage, Field } from "formik";
 import React from "react";
 import InputError from "./InputError";
 
-const TextArea = ({ name, label, ...rest }) => {
+const TextArea = ({ name, label, disabled, ...rest }) => {
   const theme = useTheme();
   return (
     <Box width="100%" {...rest}>
@@ -16,6 +16,7 @@ const TextArea = ({ name, label, ...rest }) => {
                 multiline
                 rows={15}
                 variant="outlined"
+                disabled = {disabled}
                 label={label}
                 fullWidth
                 color="secondary"

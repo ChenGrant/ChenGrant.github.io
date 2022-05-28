@@ -1,46 +1,19 @@
-import { Typography } from "@mui/material";
+import { CircularProgress, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@mui/material";
 import { Form, Formik } from "formik";
 import * as Yup from "yup";
 import FormikControl from "../formik/FormikControl";
 import emailjs from "emailjs-com";
-
-const initialValues = {
-  name: "",
-  email: "",
-  message: "",
-};
-
-const validationSchema = Yup.object({
-  name: Yup.string().required("Required"),
-  email: Yup.string().required("Required").email("Invalid Email"),
-  message: Yup.string().required("Required"),
-});
-
-const onSubmit = async (values) => {
-  try {
-    const response = await emailjs.send(
-      "service_8mjuqfu",
-      "template_djmptbs",
-      values,
-      "Ui6zfCjou32r1fYyq"
-    );
-
-    console.log(response);
-    throw new Error("sample");
-  } catch (err) {
-    console.log("error");
-    console.log(err);
-  }
-};
+import { v4 as uuidv4 } from "uuid";
 
 const contacts = [
   {
     serviceName: "gmail",
     serviceImgURL:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/1024px-Gmail_icon_%282020%29.svg.png",
+    serviceWebsiteURL: "mailto:grantchen2021@gmail.com",
   },
   {
     serviceName: "github",
@@ -57,6 +30,39 @@ const contacts = [
 const Contact = () => {
   const mb = "20px";
   const fontHeight = "24px";
+
+  const [sendingEmail, setSendingEmail] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+
+  const initialValues = {
+    name: "",
+    email: "",
+    message: "",
+  };
+
+  const validationSchema = Yup.object({
+    name: Yup.string().required("Required"),
+    email: Yup.string().required("Required").email("Invalid Email"),
+    message: Yup.string().required("Required"),
+  });
+
+  const onSubmit = async (values, actions) => {
+    setSendingEmail(true);
+    try {
+      const response = await emailjs.send(
+        "service_8mjuqfu",
+        "template_djmptbs",
+        values,
+        "Ui6zfCjou32r1fYyq"
+      );
+      setSendingEmail(false);
+      actions.resetForm({ values: initialValues });
+    } catch (err) {
+      setSendingEmail(false);
+      setEmailError(true);
+    }
+  };
+
   return (
     <Box
       display="flex"
@@ -66,6 +72,7 @@ const Contact = () => {
       p={3}
       py={7}
       bgcolor="primary.main"
+      id="contact"
     >
       <Typography variant="h1" mb={5}>
         contact
@@ -94,6 +101,7 @@ const Contact = () => {
                       ? mb
                       : `calc(${mb} + ${fontHeight})`
                   }
+                  disabled={sendingEmail}
                 />
                 <FormikControl
                   control="input"
@@ -105,6 +113,7 @@ const Contact = () => {
                       ? mb
                       : `calc(${mb} + ${fontHeight})`
                   }
+                  disabled={sendingEmail}
                 />
                 <FormikControl
                   control="textarea"
@@ -115,10 +124,15 @@ const Contact = () => {
                       ? mb
                       : `calc(${mb} + ${fontHeight})`
                   }
+                  disabled={sendingEmail}
                 />
-                <Button variant="contained" color="secondary" type="submit">
-                  Submit
-                </Button>
+                {sendingEmail ? (
+                  <CircularProgress color="secondary" />
+                ) : (
+                  <Button variant="contained" color="secondary" type="submit">
+                    Submit
+                  </Button>
+                )}
               </Box>
             </Form>
           );
@@ -127,7 +141,13 @@ const Contact = () => {
       <Box my={4} mt={15} height="40px" display="flex" gap="50px">
         {contacts.map((contact) => {
           const { serviceName, serviceImgURL, serviceWebsiteURL } = contact;
-          return <img src={serviceImgURL} alt={serviceName} height="100%" />;
+          return (
+            <Box key={uuidv4()} height="100%">
+              <a href={serviceWebsiteURL} target="_blank">
+                <img height="100%" src={serviceImgURL} alt={serviceName} />
+              </a>
+            </Box>
+          );
         })}
       </Box>
       <Typography>

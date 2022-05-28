@@ -7,6 +7,7 @@ import { CustomSettingsContext } from "../../context/CustomSettings";
 import useDelay from "../customHooks/useDelay";
 import useScreenSize from "../customHooks/useScreenSize";
 import { keyframes } from "@mui/system";
+import InternalLink from "../shared/InternalLink";
 
 const Hero = () => {
   const { desktop, tablet, phone } = useScreenSize();
@@ -67,23 +68,25 @@ const Hero = () => {
             </Typography>
           </Box>
         </Fade>
-        <Fade
-          in={useDelay(customSettings.heroButtonDelay)}
-          timeout={customSettings.heroFadeDuration}
-        >
-          <Button
-            variant="contained"
-            color="secondary"
-            sx={{
-              width: "max-content",
-              p: "20px",
-              borderRadius: "10px",
-              animation: `${reveal} 1s ease ${customSettings.heroButtonDelay}s`,
-            }}
+        <InternalLink link = "#contact">
+          <Fade
+            in={useDelay(customSettings.heroButtonDelay)}
+            timeout={customSettings.heroFadeDuration}
           >
-            Let's get in touch
-          </Button>
-        </Fade>
+            <Button
+              variant="contained"
+              color="secondary"
+              sx={{
+                width: "max-content",
+                p: "20px",
+                borderRadius: "10px",
+                animation: `${reveal} 1s ease ${customSettings.heroButtonDelay}s`,
+              }}
+            >
+              Let's get in touch
+            </Button>
+          </Fade>
+        </InternalLink>
       </Box>
       <Box
         display="flex"

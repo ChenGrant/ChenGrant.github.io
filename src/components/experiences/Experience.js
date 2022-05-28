@@ -48,6 +48,7 @@ const Experience = () => {
       p={3}
       py={7}
       bgcolor="primary.main"
+      id = 'experiences'
     >
       <Typography variant="h1">experiences</Typography>
       <Box p={1}>

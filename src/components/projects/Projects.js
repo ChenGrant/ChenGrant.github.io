@@ -95,6 +95,7 @@ const Projects = () => {
                         fontSize: "16px",
                         marginRight: "15px",
                       }}
+                      sx={{ boxShadow: 24 }}
                     >
                       View Site
                     </Button>

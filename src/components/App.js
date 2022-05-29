@@ -46,9 +46,11 @@ const App = () => {
           <ul>
             <li>Make navbar link scroll offset better for mobile/tablet</li>
             <li>Make buttons look consistent</li>
+            <li>Check over content for projects </li>
             <li>
               When autofill for email is done, ui for textbox is messed up
             </li>
+            <li>When u hover over gmail/github/linkedin have elevation</li>
             <li>
               no need to make initial custom settings a context, just make it an
               exportable object
@@ -70,6 +72,8 @@ const App = () => {
             <li>https://github.com/enigosi/react-single-page-navigation</li>
             <li>Make all images local to prevent fetching time</li>
             <li>Remove fade in animation for hero text on mobile</li>
+            <li>https://stackoverflow.com/questions/53648652/how-to-use-environment-variables-in-github-page</li>
+            <li>https://dev.to/pierresaid/deploy-node-projects-to-github-pages-with-github-actions-4jco</li>
             <li>
               Make image width/heigth 100% and apply css on its BOx instead
             </li>
@@ -93,6 +97,7 @@ const App = () => {
             <li>Wait till font has loaded in, then render page </li>
             <li>https://www.youtube.com/watch?v=huVJW23JHKQ&t=383s</li>
             <li>Center 'frontend' text for mobile</li>
+            <li>FadeInSection rest prop removed and just put the width = '100%' in the Box component</li>
             <li>add technology icons for experience</li>
             <li>
               Make smallNavBar not have 400ms animation time if its on phone

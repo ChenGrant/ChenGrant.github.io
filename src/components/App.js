@@ -44,6 +44,8 @@ const App = () => {
         <Contact />
         <div style={{ backgroundColor: "gray" }}>
           <ul>
+            <li>Make navbar link scroll offset better for mobile/tablet</li>
+            <li>Make buttons look consistent</li>
             <li>
               When autofill for email is done, ui for textbox is messed up
             </li>

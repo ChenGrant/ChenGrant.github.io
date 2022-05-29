@@ -8,6 +8,7 @@ import Projects from "./projects/Projects";
 import Contact from "./contact/Contact";
 import theme from "../mui/Theme";
 import { ThemeProvider } from "@mui/material";
+import resume from '../assets/pdf/resume.pdf'
 
 const App = () => {
   const initialCustomSettings = {
@@ -26,10 +27,7 @@ const App = () => {
       { label: "PROJECTS", link: "#projects" },
       { label: "CONTACT", link: "#contact" },
     ],
-    resume: {
-      fileName: "GrantResume.pdf",
-      fileURL: "../assets/pdf/resume.pdf",
-    },
+    resume: resume,
     getValueOfPixelString : (pxStr) => +pxStr.trim().slice(0,-2)
   };
 
@@ -47,6 +45,8 @@ const App = () => {
             <li>Make navbar link scroll offset better for mobile/tablet</li>
             <li>Make buttons look consistent</li>
             <li>Check over content for projects </li>
+            <li>make formik more scalable with styling</li>
+            <li>add resume to tablet/mobile</li>
             <li>
               When autofill for email is done, ui for textbox is messed up
             </li>

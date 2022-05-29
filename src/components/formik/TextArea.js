@@ -4,7 +4,7 @@ import { ErrorMessage, Field } from "formik";
 import React from "react";
 import InputError from "./InputError";
 
-const TextArea = ({ name, label, disabled, ...rest }) => {
+const TextArea = ({ name, label, sendingEmail, ...rest }) => {
   const theme = useTheme();
   return (
     <Box width="100%" {...rest}>
@@ -16,7 +16,7 @@ const TextArea = ({ name, label, disabled, ...rest }) => {
                 multiline
                 rows={15}
                 variant="outlined"
-                disabled = {disabled}
+                disabled={sendingEmail}
                 label={label}
                 fullWidth
                 color="secondary"
@@ -30,11 +30,14 @@ const TextArea = ({ name, label, disabled, ...rest }) => {
                   "& .MuiOutlinedInput-root": {
                     "& > fieldset": {
                       borderColor: "white",
+                      border: "0px",
                     },
                   },
                   "& .MuiOutlinedInput-root:hover": {
                     "& > fieldset": {
-                      border: `2px solid ${theme.palette.secondary.main}`,
+                      border: sendingEmail
+                        ? "0px"
+                        : `2px solid ${theme.palette.secondary.main}`,
                     },
                   },
                 }}

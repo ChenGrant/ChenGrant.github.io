@@ -3,15 +3,12 @@ import React, { useContext } from "react";
 import NavBarItem from "./NavBarItem";
 import { v4 as uuidv4 } from "uuid";
 import { CustomSettingsContext } from "../../context/CustomSettings";
-import { saveAs } from "file-saver";
 import { Grid } from "@mui/material";
 
 const LargeNavBar = ({ navBarItems }) => {
   const { resume, navBarHeight, navBarZIndex } = useContext(
     CustomSettingsContext
   );
-
-  const downloadResume = () => saveAs(resume.fileURL, resume.fileName)
 
   return (
     <Box
@@ -37,9 +34,7 @@ const LargeNavBar = ({ navBarItems }) => {
         </Grid>
         <Grid item xs>
           <Box display="flex" justifyContent="right" pr={5}>
-            <NavBarItem onClick={downloadResume}>
-              RESUME
-            </NavBarItem>
+            <NavBarItem resume={resume}>RESUME</NavBarItem>
           </Box>
         </Grid>
       </Grid>

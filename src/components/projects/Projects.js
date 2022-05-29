@@ -3,7 +3,6 @@ import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import FadeInSection from "../shared/FadeInSection";
 import GitHubIcon from "@mui/icons-material/GitHub";
-//import YouTubeIcon from "@mui/icons-material/YouTube";
 import { useTheme } from "@mui/styles";
 import useScreenSize from "../customHooks/useScreenSize";
 
@@ -49,7 +48,7 @@ const Projects = () => {
       justifyContent="center"
       p={3}
       py={7}
-      id = "projects"
+      id="projects"
     >
       <Typography variant="h1">projects</Typography>
       {projects.map((project, index) => {
@@ -97,20 +96,18 @@ const Projects = () => {
                         marginRight: "15px",
                       }}
                       sx={{ boxShadow: 24 }}
+                      onClick={() => window.open(project.websiteURL, "_blank")}
                     >
                       View Site
                     </Button>
                   )}
-
                   <IconButton
                     size="large"
                     sx={{ right: !project.websiteURL && "12.5px" }}
+                    onClick={() => window.open(project.githubURL, "_blank")}
                   >
                     <GitHubIcon fontSize="inherit" sx={{ color: "black" }} />
                   </IconButton>
-                  {/* <IconButton size="large">
-                    <YouTubeIcon fontSize="inherit" />
-                  </IconButton> */}
                 </Box>
               </Box>
               <Box flex="1" display="grid" sx={{ placeItems: "center" }}>

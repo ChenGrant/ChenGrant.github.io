@@ -8,7 +8,7 @@ import useScreenSize from "../customHooks/useScreenSize";
 const grow = keyframes({ from: { width: "0%" }, to: { width: "100%" } });
 const shrink = keyframes({ from: { width: "100%" }, to: { width: "0%" } });
 
-const NavBarItem = ({ children, link, closeMenu }) => {
+const NavBarItem = ({ children, link, resume, closeMenu }) => {
   const [navBarItemIsHovered, setNavBarItemIsHovered] = useState(false);
   const [hoveredAtLeastOnce, setHoveredAtLeastOnce] = useState(false);
   const { desktop } = useScreenSize();
@@ -33,7 +33,10 @@ const NavBarItem = ({ children, link, closeMenu }) => {
             setHoveredAtLeastOnce(true);
           }}
           onMouseLeave={() => setNavBarItemIsHovered(false)}
-          onClick={closeMenu}
+          onClick={() => {
+            resume && window.open(resume);
+            !desktop && closeMenu();
+          }}
         >
           {children}
         </Typography>

@@ -32,7 +32,11 @@ const Contact = () => {
   const fontHeight = "24px";
 
   const [sendingEmail, setSendingEmail] = useState(false);
-  const [emailError, setEmailError] = useState(false);
+  //const [emailError, setEmailError] = useState(false);
+
+  const getGmail = () => {
+    return contacts.filter((item) => item.serviceName === "gmail")[0].serviceWebsiteURL;
+  };
 
   const initialValues = {
     name: "",
@@ -49,7 +53,7 @@ const Contact = () => {
   const onSubmit = async (values, actions) => {
     setSendingEmail(true);
     try {
-      const response = await emailjs.send(
+      await emailjs.send(
         "service_8mjuqfu",
         "template_djmptbs",
         values,
@@ -59,7 +63,7 @@ const Contact = () => {
       actions.resetForm({ values: initialValues });
     } catch (err) {
       setSendingEmail(false);
-      setEmailError(true);
+      //setEmailError(true);
     }
   };
 
@@ -102,6 +106,7 @@ const Contact = () => {
                       : `calc(${mb} + ${fontHeight})`
                   }
                   disabled={sendingEmail}
+                  sendingEmail = {sendingEmail}
                 />
                 <FormikControl
                   control="input"
@@ -113,7 +118,7 @@ const Contact = () => {
                       ? mb
                       : `calc(${mb} + ${fontHeight})`
                   }
-                  disabled={sendingEmail}
+                  sendingEmail = {sendingEmail}
                 />
                 <FormikControl
                   control="textarea"
@@ -124,7 +129,7 @@ const Contact = () => {
                       ? mb
                       : `calc(${mb} + ${fontHeight})`
                   }
-                  disabled={sendingEmail}
+                  sendingEmail = {sendingEmail}
                 />
                 {sendingEmail ? (
                   <CircularProgress color="secondary" />
@@ -142,17 +147,39 @@ const Contact = () => {
         {contacts.map((contact) => {
           const { serviceName, serviceImgURL, serviceWebsiteURL } = contact;
           return (
-            <Box key={uuidv4()} height="100%">
-              <a href={serviceWebsiteURL} target="_blank">
+            <Box
+              key={uuidv4()}
+              height="100%"
+              sx={{
+                position: "relative",
+                top: 0,
+                transition: "top ease 0.2s",
+                "&:hover": {
+                  top: "-10px",
+                },
+              }}
+            >
+              <a href={serviceWebsiteURL} target="_blank" rel="noreferrer">
                 <img height="100%" src={serviceImgURL} alt={serviceName} />
               </a>
             </Box>
           );
         })}
       </Box>
-      <Typography textAlign="center">
-        It's best to contact me via gmail at grantchen2021@gmail.com
-      </Typography>
+      <Box>
+        <Typography textAlign="center">
+          It's best to contact me via gmail at{"  "}
+          <Box
+            component="a"
+            href={getGmail()}
+            target="_blank"
+            sx={{ textDecoration: "none", fontWeight: 600 }}
+            color="secondary.main"
+          >
+            grantchen2021@gmail.com
+          </Box>
+        </Typography>
+      </Box>
     </Box>
   );
 };

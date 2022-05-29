@@ -1,6 +1,6 @@
 import React from "react";
 import Hero from "./hero/Hero";
-import NavBar from "./navigationBar/NavBar";
+import NavBar from "./navBar/NavBar";
 import Skills from "./skills/Skills";
 import { CustomSettingsProvider } from "../context/CustomSettings";
 import Experience from "./experiences/Experience";
@@ -20,32 +20,17 @@ const App = () => {
     skillItemIconHeight: "60%",
     skillItemCircleHeight: "80px",
     navBarItems: [
-      {
-        label: "HOME",
-        link: "#",
-      },
-      {
-        label: "SKILLS",
-        link: "#skills",
-      },
-      {
-        label: "EXPERIENCES",
-        link: "#experiences",
-      },
-      {
-        label: "PROJECTS",
-        link: "#projects",
-      },
-      {
-        label: "CONTACT",
-        link: "#contact",
-      },
+      { label: "HOME", link: "#" },
+      { label: "SKILLS", link: "#skills" },
+      { label: "EXPERIENCES", link: "#experiences" },
+      { label: "PROJECTS", link: "#projects" },
+      { label: "CONTACT", link: "#contact" },
     ],
     resume: {
-      fileName: "GrantResume.txt",
-      fileURL:
-        "https://raw.githubusercontent.com/ChenGrant/ChenGrant.github.io/adb983dd9434a779172609a5c2880cc7700652a3/about/description.txt",
+      fileName: "GrantResume.pdf",
+      fileURL: "../assets/pdf/resume.pdf",
     },
+    getValueOfPixelString : (pxStr) => +pxStr.trim().slice(0,-2)
   };
 
   return (
@@ -59,6 +44,9 @@ const App = () => {
         <Contact />
         <div style={{ backgroundColor: "gray" }}>
           <ul>
+            <li>
+              When autofill for email is done, ui for textbox is messed up
+            </li>
             <li>
               no need to make initial custom settings a context, just make it an
               exportable object

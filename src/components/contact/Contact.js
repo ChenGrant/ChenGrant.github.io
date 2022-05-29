@@ -150,7 +150,7 @@ const Contact = () => {
           );
         })}
       </Box>
-      <Typography>
+      <Typography textAlign="center">
         It's best to contact me via gmail at grantchen2021@gmail.com
       </Typography>
     </Box>

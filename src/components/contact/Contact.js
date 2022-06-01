@@ -35,8 +35,8 @@ const Contact = () => {
   const fontHeight = "24px";
 
   const [sendingEmail, setSendingEmail] = useState(false);
-  const [emailSent, setEmailSent] = useState(false);
-  const [emailFailed, setEmailFailed] = useState(false);
+  const [sendingEmailSuccess, setSendingEmailSuccess] = useState(false);
+  const [sendingEmailFailure, setSendingEmailFailure] = useState(false);
 
   const getGmail = () => {
     return contacts.filter((item) => item.serviceName === "gmail")[0]
@@ -66,12 +66,12 @@ const Contact = () => {
       );
       setSendingEmail(false);
       actions.resetForm({ values: initialValues });
-      setEmailSent(true);
-      setTimeout(() => setEmailSent(false), 5000);
+      setSendingEmailSuccess(true);
+      setTimeout(() => setSendingEmailSuccess(false), 2000);
     } catch (err) {
       setSendingEmail(false);
-      setEmailFailed(true);
-      setTimeout(() => setEmailFailed(false), 5000);
+      setSendingEmailFailure(true);
+      setTimeout(() => setSendingEmailFailure(false), 2000);
     }
   };
 
@@ -142,9 +142,9 @@ const Contact = () => {
                 <Box height="60px" display="flex" justifyContent="center">
                   {sendingEmail ? (
                     <CircularProgress color="secondary" />
-                  ) : emailSent ? (
+                  ) : sendingEmailSuccess ? (
                     <CheckCircleIcon color="success" sx={{ fontSize: 50 }} />
-                  ) : emailFailed ? (
+                  ) : sendingEmailFailure ? (
                     <ErrorIcon color="error" sx={{ fontSize: 50 }} />
                   ) : (
                     <FadeInSection width="100%">

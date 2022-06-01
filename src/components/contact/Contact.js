@@ -7,6 +7,9 @@ import * as Yup from "yup";
 import FormikControl from "../formik/FormikControl";
 import emailjs from "emailjs-com";
 import { v4 as uuidv4 } from "uuid";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import ErrorIcon from "@mui/icons-material/Error";
+import FadeInSection from "../shared/FadeInSection";
 
 const contacts = [
   {
@@ -32,10 +35,12 @@ const Contact = () => {
   const fontHeight = "24px";
 
   const [sendingEmail, setSendingEmail] = useState(false);
-  //const [emailError, setEmailError] = useState(false);
+  const [emailSent, setEmailSent] = useState(false);
+  const [emailFailed, setEmailFailed] = useState(false);
 
   const getGmail = () => {
-    return contacts.filter((item) => item.serviceName === "gmail")[0].serviceWebsiteURL;
+    return contacts.filter((item) => item.serviceName === "gmail")[0]
+      .serviceWebsiteURL;
   };
 
   const initialValues = {
@@ -54,16 +59,19 @@ const Contact = () => {
     setSendingEmail(true);
     try {
       await emailjs.send(
-        "service_8mjuqfu",
-        "template_djmptbs",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         values,
-        "Ui6zfCjou32r1fYyq"
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       );
       setSendingEmail(false);
       actions.resetForm({ values: initialValues });
+      setEmailSent(true);
+      setTimeout(() => setEmailSent(false), 5000);
     } catch (err) {
       setSendingEmail(false);
-      //setEmailError(true);
+      setEmailFailed(true);
+      setTimeout(() => setEmailFailed(false), 5000);
     }
   };
 
@@ -106,7 +114,7 @@ const Contact = () => {
                       : `calc(${mb} + ${fontHeight})`
                   }
                   disabled={sendingEmail}
-                  sendingEmail = {sendingEmail}
+                  sendingEmail={sendingEmail}
                 />
                 <FormikControl
                   control="input"
@@ -118,7 +126,7 @@ const Contact = () => {
                       ? mb
                       : `calc(${mb} + ${fontHeight})`
                   }
-                  sendingEmail = {sendingEmail}
+                  sendingEmail={sendingEmail}
                 />
                 <FormikControl
                   control="textarea"
@@ -129,21 +137,34 @@ const Contact = () => {
                       ? mb
                       : `calc(${mb} + ${fontHeight})`
                   }
-                  sendingEmail = {sendingEmail}
+                  sendingEmail={sendingEmail}
                 />
-                {sendingEmail ? (
-                  <CircularProgress color="secondary" />
-                ) : (
-                  <Button variant="contained" color="secondary" type="submit">
-                    Submit
-                  </Button>
-                )}
+                <Box height="60px" display="flex" justifyContent="center">
+                  {sendingEmail ? (
+                    <CircularProgress color="secondary" />
+                  ) : emailSent ? (
+                    <CheckCircleIcon color="success" sx={{ fontSize: 50 }} />
+                  ) : emailFailed ? (
+                    <ErrorIcon color="error" sx={{ fontSize: 50 }} />
+                  ) : (
+                    <FadeInSection width="100%">
+                      <Button
+                        variant="contained"
+                        color="secondary"
+                        type="submit"
+                        sx={{ borderRadius: "9px" }}
+                      >
+                        Submit
+                      </Button>
+                    </FadeInSection>
+                  )}
+                </Box>
               </Box>
             </Form>
           );
         }}
       </Formik>
-      <Box my={4} mt={15} height="40px" display="flex" gap="50px">
+      <Box my={4} mt={10} height="40px" display="flex" gap="50px">
         {contacts.map((contact) => {
           const { serviceName, serviceImgURL, serviceWebsiteURL } = contact;
           return (
@@ -159,9 +180,9 @@ const Contact = () => {
                 },
               }}
             >
-              <a href={serviceWebsiteURL} target="_blank" rel="noreferrer">
+              <Box component="a" href={serviceWebsiteURL} target="_blank">
                 <img height="100%" src={serviceImgURL} alt={serviceName} />
-              </a>
+              </Box>
             </Box>
           );
         })}

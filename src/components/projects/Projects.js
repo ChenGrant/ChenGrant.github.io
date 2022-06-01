@@ -10,7 +10,7 @@ const projects = [
   {
     name: "Chatify",
     description:
-      "Chatify is a web messaging app that allows for instant messaging, sharing of photos, videos, and other files for group chats.",
+      "Chatify is a web messaging app that allows for instant group messaging and sharing of media files between authenticated users.",
     techStack: ["React.js", "Firebase", "ChatEngine.io REST API", "Heroku"],
     websiteURL: "https://chatify-reactjs.herokuapp.com/",
     githubURL: "https://github.com/ChenGrant/Chatify-Public",
@@ -20,7 +20,7 @@ const projects = [
   {
     name: "Graphing Calculator",
     description:
-      "This project consists of a scientific calculator, statistics calculator, graphing and calculus calculator, and trigonometry visualizer.",
+      "This project creates a mathematical graphing calculator that graphs any function constructed from any combination of any elementary function.",
     techStack: ["Java"],
     githubURL: "https://github.com/ChenGrant/Math-Graphing-Calculator",
     desktopImgSrc:
@@ -91,11 +91,11 @@ const Projects = () => {
                       color="secondary"
                       style={{
                         p: "15px",
-                        borderRadius: "10px",
+                        borderRadius: "6px",
                         fontSize: "16px",
                         marginRight: "15px",
                       }}
-                      sx={{ boxShadow: 24 }}
+                      sx={{ "&:hover": { boxShadow: 10 } }}
                       onClick={() => window.open(project.websiteURL, "_blank")}
                     >
                       View Site

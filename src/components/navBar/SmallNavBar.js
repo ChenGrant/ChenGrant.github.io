@@ -9,7 +9,9 @@ import useScreenSize from "../customHooks/useScreenSize";
 import NavBarItem from "./NavBarItem";
 
 const SmallNavBar = ({ navBarItems }) => {
-  const { navBarHeight, navBarZIndex } = useContext(CustomSettingsContext);
+  const { resume, navBarHeight, navBarZIndex } = useContext(
+    CustomSettingsContext
+  );
   const { tablet } = useScreenSize();
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
@@ -53,11 +55,19 @@ const SmallNavBar = ({ navBarItems }) => {
           </Box>
           {navBarItems.map(({ label, link }) => (
             <Box display="flex" mt={2.5} key={uuidv4()}>
-              <NavBarItem link={link} closeMenu = {() => setMenuIsOpen(false)}>
+              <NavBarItem link={link} closeMenu={() => setMenuIsOpen(false)}>
                 {label}
               </NavBarItem>
             </Box>
           ))}
+          <Box display="flex" mt={2.5} key={uuidv4()}>
+            <NavBarItem
+              resume={resume}
+              closeMenu={() => setMenuIsOpen(false)}
+            >
+              RESUME
+            </NavBarItem>
+          </Box>
         </Box>
       </Slide>
     </>

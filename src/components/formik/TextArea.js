@@ -14,7 +14,7 @@ const TextArea = ({ name, label, sendingEmail, ...rest }) => {
             <Box boxShadow={5} sx={{ borderRadius: "10px" }}>
               <TextField
                 multiline
-                rows={15}
+                rows={8}
                 variant="outlined"
                 disabled={sendingEmail}
                 label={label}

@@ -1,12 +1,8 @@
-import { Box, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import React from "react";
 
 const InputError = ({ children }) => {
-  return (
-    <Box >
-      <Typography color="error">{children}</Typography>
-    </Box>
-  );
+  return <Typography color="error">{children}</Typography>;
 };
 
 export default InputError;

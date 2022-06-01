@@ -34,7 +34,7 @@ const NavBarItem = ({ children, link, resume, closeMenu }) => {
           }}
           onMouseLeave={() => setNavBarItemIsHovered(false)}
           onClick={() => {
-            resume && window.open(resume);
+            resume && window.open(resume, "PromoteFirefoxWindowName");
             !desktop && closeMenu();
           }}
         >

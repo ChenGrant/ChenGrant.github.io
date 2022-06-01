@@ -79,7 +79,7 @@ const Hero = () => {
               color="secondary"
               sx={{
                 width: "max-content",
-                p: "20px",
+                p: "15px",
                 borderRadius: "10px",
                 animation: `${reveal} 1s ease ${customSettings.heroButtonDelay}s`,
               }}

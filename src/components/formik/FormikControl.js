@@ -1,22 +1,13 @@
 import React from "react";
 import Input from "./Input";
 import TextArea from "./TextArea";
-import FadeInSection from "../shared/FadeInSection";
 
 const FormikControl = ({ control, ...rest }) => {
   switch (control) {
     case "input":
-      return (
-        <FadeInSection width="100%">
-          <Input {...rest} />
-        </FadeInSection>
-      );
+      return <Input {...rest} />;
     case "textarea":
-      return (
-        <FadeInSection width="100%">
-          <TextArea {...rest} />
-        </FadeInSection>
-      );
+      return <TextArea {...rest} />;
     default:
       return null;
   }

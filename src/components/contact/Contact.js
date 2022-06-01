@@ -1,6 +1,6 @@
 import { CircularProgress, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Button } from "@mui/material";
 import { Form, Formik } from "formik";
 import * as Yup from "yup";
@@ -10,29 +10,12 @@ import { v4 as uuidv4 } from "uuid";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ErrorIcon from "@mui/icons-material/Error";
 import FadeInSection from "../shared/FadeInSection";
-
-const contacts = [
-  {
-    serviceName: "gmail",
-    serviceImgURL:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/1024px-Gmail_icon_%282020%29.svg.png",
-    serviceWebsiteURL: "mailto:grantchen2021@gmail.com",
-  },
-  {
-    serviceName: "github",
-    serviceImgURL: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
-    serviceWebsiteURL: "https://github.com/ChenGrant",
-  },
-  {
-    serviceName: "linkedin",
-    serviceImgURL: "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-    serviceWebsiteURL: "https://www.linkedin.com/in/grant-chen-1a96ba210/",
-  },
-];
+import { CustomSettingsContext } from "../../context/CustomSettings";
 
 const Contact = () => {
   const mb = "20px";
   const fontHeight = "24px";
+  const { contacts } = useContext(CustomSettingsContext);
 
   const [sendingEmail, setSendingEmail] = useState(false);
   const [sendingEmailSuccess, setSendingEmailSuccess] = useState(false);
@@ -103,42 +86,48 @@ const Contact = () => {
                 width="min(80vw, 400px)"
                 alignItems="center"
               >
-                <FormikControl
-                  control="input"
-                  label="Name"
-                  name="name"
-                  type="text"
-                  mb={
-                    formik.errors.name && formik.touched.name
-                      ? mb
-                      : `calc(${mb} + ${fontHeight})`
-                  }
-                  disabled={sendingEmail}
-                  sendingEmail={sendingEmail}
-                />
-                <FormikControl
-                  control="input"
-                  label="Email"
-                  name="email"
-                  type="email"
-                  mb={
-                    formik.errors.email && formik.touched.email
-                      ? mb
-                      : `calc(${mb} + ${fontHeight})`
-                  }
-                  sendingEmail={sendingEmail}
-                />
-                <FormikControl
-                  control="textarea"
-                  label="Message"
-                  name="message"
-                  mb={
-                    formik.errors.message && formik.touched.message
-                      ? mb
-                      : `calc(${mb} + ${fontHeight})`
-                  }
-                  sendingEmail={sendingEmail}
-                />
+                <FadeInSection width="100%">
+                  <FormikControl
+                    control="input"
+                    label="Name"
+                    name="name"
+                    type="text"
+                    mb={
+                      formik.errors.name && formik.touched.name
+                        ? mb
+                        : `calc(${mb} + ${fontHeight})`
+                    }
+                    disabled={sendingEmail}
+                    sendingEmail={sendingEmail}
+                  />
+                </FadeInSection>
+                <FadeInSection width="100%">
+                  <FormikControl
+                    control="input"
+                    label="Email"
+                    name="email"
+                    type="email"
+                    mb={
+                      formik.errors.email && formik.touched.email
+                        ? mb
+                        : `calc(${mb} + ${fontHeight})`
+                    }
+                    sendingEmail={sendingEmail}
+                  />
+                </FadeInSection>
+                <FadeInSection width="100%">
+                  <FormikControl
+                    control="textarea"
+                    label="Message"
+                    name="message"
+                    mb={
+                      formik.errors.message && formik.touched.message
+                        ? mb
+                        : `calc(${mb} + ${fontHeight})`
+                    }
+                    sendingEmail={sendingEmail}
+                  />
+                </FadeInSection>
                 <Box height="60px" display="flex" justifyContent="center">
                   {sendingEmail ? (
                     <CircularProgress color="secondary" />

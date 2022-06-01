@@ -1,45 +1,15 @@
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React from "react";
+import React, { useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
+import { CustomSettingsContext } from "../../context/CustomSettings";
 import FadeInSection from "../shared/FadeInSection";
 
-const experiencesList = [
-  {
-    companyName: "Spotwork",
-    role: "Full Stack Developer Intern",
-    timePeriod: "May 2022 - Present",
-    techStack: ["React.js", "Redux", "Material UI", "Formik", "Firebase"],
-  },
-  {
-    companyName: "Jin Kuai Zi",
-    role: "Full Stack Developer Freelancer",
-    timePeriod: "June 2021 - August 2021",
-    techStack: ["Django", "jQuery", "Sass", "MySQL"],
-  },
-  {
-    companyName: "Code Ninjas",
-    role: "Lead Coding Instructor",
-    timePeriod: "June 2020 - August 2020",
-  },
-];
-
-class Experiences {
-  constructor(experiences) {
-    this.experiences = experiences;
-  }
-
-  isNotFirstItem(index) {
-    return index !== 0;
-  }
-
-  isNotLastItem(index) {
-    return index !== this.experiences.length - 1;
-  }
-}
-
 const Experience = () => {
-  const experiences = new Experiences(experiencesList);
+  const { experiences } = useContext(CustomSettingsContext);
+  const isNotFirstItem = (index) => index !== 0;
+  const isNotLastItem = (index) => index !== experiences.length - 1;
+
   return (
     <Box
       display="flex"
@@ -48,19 +18,19 @@ const Experience = () => {
       p={3}
       py={7}
       bgcolor="primary.main"
-      id = 'experiences'
+      id="experiences"
     >
       <Typography variant="h1">experiences</Typography>
       <Box p={1}>
-        {experiences.experiences.map((experience, index) => {
+        {experiences.map((experience, index) => {
           return (
             <Box display="flex" flexDirection="row" key={uuidv4()}>
               <Box display="flex" flexDirection="column" width="20px">
                 <Box
                   width="5px"
                   flex={2}
-                  bgcolor={experiences.isNotFirstItem(index) && "tertiary.main"}
-                  mb={experiences.isNotFirstItem(index) && 2}
+                  bgcolor={isNotFirstItem(index) && "tertiary.main"}
+                  mb={isNotFirstItem(index) && 2}
                   borderRadius="0px 0px 5px 5px "
                 />
                 <Box
@@ -72,8 +42,8 @@ const Experience = () => {
                 <Box
                   width="5px"
                   flex={2}
-                  bgcolor={experiences.isNotLastItem(index) && "tertiary.main"}
-                  mt={experiences.isNotLastItem(index) && 2}
+                  bgcolor={isNotLastItem(index) && "tertiary.main"}
+                  mt={isNotLastItem(index) && 2}
                   borderRadius="5px 5px 0px 0px"
                 />
               </Box>

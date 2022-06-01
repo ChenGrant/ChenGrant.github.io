@@ -2,19 +2,18 @@ import React from "react";
 import Hero from "./hero/Hero";
 import NavBar from "./navBar/NavBar";
 import Skills from "./skills/Skills";
-import { CustomSettingsProvider } from "../context/CustomSettings";
+import customSettings, { CustomSettingsProvider } from "../context/CustomSettings";
 import Experience from "./experiences/Experience";
 import Projects from "./projects/Projects";
 import Contact from "./contact/Contact";
-import theme from "../mui/Theme";
+import themeMUI from "../ThemeMUI";
 import { ThemeProvider } from "@mui/material";
-import customSettings from "../utils/customSettings";
 
 const App = () => {
 
   return (
-    <ThemeProvider theme={theme}>
-      <CustomSettingsProvider value={customSettings}>
+    <ThemeProvider theme={themeMUI}>
+      <CustomSettingsProvider value = {customSettings}>
         <NavBar />
         <Hero />
         <Skills />

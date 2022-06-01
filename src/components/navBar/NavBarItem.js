@@ -13,6 +13,31 @@ const NavBarItem = ({ children, link, resume, closeMenu }) => {
   const [hoveredAtLeastOnce, setHoveredAtLeastOnce] = useState(false);
   const { desktop } = useScreenSize();
 
+  const openResumeInNewTab = () => {
+    const pdfWindow = window.open();
+    pdfWindow.document.write(`
+    <html>
+      <head>
+        <title>${resume.windowTitle}</title>
+      </head>
+      <body style="margin:0">
+        <embed 
+          width="100%" 
+          height="100%" 
+          src=${resume.downloadableURL} 
+          type="application/pdf"
+        >
+      </body>
+    </html>
+  `);
+    pdfWindow.document.close();
+    pdfWindow.history.pushState(
+      null,
+      null,
+      resume.windowTitle.replace(/ /g, "")
+    );
+  };
+
   return (
     <Box
       display="flex"
@@ -34,7 +59,7 @@ const NavBarItem = ({ children, link, resume, closeMenu }) => {
           }}
           onMouseLeave={() => setNavBarItemIsHovered(false)}
           onClick={() => {
-            resume && window.open(resume, "PromoteFirefoxWindowName");
+            resume && openResumeInNewTab();
             !desktop && closeMenu();
           }}
         >

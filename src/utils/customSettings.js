@@ -1,5 +1,3 @@
-import resume from "../assets/pdf/resume.pdf";
-
 const customSettings = {
   navBarHeight: "70px",
   navBarZIndex: 9999999,
@@ -16,7 +14,10 @@ const customSettings = {
     { label: "PROJECTS", link: "#projects" },
     { label: "CONTACT", link: "#contact" },
   ],
-  resume: resume,
+  resume: {
+    downloadableURL: process.env.REACT_APP_RESUME_URL,
+    windowTitle: 'Grant Chen Resume',
+  },
   getValueOfPixelString: (pxStr) => +pxStr.trim().slice(0, -2),
 };
 

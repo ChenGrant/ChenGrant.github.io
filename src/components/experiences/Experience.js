@@ -2,7 +2,7 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { CustomSettingsContext } from "../../context/CustomSettings";
+import { CustomSettingsContext } from "./../context/CustomSettings";
 import FadeInSection from "../shared/FadeInSection";
 
 const Experience = () => {

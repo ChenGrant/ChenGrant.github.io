@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { CustomSettingsContext } from "../../context/CustomSettings";
+import { CustomSettingsContext } from "./../context/CustomSettings";
 import useScreenSize from "../customHooks/useScreenSize";
 
 const InternalLink = ({ children, link = "" }) => {

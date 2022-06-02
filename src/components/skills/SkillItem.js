@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React, { useContext } from "react";
-import { CustomSettingsContext } from "../../context/CustomSettings";
+import { CustomSettingsContext } from "./../context/CustomSettings";
 import useScreenSize from "../customHooks/useScreenSize";
 
 const SkillItem = ({ name, src }) => {

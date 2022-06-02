@@ -2,7 +2,7 @@ import { Box } from "@mui/system";
 import React, { useContext } from "react";
 import NavBarItem from "./NavBarItem";
 import { v4 as uuidv4 } from "uuid";
-import { CustomSettingsContext } from "../../context/CustomSettings";
+import { CustomSettingsContext } from "./../context/CustomSettings";
 import { Grid } from "@mui/material";
 
 const LargeNavBar = ({ navBarItems }) => {

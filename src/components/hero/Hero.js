@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import React, { useContext } from "react";
 import bubblesImgSrc from "../../assets/images/bubbles.png";
 import heroImgSrc from "../../assets/images/hero.png";
-import { CustomSettingsContext } from "../../context/CustomSettings";
+import { CustomSettingsContext } from "./../context/CustomSettings";
 import useDelay from "../customHooks/useDelay";
 import useScreenSize from "../customHooks/useScreenSize";
 import { keyframes } from "@emotion/react";

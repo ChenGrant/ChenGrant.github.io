@@ -4,7 +4,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Clear";
 import { v4 as uuidv4 } from "uuid";
 import bubbles from "../../assets/images/bubbles.png";
-import { CustomSettingsContext } from "../../context/CustomSettings";
+import { CustomSettingsContext } from "./../context/CustomSettings";
 import useScreenSize from "../customHooks/useScreenSize";
 import NavBarItem from "./NavBarItem";
 

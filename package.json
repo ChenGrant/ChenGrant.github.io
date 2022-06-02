@@ -1,7 +1,7 @@
 {
   "name": "portfolio-website",
   "version": "0.1.0",
-  "homepage": "https://ChenGrant.github.io/personal-website",
+  "homepage": "https://chengrant.github.io/personal-website",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.0",

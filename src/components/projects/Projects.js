@@ -24,7 +24,7 @@ const projects = [
     techStack: ["Java"],
     githubURL: "https://github.com/ChenGrant/Math-Graphing-Calculator",
     desktopImgSrc:
-      "http://grantchen.me/resources/gifs/math_graphing_calculator.gif",
+      "https://github.com/ChenGrant/Math-Graphing-Calculator/raw/c55d0287b00c3a11c326571bebc9d0b22e99c69f/about/gif.gif",
   },
   {
     name: "Sorting Algorithm Visualizer",
@@ -33,7 +33,7 @@ const projects = [
     techStack: ["Java"],
     githubURL: "https://github.com/ChenGrant/Sorting-Algorithm-Visualizer",
     desktopImgSrc:
-      "http://grantchen.me/resources/gifs/sorting_algorithm_visualizer.gif",
+      "https://github.com/ChenGrant/Sorting-Algorithm-Visualizer/raw/956209d1caae8aa4bfea950299804ff28edc30d1/about/gif.gif",
   },
 ];
 

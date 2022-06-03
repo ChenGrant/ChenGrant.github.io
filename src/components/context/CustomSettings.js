@@ -16,10 +16,7 @@ const customSettings = {
     { label: "PROJECTS", link: "#projects" },
     { label: "CONTACT", link: "#contact" },
   ],
-  resume: {
-    downloadableURL: process.env.REACT_APP_RESUME_URL,
-    windowTitle: 'Grant Chen Resume',
-  },
+  resume: process.env.REACT_APP_RESUME_URL,
   experiences : [
     {
       companyName: "Spotwork",

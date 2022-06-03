@@ -50,6 +50,7 @@ const skills = {
     Jira: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
     Heroku:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-plain.svg",
+    Netlify: 'https://cdn.iconscout.com/icon/free/png-256/netlify-3628945-3030170.png',
     "VS Code":
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
   },

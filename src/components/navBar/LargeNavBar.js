@@ -17,7 +17,7 @@ const LargeNavBar = ({ navBarItems }) => {
       alignItems="center"
       position="fixed"
       height={navBarHeight}
-      width="100%"
+      width="100vw"
       zIndex={navBarZIndex}
       sx={{ backdropFilter: "blur(10px)" }}
     >

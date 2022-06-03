@@ -9,6 +9,55 @@ const customSettings = {
   heroFadeDuration: 800,
   skillItemIconHeight: "60%",
   skillItemCircleHeight: "80px",
+  skills : {
+    languages: {
+      JavaScript:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      Python:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+      Java: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+      C: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
+      HTML: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      CSS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    },
+    frontend: {
+      "React.js":
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      Redux:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+      "Material UI":
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
+      Sass: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+      jQuery:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
+      Formik: "https://img.stackshare.io/service/8846/preview.png",
+    },
+    backend: {
+      "Node.js":
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+      "Express.js":
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+      Django:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+      MySQL:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
+      Firebase:
+        "https://www.gstatic.com/mobilesdk/160503_mobilesdk/logo/2x/firebase_28dp.png",
+    },
+    other: {
+      Git: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+      GitHub:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+      Bitbucket:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bitbucket/bitbucket-original.svg",
+      Jira: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
+      Heroku:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-plain.svg",
+      Netlify: 'https://cdn.iconscout.com/icon/free/png-256/netlify-3628945-3030170.png',
+      "VS Code":
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+    },
+  },
   navBarItems: [
     { label: "HOME", link: "#" },
     { label: "SKILLS", link: "#skills" },
@@ -16,7 +65,7 @@ const customSettings = {
     { label: "PROJECTS", link: "#projects" },
     { label: "CONTACT", link: "#contact" },
   ],
-  resume: process.env.REACT_APP_RESUME_URL,
+  resume: 'https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/GrantChenResume.pdf?alt=media&token=a4159a5f-d0ee-4e02-a0e6-69e240e3fbab',
   experiences : [
     {
       companyName: "Spotwork",

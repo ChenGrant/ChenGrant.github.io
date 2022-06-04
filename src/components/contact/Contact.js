@@ -171,7 +171,6 @@ const Contact = () => {
             >
               <Box component="a" href={serviceWebsiteURL} target="_blank">
                 <img
-                  loading="lazy"
                   height="100%"
                   src={serviceImgURL}
                   alt={serviceName}

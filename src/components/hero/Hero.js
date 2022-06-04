@@ -1,8 +1,6 @@
 import { Button, Fade, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useContext } from "react";
-import bubblesImgSrc from "../../assets/images/bubbles.png";
-import heroImgSrc from "../../assets/images/hero.png";
 import { CustomSettingsContext } from "./../context/CustomSettings";
 import useDelay from "../customHooks/useDelay";
 import useScreenSize from "../customHooks/useScreenSize";
@@ -11,7 +9,14 @@ import InternalLink from "../shared/InternalLink";
 
 const Hero = () => {
   const { desktop, tablet, phone } = useScreenSize();
-  const customSettings = useContext(CustomSettingsContext);
+  const {
+    heroPadding,
+    background,
+    hero,
+    heroTypographyDelay,
+    heroFadeDuration,
+    heroButtonDelay,
+  } = useContext(CustomSettingsContext);
 
   const reveal = keyframes({
     from: { transform: "translate3d(-40px, 0px, 0px)" },
@@ -20,11 +25,11 @@ const Hero = () => {
 
   return (
     <Box
-      height={`calc(100vh - 2 * ${customSettings.heroPadding})`}
-      py={customSettings.heroPadding}
+      height={`calc(100vh - 2 * ${heroPadding})`}
+      py={heroPadding}
       px="5vw"
       sx={{
-        backgroundImage: `url(${bubblesImgSrc})`,
+        backgroundImage: `url(${background})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
@@ -40,13 +45,10 @@ const Hero = () => {
         flexDirection="column"
         alignItems={desktop ? "space-between" : "center"}
       >
-        <Fade
-          in={useDelay(customSettings.heroTypographyDelay)}
-          timeout={customSettings.heroFadeDuration}
-        >
+        <Fade in={useDelay(heroTypographyDelay)} timeout={heroFadeDuration}>
           <Box
             sx={{
-              animation: `${reveal} 1s ease ${customSettings.heroTypographyDelay}s`,
+              animation: `${reveal} 1s ease ${heroTypographyDelay}s`,
             }}
           >
             <Typography
@@ -70,10 +72,7 @@ const Hero = () => {
           </Box>
         </Fade>
         <InternalLink link="#contact">
-          <Fade
-            in={useDelay(customSettings.heroButtonDelay)}
-            timeout={customSettings.heroFadeDuration}
-          >
+          <Fade in={useDelay(heroButtonDelay)} timeout={heroFadeDuration}>
             <Button
               variant="contained"
               color="secondary"
@@ -81,7 +80,7 @@ const Hero = () => {
                 width: "max-content",
                 p: "15px",
                 borderRadius: "10px",
-                animation: `${reveal} 1s ease ${customSettings.heroButtonDelay}s`,
+                animation: `${reveal} 1s ease ${heroButtonDelay}s`,
               }}
             >
               Let's get in touch
@@ -97,8 +96,7 @@ const Hero = () => {
       >
         <img
           alt="hero"
-          loading="lazy"
-          src={heroImgSrc}
+          src={hero}
           height={desktop ? "50%" : tablet ? "100%" : "auto"}
           width={phone ? "90%" : "auto"}
         />

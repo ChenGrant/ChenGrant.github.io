@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import React, { useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { CustomSettingsContext } from "./../context/CustomSettings";
-import FadeInSection from "../shared/FadeInSection";
+import AnimateOnScroll from "../shared/AnimateOnScroll";
 
 const Experience = () => {
   const { experiences } = useContext(CustomSettingsContext);
@@ -47,7 +47,7 @@ const Experience = () => {
                   borderRadius="5px 5px 0px 0px"
                 />
               </Box>
-              <FadeInSection>
+              <AnimateOnScroll animation = 'fade-left' >
                 <Box py={5} pl={3}>
                   <Typography variant="h4" color="secondary.main">
                     {experience.companyName}
@@ -69,7 +69,7 @@ const Experience = () => {
                   )}
                   <Typography>{experience.timePeriod}</Typography>
                 </Box>
-              </FadeInSection>
+              </AnimateOnScroll>
             </Box>
           );
         })}

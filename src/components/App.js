@@ -15,6 +15,7 @@ const App = () => {
 
   useEffect(() => {
     AOS.init({
+      disable: 'phone',
       duration: 1200,
       easing: 'ease',
       once: true,

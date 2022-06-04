@@ -4,13 +4,13 @@ import React, { useContext } from "react";
 import SkillItem from "./SkillItem";
 import { v4 as uuidv4 } from "uuid";
 import useScreenSize from "../customHooks/useScreenSize";
-import FadeInSection from "../shared/FadeInSection";
+import AnimateOnScroll from "../shared/AnimateOnScroll";
 import { CustomSettingsContext } from "./../context/CustomSettings";
 
 const Skills = () => {
-  const {skills} = useContext(CustomSettingsContext)
+  const { skills } = useContext(CustomSettingsContext);
   const { desktop, tablet, phone } = useScreenSize();
-  
+
   return (
     <Box
       display="flex"
@@ -54,7 +54,7 @@ const Skills = () => {
                 </Typography>
               </Box>
 
-              <FadeInSection >
+              <AnimateOnScroll animation="fade-left" >
                 <Box
                   display="flex"
                   flexDirection="row"
@@ -72,7 +72,7 @@ const Skills = () => {
                     );
                   })}
                 </Box>
-              </FadeInSection>
+              </AnimateOnScroll>
             </Box>
           );
         })}

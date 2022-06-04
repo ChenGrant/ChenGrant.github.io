@@ -13,16 +13,3 @@ input:-webkit-autofill:active  {
 html, body {
   overflow-x: hidden;
 }
-
-/* 
-body::-webkit-scrollbar {
-  display: none;
-}
-
-body {
-  position: relative;
-} */
-/* 
-body {
-  position: relative;
-} */

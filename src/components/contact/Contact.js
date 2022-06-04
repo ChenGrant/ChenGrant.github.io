@@ -9,7 +9,7 @@ import emailjs from "emailjs-com";
 import { v4 as uuidv4 } from "uuid";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ErrorIcon from "@mui/icons-material/Error";
-import FadeInSection from "../shared/FadeInSection";
+import AnimateOnScroll from "../shared/AnimateOnScroll";
 import { CustomSettingsContext } from "./../context/CustomSettings";
 
 const Contact = () => {
@@ -86,7 +86,7 @@ const Contact = () => {
                 width="min(80vw, 400px)"
                 alignItems="center"
               >
-                <FadeInSection width="100%">
+                <AnimateOnScroll animation="fade-left">
                   <FormikControl
                     control="input"
                     label="Name"
@@ -100,8 +100,8 @@ const Contact = () => {
                     disabled={sendingEmail}
                     sendingEmail={sendingEmail}
                   />
-                </FadeInSection>
-                <FadeInSection width="100%">
+                </AnimateOnScroll>
+                <AnimateOnScroll animation="fade-left">
                   <FormikControl
                     control="input"
                     label="Email"
@@ -114,8 +114,8 @@ const Contact = () => {
                     }
                     sendingEmail={sendingEmail}
                   />
-                </FadeInSection>
-                <FadeInSection width="100%">
+                </AnimateOnScroll>
+                <AnimateOnScroll animation = 'fade-left'>
                   <FormikControl
                     control="textarea"
                     label="Message"
@@ -127,7 +127,7 @@ const Contact = () => {
                     }
                     sendingEmail={sendingEmail}
                   />
-                </FadeInSection>
+                </AnimateOnScroll>
                 <Box height="60px" display="flex" justifyContent="center">
                   {sendingEmail ? (
                     <CircularProgress color="secondary" />
@@ -136,7 +136,7 @@ const Contact = () => {
                   ) : sendingEmailFailure ? (
                     <ErrorIcon color="error" sx={{ fontSize: 50 }} />
                   ) : (
-                    <FadeInSection width="100%">
+                    <AnimateOnScroll animation = 'fade-left' >
                       <Button
                         variant="contained"
                         color="secondary"
@@ -145,7 +145,7 @@ const Contact = () => {
                       >
                         Submit
                       </Button>
-                    </FadeInSection>
+                    </AnimateOnScroll>
                   )}
                 </Box>
               </Box>
@@ -170,11 +170,7 @@ const Contact = () => {
               }}
             >
               <Box component="a" href={serviceWebsiteURL} target="_blank">
-                <img
-                  height="100%"
-                  src={serviceImgURL}
-                  alt={serviceName}
-                />
+                <img height="100%" src={serviceImgURL} alt={serviceName} />
               </Box>
             </Box>
           );

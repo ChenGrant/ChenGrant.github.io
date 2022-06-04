@@ -65,7 +65,7 @@ const customSettings = {
     { label: "PROJECTS", link: "#projects" },
     { label: "CONTACT", link: "#contact" },
   ],
-  resume: 'https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/GrantChenResume.pdf?alt=media&token=a4159a5f-d0ee-4e02-a0e6-69e240e3fbab',
+  resume: 'https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/resume%2FGrantChenResume.pdf?alt=media&token=73295167-0826-4172-b3c3-61aaa2bf0474',
   experiences : [
     {
       companyName: "Spotwork",

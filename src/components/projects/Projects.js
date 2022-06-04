@@ -112,6 +112,7 @@ const Projects = () => {
               </Box>
               <Box flex="1" display="grid" sx={{ placeItems: "center" }}>
                 <img
+                  loading="lazy"
                   src={project.desktopImgSrc}
                   alt={project.name}
                   width="100%"

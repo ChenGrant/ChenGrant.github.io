@@ -12,7 +12,7 @@ const SkillItem = ({ name, src }) => {
       justifyContent="center"
       alignItems="center"
       flexDirection="column"
-      width = '110px'
+      width="110px"
       mb={(tablet || phone) && "20px"}
     >
       <Box
@@ -27,6 +27,7 @@ const SkillItem = ({ name, src }) => {
         <img
           src={src}
           alt={name}
+          loading="lazy"
           width={customSettings.skillItemIconHeight}
           height={customSettings.skillItemIconHeight}
         />

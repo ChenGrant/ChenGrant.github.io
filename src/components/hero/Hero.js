@@ -97,6 +97,7 @@ const Hero = () => {
       >
         <img
           alt="hero"
+          loading="lazy"
           src={heroImgSrc}
           height={desktop ? "50%" : tablet ? "100%" : "auto"}
           width={phone ? "90%" : "auto"}

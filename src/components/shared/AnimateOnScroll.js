@@ -11,7 +11,7 @@ const AnimateOnScroll = ({ animation, children, ...rest }) => {
     );
 
   return (
-    <Box data-aos={animation} width="100%" {...rest}>
+    <Box data-aos={animation} width="100%" {...rest} >
       {children}
     </Box>
   );

@@ -6,9 +6,12 @@ import useDelay from "../customHooks/useDelay";
 import useScreenSize from "../customHooks/useScreenSize";
 import { keyframes } from "@emotion/react";
 import InternalLink from "../shared/InternalLink";
+import { useTheme } from "@mui/styles";
+import AnimateOnScroll from "../shared/AnimateOnScroll";
 
 const Hero = () => {
   const { desktop, tablet, phone } = useScreenSize();
+  const theme = useTheme();
   const {
     heroPadding,
     background,
@@ -18,14 +21,13 @@ const Hero = () => {
     heroButtonDelay,
   } = useContext(CustomSettingsContext);
 
-  let heroTypographyIsReady = useDelay(heroTypographyDelay)
-  let heroButtonIsReady = useDelay(heroButtonDelay)
+  let heroTypographyIsReady = useDelay(heroTypographyDelay);
+  let heroButtonIsReady = useDelay(heroButtonDelay);
 
   if (phone) {
-    heroTypographyIsReady = true
-    heroButtonIsReady = true
+    heroTypographyIsReady = true;
+    heroButtonIsReady = true;
   }
-
 
   const reveal = keyframes({
     from: { transform: "translate3d(-40px, 0px, 0px)" },
@@ -47,6 +49,7 @@ const Hero = () => {
       justifyContent={"center"}
       alignItems={(tablet || phone) && "center"}
       gap={desktop ? "5vw" : "min(100px, 10vh)"}
+      bgcolor={theme.palette.primary.main}
     >
       <Box
         display="flex"
@@ -103,12 +106,23 @@ const Hero = () => {
         justifyContent="center"
         height={tablet || phone ? "50%" : "auto"}
       >
-        <img
-          alt="hero"
-          src={hero}
-          height={desktop ? "50%" : tablet ? "100%" : "auto"}
-          width={phone ? "90%" : "auto"}
-        />
+        <AnimateOnScroll
+          animation="fade-in"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in"
+        >
+          <img
+            alt="hero"
+            src={hero}
+            height={desktop ? "50%" : tablet ? "100%" : "auto"}
+            width={phone ? "90%" : "auto"}
+            style={{
+              display: 'block',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+            }}
+          />
+        </AnimateOnScroll>
       </Box>
     </Box>
   );

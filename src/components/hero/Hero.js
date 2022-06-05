@@ -18,6 +18,15 @@ const Hero = () => {
     heroButtonDelay,
   } = useContext(CustomSettingsContext);
 
+  let heroTypographyIsReady = useDelay(heroTypographyDelay)
+  let heroButtonIsReady = useDelay(heroButtonDelay)
+
+  if (phone) {
+    heroTypographyIsReady = true
+    heroButtonIsReady = true
+  }
+
+
   const reveal = keyframes({
     from: { transform: "translate3d(-40px, 0px, 0px)" },
     to: { transform: "none" },
@@ -45,10 +54,10 @@ const Hero = () => {
         flexDirection="column"
         alignItems={desktop ? "space-between" : "center"}
       >
-        <Fade in={useDelay(heroTypographyDelay)} timeout={heroFadeDuration}>
+        <Fade in={heroTypographyIsReady} timeout={phone ? 0 : heroFadeDuration}>
           <Box
             sx={{
-              animation: `${reveal} 1s ease ${heroTypographyDelay}s`,
+              animation: !phone && `${reveal} 1s ease ${heroTypographyDelay}s`,
             }}
           >
             <Typography
@@ -72,7 +81,7 @@ const Hero = () => {
           </Box>
         </Fade>
         <InternalLink link="#contact">
-          <Fade in={useDelay(heroButtonDelay)} timeout={heroFadeDuration}>
+          <Fade in={heroButtonIsReady} timeout={phone ? 0 : heroFadeDuration}>
             <Button
               variant="contained"
               color="secondary"
@@ -80,7 +89,7 @@ const Hero = () => {
                 width: "max-content",
                 p: "15px",
                 borderRadius: "10px",
-                animation: `${reveal} 1s ease ${heroButtonDelay}s`,
+                animation: !phone && `${reveal} 1s ease ${heroButtonDelay}s`,
               }}
             >
               Let's get in touch

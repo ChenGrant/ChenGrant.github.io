@@ -61,7 +61,7 @@ const customSettings = {
   skillItemCircleHeight: "80px",
   background:
     "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/background%2Fbackground.webp?alt=media&token=c84742ad-32a1-4c06-bbb3-7fa22aeb3d4b",
-  hero: "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/hero%2Fhero.webp?alt=media&token=c520e23c-be1d-48ec-b98f-c926314fa4e4",
+  hero: "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/hero%2Fhero.webp?alt=media&token=2f208d5d-c11d-431f-9840-0f75c6e60f80",
   skills: skills,
   navBarItems: [
     { label: "HOME", link: "#" },

@@ -34,10 +34,11 @@ const Hero = () => {
     to: { transform: "none" },
   });
 
-  const [backgroundImage, setBackgroundImage] = useState('') 
+  const [backgroundImage, setBackgroundImage] = useState("");
 
   return (
     <Box
+      width="100vw"
       height={`calc(100vh - 2 * ${heroPadding})`}
       py={heroPadding}
       px="5vw"
@@ -107,22 +108,28 @@ const Hero = () => {
         alignItems="center"
         justifyContent="center"
         height={tablet || phone ? "50%" : "auto"}
+        width="100%"
+        height = '100%'
       >
         <AnimateOnScroll
           animation="fade-in"
           data-aos-duration="1200"
           data-aos-easing="ease-in"
+          width="100%"
+          height = '100%'
         >
           <img
             alt="hero"
             src={hero}
-            onLoad={()=> backgroundImage === '' && setBackgroundImage(background) }
+            onLoad={() =>
+              backgroundImage === "" && setBackgroundImage(background)
+            }
             height={desktop ? "50%" : tablet ? "100%" : "auto"}
             width={phone ? "90%" : "auto"}
             style={{
-              display: 'block',
-              marginLeft: 'auto',
-              marginRight: 'auto',
+              display: "block",
+              marginLeft: "auto",
+              marginRight: "auto",
             }}
           />
         </AnimateOnScroll>

@@ -1,6 +1,6 @@
 import { Button, Fade, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { CustomSettingsContext } from "./../context/CustomSettings";
 import useDelay from "../customHooks/useDelay";
 import useScreenSize from "../customHooks/useScreenSize";
@@ -34,13 +34,15 @@ const Hero = () => {
     to: { transform: "none" },
   });
 
+  const [backgroundImage, setBackgroundImage] = useState('') 
+
   return (
     <Box
       height={`calc(100vh - 2 * ${heroPadding})`}
       py={heroPadding}
       px="5vw"
       sx={{
-        backgroundImage: `url(${background})`,
+        backgroundImage: `url(${backgroundImage})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
@@ -114,6 +116,7 @@ const Hero = () => {
           <img
             alt="hero"
             src={hero}
+            onLoad={()=> backgroundImage === '' && setBackgroundImage(background) }
             height={desktop ? "50%" : tablet ? "100%" : "auto"}
             width={phone ? "90%" : "auto"}
             style={{

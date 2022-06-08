@@ -5,7 +5,7 @@ const AnimateOnScroll = ({ animation, children, ...rest }) => {
   const { phone } = useScreenSize();
   if (phone)
     return (
-      <Box width="100%" {...rest}>
+      <Box data-aos = 'fade-in' width="100%" {...rest}>
         {children}
       </Box>
     );

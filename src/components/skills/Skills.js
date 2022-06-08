@@ -54,11 +54,11 @@ const Skills = () => {
                 </Typography>
               </Box>
 
-              <AnimateOnScroll animation="fade-left" >
+              <AnimateOnScroll animation="fade-left">
                 <Box
                   display="flex"
                   flexDirection="row"
-                  flexWrap={"wrap"}
+                  flexWrap="wrap"
                   justifyContent={desktop ? "left" : "center"}
                 >
                   {Object.entries(technologyGroupList).map((technology) => {

@@ -3,15 +3,8 @@ import useScreenSize from "../customHooks/useScreenSize";
 
 const AnimateOnScroll = ({ animation, children, ...rest }) => {
   const { phone } = useScreenSize();
-  if (phone)
-    return (
-      <Box data-aos = 'fade-in' width="100%" {...rest}>
-        {children}
-      </Box>
-    );
-
   return (
-    <Box data-aos={animation} width="100%" {...rest} >
+    <Box data-aos={phone ? "fade-in" : animation} width="100%" {...rest}>
       {children}
     </Box>
   );

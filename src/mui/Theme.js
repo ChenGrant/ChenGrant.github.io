@@ -33,20 +33,46 @@ const theme = createTheme({
   },
 });
 
-theme.typography.h1[theme.breakpoints.up("md")] = { fontSize: "56px", fontWeight: 700}
-theme.typography.h4[theme.breakpoints.up("md")] = { fontSize: "30px", fontWeight: 600}
-theme.typography.body1[theme.breakpoints.up("md")] = { fontSize: "16px"}
-theme.typography.button[theme.breakpoints.up("md")] = {fontSize: '25px'}
+theme.typography.h1[theme.breakpoints.up("md")] = {
+  fontSize: "56px",
+  fontWeight: 700,
+};
 
+theme.typography.h4[theme.breakpoints.up("md")] = {
+  fontSize: "30px",
+  fontWeight: 600,
+};
 
-theme.typography.h1[theme.breakpoints.only("sm")] = { fontSize: "44px", fontWeight: 700 }
-theme.typography.h4[theme.breakpoints.only("sm")] = { fontSize: "31px", fontWeight: 600 }
-theme.typography.body1[theme.breakpoints.only("sm")] = { fontSize: "16px"}
-theme.typography.button[theme.breakpoints.only("sm")] = {fontSize: '22px'}
+theme.typography.body1[theme.breakpoints.up("md")] = { fontSize: "16px" };
 
-theme.typography.h1[theme.breakpoints.only("xs")] = { fontSize: "32px" , fontWeight: 700}
-theme.typography.h4[theme.breakpoints.only("xs")] = { fontSize: "24px" , fontWeight: 600}
-theme.typography.body1[theme.breakpoints.only("xs")] = { fontSize: "16px"}
-theme.typography.button[theme.breakpoints.only("xs")] = {fontSize: '18px'}
+theme.typography.button[theme.breakpoints.up("md")] = { fontSize: "25px" };
+
+theme.typography.h1[theme.breakpoints.only("sm")] = {
+  fontSize: "44px",
+  fontWeight: 700,
+};
+
+theme.typography.h4[theme.breakpoints.only("sm")] = {
+  fontSize: "31px",
+  fontWeight: 600,
+};
+
+theme.typography.body1[theme.breakpoints.only("sm")] = { fontSize: "16px" };
+
+theme.typography.button[theme.breakpoints.only("sm")] = { fontSize: "22px" };
+
+theme.typography.h1[theme.breakpoints.only("xs")] = {
+  fontSize: "32px",
+  fontWeight: 700,
+};
+
+theme.typography.h4[theme.breakpoints.only("xs")] = {
+  fontSize: "24px",
+  fontWeight: 600,
+};
+
+theme.typography.body1[theme.breakpoints.only("xs")] = { fontSize: "16px" };
+
+theme.typography.button[theme.breakpoints.only("xs")] = { fontSize: "18px" };
 
 export default theme;

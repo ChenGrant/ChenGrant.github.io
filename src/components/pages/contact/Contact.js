@@ -45,11 +45,6 @@ const Contact = () => {
     return contactList.filter((item) => item.name === "gmail")[0].websiteURL;
   };
 
-  const getFormikControlMarginBottom = (formik) =>
-    formik.errors.name && formik.touched.name
-      ? contactFormikControlMarginBottom
-      : `calc(${contactFormikControlMarginBottom} + ${contactFormikControlFontHeight})`;
-
   const contactFormInitialValues = {
     name: "",
     email: "",
@@ -118,7 +113,12 @@ const Contact = () => {
                     label="Name"
                     name="name"
                     type="text"
-                    mb={getFormikControlMarginBottom(formik)}
+                    mb={
+                      formik.errors.name && formik.touched.name
+                        ? contactFormikControlMarginBottom
+                        : `calc(${contactFormikControlMarginBottom} + ${contactFormikControlFontHeight})`
+                    }
+                    disabled={sendingEmail}
                     sendingEmail={sendingEmail}
                   />
                 </AnimateOnScroll>
@@ -128,7 +128,11 @@ const Contact = () => {
                     label="Email"
                     name="email"
                     type="email"
-                    mb={getFormikControlMarginBottom(formik)}
+                    mb={
+                      formik.errors.email && formik.touched.email
+                        ? contactFormikControlMarginBottom
+                        : `calc(${contactFormikControlMarginBottom} + ${contactFormikControlFontHeight})`
+                    }
                     sendingEmail={sendingEmail}
                   />
                 </AnimateOnScroll>
@@ -137,7 +141,11 @@ const Contact = () => {
                     control="textarea"
                     label="Message"
                     name="message"
-                    mb={getFormikControlMarginBottom(formik)}
+                    mb={
+                      formik.errors.message && formik.touched.message
+                        ? contactFormikControlMarginBottom
+                        : `calc(${contactFormikControlMarginBottom} + ${contactFormikControlFontHeight})`
+                    }
                     sendingEmail={sendingEmail}
                   />
                 </AnimateOnScroll>

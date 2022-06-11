@@ -11,8 +11,10 @@ import AnimateOnScroll from "../../shared/AnimateOnScroll";
 
 const heroImageSrc =
   "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/hero%2Fhero.png?alt=media&token=6f806aee-a1e1-4061-a0af-b42a18371b14";
+
 const backgroundImageSrc =
   "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/background%2Fbackground.png?alt=media&token=8dc3c778-0e09-4653-8612-45ea605f294d";
+
 const Hero = () => {
   const { desktop, tablet, phone } = useScreenSize();
   const theme = useTheme();

@@ -40,6 +40,7 @@ const projects = [
 const Projects = () => {
   const theme = useTheme();
   const { desktop } = useScreenSize();
+  
   return (
     <Box
       display="flex"

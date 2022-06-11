@@ -6,6 +6,7 @@ import useScreenSize from "../../../hooks/useScreenSize";
 const SkillItem = ({ name, src }) => {
   const { tablet, phone } = useScreenSize();
   const {skillItemCircleHeight, skillItemIconHeight} = useContext(StylingValuesContext);
+  
   return (
     <Box
       display="flex"

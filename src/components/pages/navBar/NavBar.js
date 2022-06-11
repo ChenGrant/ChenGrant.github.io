@@ -4,17 +4,12 @@ import LargeNavBar from "./LargeNavBar";
 import SmallNavBar from "./SmallNavBar";
 
 const navBarItems = [
-  "HOME",
-  "SKILLS",
-  "EXPERIENCES",
-  "PROJECTS",
-  "CONTACT",
-].map((item) => {
-  return {
-    label: item,
-    link: `#${item === "HOME" ? "" : item.toLowerCase()}`,
-  };
-});
+  { label: "HOME", link: "#" },
+  { label: "SKILLS", link: "#skills" },
+  { label: "EXPERIENCES", link: "#experiences" },
+  { label: "PROJECTS", link: "#projects" },
+  { label: "CONTACT", link: "#contact" },
+];
 
 const NavBar = () => {
   const { desktop } = useScreenSize();

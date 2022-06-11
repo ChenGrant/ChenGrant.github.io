@@ -6,7 +6,9 @@ import { keyframes } from "@emotion/react";
 import useScreenSize from "../../../hooks/useScreenSize";
 
 const grow = keyframes({ from: { width: "0%" }, to: { width: "100%" } });
+
 const shrink = keyframes({ from: { width: "100%" }, to: { width: "0%" } });
+
 const resumeSrc =
   "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/resume%2FGrantChenResume.pdf?alt=media&token=73295167-0826-4172-b3c3-61aaa2bf0474";
 

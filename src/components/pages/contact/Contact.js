@@ -63,6 +63,12 @@ const Contact = () => {
   });
 
   const contactFormOnSubmit = async (values, formik) => {
+    const renderSendingEmailStatus = (setSendingEmailStatus) => {
+      setSendingEmail(false);
+      setSendingEmailStatus(true);
+      setTimeout(() => setSendingEmailStatus(false), 2000);
+    };
+
     setSendingEmail(true);
     try {
       await emailjs.send(
@@ -71,14 +77,10 @@ const Contact = () => {
         values,
         process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       );
-      setSendingEmail(false);
       formik.resetForm({ values: contactFormInitialValues });
-      setSendingEmailSuccess(true);
-      setTimeout(() => setSendingEmailSuccess(false), 2000);
+      renderSendingEmailStatus(setSendingEmailSuccess);
     } catch (err) {
-      setSendingEmail(false);
-      setSendingEmailFailure(true);
-      setTimeout(() => setSendingEmailFailure(false), 2000);
+      renderSendingEmailStatus(setSendingEmailFailure);
     }
   };
 
@@ -117,7 +119,6 @@ const Contact = () => {
                     name="name"
                     type="text"
                     mb={getFormikControlMarginBottom(formik)}
-                    disabled={sendingEmail}
                     sendingEmail={sendingEmail}
                   />
                 </AnimateOnScroll>

@@ -8,18 +8,19 @@ const contactList = [
   {
     name: "gmail",
     imageURL:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png",
+      "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/contact%2Fgmail.png?alt=media&token=d469221a-6f22-403d-8e51-95da862e9e14",
     websiteURL: "mailto:grantchen2021@gmail.com",
   },
   {
     name: "github",
-    imageURL: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
+    imageURL:
+      "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/contact%2Fgithub.png?alt=media&token=6ef523e4-4f86-4ae7-9d67-4c4a8368b122",
     websiteURL: "https://github.com/ChenGrant",
   },
   {
     name: "linkedin",
     imageURL:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png",
+      "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/contact%2Flinkedin.png?alt=media&token=ca193b60-8863-48d1-85c8-17c1eeca100f",
     websiteURL: "https://www.linkedin.com/in/grant-chen-1a96ba210/",
   },
 ];

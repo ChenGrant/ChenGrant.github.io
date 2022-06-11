@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { CustomSettingsContext } from "./../context/CustomSettings";
-import useScreenSize from "../customHooks/useScreenSize";
+import { CustomSettingsContext } from "./../../contexts/CustomSettings";
+import useScreenSize from "../../hooks/useScreenSize";
 
 const InternalLink = ({ children, link = "" }) => {
   const { navBarHeight, getValueOfPixelString } = useContext(

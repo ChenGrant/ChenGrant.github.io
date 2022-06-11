@@ -3,8 +3,8 @@ import { Box, IconButton, Slide } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Clear";
 import { v4 as uuidv4 } from "uuid";
-import { CustomSettingsContext } from "../../context/CustomSettings";
-import useScreenSize from "../../customHooks/useScreenSize";
+import { CustomSettingsContext } from "../../../contexts/CustomSettings";
+import useScreenSize from "../../../hooks/useScreenSize";
 import NavBarItem from "./NavBarItem";
 
 const SmallNavBar = ({ navBarItems }) => {

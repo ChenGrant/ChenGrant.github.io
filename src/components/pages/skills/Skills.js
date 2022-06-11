@@ -3,9 +3,9 @@ import { Box } from "@mui/system";
 import React, { useContext } from "react";
 import SkillItem from "./SkillItem";
 import { v4 as uuidv4 } from "uuid";
-import useScreenSize from "../../customHooks/useScreenSize";
+import useScreenSize from "../../../hooks/useScreenSize";
 import AnimateOnScroll from "../../shared/AnimateOnScroll";
-import { CustomSettingsContext } from "../../context/CustomSettings";
+import { CustomSettingsContext } from "../../../contexts/CustomSettings";
 
 const Skills = () => {
   const { skills } = useContext(CustomSettingsContext);

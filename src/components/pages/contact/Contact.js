@@ -10,7 +10,7 @@ import { v4 as uuidv4 } from "uuid";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ErrorIcon from "@mui/icons-material/Error";
 import AnimateOnScroll from "../../shared/AnimateOnScroll";
-import { CustomSettingsContext } from "../../context/CustomSettings";
+import { CustomSettingsContext } from "../../../contexts/CustomSettings";
 
 const Contact = () => {
   const mb = "20px";

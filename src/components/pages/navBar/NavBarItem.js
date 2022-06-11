@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import React, { useState } from "react";
 import InternalLink from "../../shared/InternalLink";
 import { keyframes } from "@emotion/react";
-import useScreenSize from "../../customHooks/useScreenSize";
+import useScreenSize from "../../../hooks/useScreenSize";
 
 const grow = keyframes({ from: { width: "0%" }, to: { width: "100%" } });
 const shrink = keyframes({ from: { width: "100%" }, to: { width: "0%" } });

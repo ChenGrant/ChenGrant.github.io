@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React, { useContext } from "react";
-import { CustomSettingsContext } from "../../context/CustomSettings";
-import useScreenSize from "../../customHooks/useScreenSize";
+import { CustomSettingsContext } from "../../../contexts/CustomSettings";
+import useScreenSize from "../../../hooks/useScreenSize";
 
 const SkillItem = ({ name, src }) => {
   const { tablet, phone } = useScreenSize();

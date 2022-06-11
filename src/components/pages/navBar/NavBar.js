@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { CustomSettingsContext } from "./../../context/CustomSettings";
-import useScreenSize from "../../customHooks/useScreenSize";
+import { CustomSettingsContext } from "./../../../contexts/CustomSettings";
+import useScreenSize from "../../../hooks/useScreenSize";
 import LargeNavBar from "./LargeNavBar";
 import SmallNavBar from "./SmallNavBar";
 

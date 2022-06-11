@@ -1,5 +1,5 @@
 import { Box } from "@mui/system";
-import useScreenSize from "../customHooks/useScreenSize";
+import useScreenSize from "../../hooks/useScreenSize";
 
 const AnimateOnScroll = ({ animation, children, ...rest }) => {
   const { phone } = useScreenSize();

@@ -1,9 +1,9 @@
 import { Button, Fade, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useContext, useState } from "react";
-import { CustomSettingsContext } from "../../context/CustomSettings";
-import useDelay from "../../customHooks/useDelay";
-import useScreenSize from "../../customHooks/useScreenSize";
+import { CustomSettingsContext } from "../../../contexts/CustomSettings";
+import useDelay from "../../../hooks/useDelay";
+import useScreenSize from "../../../hooks/useScreenSize";
 import { keyframes } from "@emotion/react";
 import InternalLink from "../../shared/InternalLink";
 import { useTheme } from "@mui/styles";

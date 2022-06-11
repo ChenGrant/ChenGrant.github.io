@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import AnimateOnScroll from "../../shared/AnimateOnScroll";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { useTheme } from "@mui/styles";
-import useScreenSize from "../../customHooks/useScreenSize";
+import useScreenSize from "../../../hooks/useScreenSize";
 
 const projects = [
   {

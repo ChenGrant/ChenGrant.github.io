@@ -9,6 +9,8 @@ const stylingValues = {
   heroFadeDuration: 800,
   skillItemIconHeight: "60%",
   skillItemCircleHeight: "80px",
+  contactFormikControlMarginBottom : "20px",
+  contactFormikControlFontHeight : "24px"
 };
 
 export default stylingValues;

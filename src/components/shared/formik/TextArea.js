@@ -36,7 +36,7 @@ const TextArea = ({ name, label, sendingEmail, ...rest }) => {
                   "& .MuiOutlinedInput-root:hover": {
                     "& > fieldset": {
                       border: sendingEmail
-                        ? "0px"
+                        ? `0px solid ${theme.palette.primary.main}`
                         : `2px solid ${theme.palette.secondary.main}`,
                     },
                   },

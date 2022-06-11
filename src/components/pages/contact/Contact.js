@@ -1,6 +1,6 @@
 import { CircularProgress, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Button } from "@mui/material";
 import { Form, Formik } from "formik";
 import * as Yup from "yup";
@@ -10,54 +10,59 @@ import { v4 as uuidv4 } from "uuid";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ErrorIcon from "@mui/icons-material/Error";
 import AnimateOnScroll from "../../shared/AnimateOnScroll";
+import { StylingValuesContext } from "../../../contexts/StylingValues";
 
 const contactList = [
   {
-    serviceName: "gmail",
-    serviceImgURL:
+    name: "gmail",
+    imageURL:
       "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/contact%2Fgmail.png?alt=media&token=d469221a-6f22-403d-8e51-95da862e9e14",
-    serviceWebsiteURL: "mailto:grantchen2021@gmail.com",
+    websiteURL: "mailto:grantchen2021@gmail.com",
   },
   {
-    serviceName: "github",
-    serviceImgURL:
+    name: "github",
+    imageURL:
       "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/contact%2Fgithub.png?alt=media&token=6ef523e4-4f86-4ae7-9d67-4c4a8368b122",
-    serviceWebsiteURL: "https://github.com/ChenGrant",
+    websiteURL: "https://github.com/ChenGrant",
   },
   {
-    serviceName: "linkedin",
-    serviceImgURL:
+    name: "linkedin",
+    imageURL:
       "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/contact%2Flinkedin.png?alt=media&token=ca193b60-8863-48d1-85c8-17c1eeca100f",
-    serviceWebsiteURL: "https://www.linkedin.com/in/grant-chen-1a96ba210/",
+    websiteURL: "https://www.linkedin.com/in/grant-chen-1a96ba210/",
   },
 ];
 
 const Contact = () => {
-  const mb = "20px";
-  const fontHeight = "24px";
+  const { contactFormikControlMarginBottom, contactFormikControlFontHeight } =
+    useContext(StylingValuesContext);
 
   const [sendingEmail, setSendingEmail] = useState(false);
   const [sendingEmailSuccess, setSendingEmailSuccess] = useState(false);
   const [sendingEmailFailure, setSendingEmailFailure] = useState(false);
 
   const getGmail = () => {
-    return contactList.filter((item) => item.serviceName === "gmail")[0]
-      .serviceWebsiteURL;
+    return contactList.filter((item) => item.name === "gmail")[0].websiteURL;
   };
 
-  const initialValues = {
+  const getFormikControlMarginBottom = (formik) =>
+    formik.errors.name && formik.touched.name
+      ? contactFormikControlMarginBottom
+      : `calc(${contactFormikControlMarginBottom} + ${contactFormikControlFontHeight})`;
+
+  const contactFormInitialValues = {
     name: "",
     email: "",
     message: "",
   };
 
-  const validationSchema = Yup.object({
+  const contactFormValidationSchema = Yup.object({
     name: Yup.string().required("Required"),
     email: Yup.string().required("Required").email("Invalid Email"),
     message: Yup.string().required("Required"),
   });
 
-  const onSubmit = async (values, actions) => {
+  const contactFormOnSubmit = async (values, formik) => {
     setSendingEmail(true);
     try {
       await emailjs.send(
@@ -67,7 +72,7 @@ const Contact = () => {
         process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       );
       setSendingEmail(false);
-      actions.resetForm({ values: initialValues });
+      formik.resetForm({ values: contactFormInitialValues });
       setSendingEmailSuccess(true);
       setTimeout(() => setSendingEmailSuccess(false), 2000);
     } catch (err) {
@@ -92,9 +97,9 @@ const Contact = () => {
         contact
       </Typography>
       <Formik
-        initialValues={initialValues}
-        validationSchema={validationSchema}
-        onSubmit={onSubmit}
+        initialValues={contactFormInitialValues}
+        validationSchema={contactFormValidationSchema}
+        onSubmit={contactFormOnSubmit}
       >
         {(formik) => {
           return (
@@ -111,11 +116,7 @@ const Contact = () => {
                     label="Name"
                     name="name"
                     type="text"
-                    mb={
-                      formik.errors.name && formik.touched.name
-                        ? mb
-                        : `calc(${mb} + ${fontHeight})`
-                    }
+                    mb={getFormikControlMarginBottom(formik)}
                     disabled={sendingEmail}
                     sendingEmail={sendingEmail}
                   />
@@ -126,11 +127,7 @@ const Contact = () => {
                     label="Email"
                     name="email"
                     type="email"
-                    mb={
-                      formik.errors.email && formik.touched.email
-                        ? mb
-                        : `calc(${mb} + ${fontHeight})`
-                    }
+                    mb={getFormikControlMarginBottom(formik)}
                     sendingEmail={sendingEmail}
                   />
                 </AnimateOnScroll>
@@ -139,11 +136,7 @@ const Contact = () => {
                     control="textarea"
                     label="Message"
                     name="message"
-                    mb={
-                      formik.errors.message && formik.touched.message
-                        ? mb
-                        : `calc(${mb} + ${fontHeight})`
-                    }
+                    mb={getFormikControlMarginBottom(formik)}
                     sendingEmail={sendingEmail}
                   />
                 </AnimateOnScroll>
@@ -174,7 +167,7 @@ const Contact = () => {
       </Formik>
       <Box my={4} mt={10} height="40px" display="flex" gap="50px">
         {contactList.map((contact) => {
-          const { serviceName, serviceImgURL, serviceWebsiteURL } = contact;
+          const { name, imageURL, websiteURL } = contact;
           return (
             <Box
               key={uuidv4()}
@@ -188,8 +181,8 @@ const Contact = () => {
                 },
               }}
             >
-              <Box component="a" href={serviceWebsiteURL} target="_blank">
-                <img height="100%" src={serviceImgURL} alt={serviceName} />
+              <Box component="a" href={websiteURL} target="_blank">
+                <img height="100%" src={imageURL} alt={name} />
               </Box>
             </Box>
           );

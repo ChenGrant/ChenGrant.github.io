@@ -7,9 +7,11 @@ import { StylingValuesContext } from "../../../contexts/StylingValues";
 import useScreenSize from "../../../hooks/useScreenSize";
 import NavBarItem from "./NavBarItem";
 
+const backgroundImageSrc =
+  "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/background%2Fbackground.png?alt=media&token=8dc3c778-0e09-4653-8612-45ea605f294d";
+
 const SmallNavBar = ({ navBarItems }) => {
-  const { background, navBarHeight, navBarZIndex } =
-    useContext(StylingValuesContext);
+  const { navBarHeight, navBarZIndex } = useContext(StylingValuesContext);
   const { tablet } = useScreenSize();
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
@@ -41,7 +43,7 @@ const SmallNavBar = ({ navBarItems }) => {
           sx={{
             zIndex: navBarZIndex,
             boxShadow: 13,
-            backgroundImage: `url(${background})`,
+            backgroundImage: `url(${backgroundImageSrc})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import customSettings, { CustomSettingsProvider } from "../contexts/CustomSettings";
+import stylingValues, { StylingValuesProvider } from "../contexts/StylingValues";
 import Hero from "./pages/hero/Hero";
 import NavBar from "./pages/navBar/NavBar";
 import Skills from "./pages/skills/Skills";
@@ -24,14 +24,14 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <CustomSettingsProvider value = {customSettings}>
+      <StylingValuesProvider value = {stylingValues}>
         <NavBar />
         <Hero />
         <Skills />
         <Experience />
         <Projects />
         <Contact />
-      </CustomSettingsProvider>
+      </StylingValuesProvider>
     </ThemeProvider>
   );
 };

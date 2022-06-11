@@ -1,7 +1,7 @@
 import { Button, Fade, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useContext, useState } from "react";
-import { CustomSettingsContext } from "../../../contexts/CustomSettings";
+import { StylingValuesContext } from "../../../contexts/StylingValues";
 import useDelay from "../../../hooks/useDelay";
 import useScreenSize from "../../../hooks/useScreenSize";
 import { keyframes } from "@emotion/react";
@@ -9,17 +9,19 @@ import InternalLink from "../../shared/InternalLink";
 import { useTheme } from "@mui/styles";
 import AnimateOnScroll from "../../shared/AnimateOnScroll";
 
+const heroImageSrc =
+  "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/hero%2Fhero.png?alt=media&token=6f806aee-a1e1-4061-a0af-b42a18371b14";
+const backgroundImageSrc =
+  "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/background%2Fbackground.png?alt=media&token=8dc3c778-0e09-4653-8612-45ea605f294d";
 const Hero = () => {
   const { desktop, tablet, phone } = useScreenSize();
   const theme = useTheme();
   const {
     heroPadding,
-    background,
-    hero,
     heroTypographyDelay,
     heroFadeDuration,
     heroButtonDelay,
-  } = useContext(CustomSettingsContext);
+  } = useContext(StylingValuesContext);
 
   let heroTypographyIsReady = useDelay(heroTypographyDelay);
   let heroButtonIsReady = useDelay(heroButtonDelay);
@@ -34,7 +36,7 @@ const Hero = () => {
     to: { transform: "none" },
   });
 
-  const [backgroundImage, setBackgroundImage] = useState('') 
+  const [backgroundImage, setBackgroundImage] = useState("");
 
   return (
     <Box
@@ -115,14 +117,16 @@ const Hero = () => {
         >
           <img
             alt="hero"
-            src={hero}
-            onLoad={()=> backgroundImage === '' && setBackgroundImage(background) }
+            src={heroImageSrc}
+            onLoad={() =>
+              backgroundImage === "" && setBackgroundImage(backgroundImageSrc)
+            }
             height={desktop ? "50%" : tablet ? "100%" : "auto"}
             width={phone ? "90%" : "auto"}
             style={{
-              display: 'block',
-              marginLeft: 'auto',
-              marginRight: 'auto',
+              display: "block",
+              marginLeft: "auto",
+              marginRight: "auto",
             }}
           />
         </AnimateOnScroll>

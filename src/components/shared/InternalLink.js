@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { CustomSettingsContext } from "./../../contexts/CustomSettings";
+import { StylingValuesContext } from "../../contexts/StylingValues";
 import useScreenSize from "../../hooks/useScreenSize";
 
+const getValueOfPixelString = (pixelString) => +pixelString.trim().slice(0, -2);
+
 const InternalLink = ({ children, link = "" }) => {
-  const { navBarHeight, getValueOfPixelString } = useContext(
-    CustomSettingsContext
-  );
+  const { navBarHeight } = useContext(StylingValuesContext);
   const { desktop } = useScreenSize();
 
   const scrollWithOffset = (el) => {

@@ -2,13 +2,11 @@ import { Box } from "@mui/system";
 import React, { useContext } from "react";
 import NavBarItem from "./NavBarItem";
 import { v4 as uuidv4 } from "uuid";
-import { CustomSettingsContext } from "./../../../contexts/CustomSettings";
+import { StylingValuesContext } from "../../../contexts/StylingValues";
 import { Grid } from "@mui/material";
 
 const LargeNavBar = ({ navBarItems }) => {
-  const { resume, navBarHeight, navBarZIndex } = useContext(
-    CustomSettingsContext
-  );
+  const { navBarHeight, navBarZIndex } = useContext(StylingValuesContext);
 
   return (
     <Box
@@ -34,7 +32,7 @@ const LargeNavBar = ({ navBarItems }) => {
         </Grid>
         <Grid item xs>
           <Box display="flex" justifyContent="right" pr={5}>
-            <NavBarItem resume={resume}>RESUME</NavBarItem>
+            <NavBarItem resume>RESUME</NavBarItem>
           </Box>
         </Grid>
       </Grid>

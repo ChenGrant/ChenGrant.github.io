@@ -1,11 +1,11 @@
 import { Box, Typography } from "@mui/material";
 import React, { useContext } from "react";
-import { CustomSettingsContext } from "../../../contexts/CustomSettings";
+import { StylingValuesContext } from "../../../contexts/StylingValues";
 import useScreenSize from "../../../hooks/useScreenSize";
 
 const SkillItem = ({ name, src }) => {
   const { tablet, phone } = useScreenSize();
-  const customSettings = useContext(CustomSettingsContext);
+  const {skillItemCircleHeight, skillItemIconHeight} = useContext(StylingValuesContext);
   return (
     <Box
       display="flex"
@@ -16,8 +16,8 @@ const SkillItem = ({ name, src }) => {
       mb={(tablet || phone) && "20px"}
     >
       <Box
-        width={customSettings.skillItemCircleHeight}
-        height={customSettings.skillItemCircleHeight}
+        width={skillItemCircleHeight}
+        height={skillItemCircleHeight}
         display="grid"
         sx={{ placeItems: "center" }}
         bgcolor="primary.main"
@@ -28,8 +28,8 @@ const SkillItem = ({ name, src }) => {
           src={src}
           alt={name}
           loading="lazy"
-          width={customSettings.skillItemIconHeight}
-          height={customSettings.skillItemIconHeight}
+          width={skillItemIconHeight}
+          height={skillItemIconHeight}
         />
       </Box>
       <Typography pt="5px">{name}</Typography>

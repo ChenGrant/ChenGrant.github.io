@@ -1,6 +1,6 @@
 import { CircularProgress, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Button } from "@mui/material";
 import { Form, Formik } from "formik";
 import * as Yup from "yup";
@@ -10,19 +10,38 @@ import { v4 as uuidv4 } from "uuid";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ErrorIcon from "@mui/icons-material/Error";
 import AnimateOnScroll from "../../shared/AnimateOnScroll";
-import { CustomSettingsContext } from "../../../contexts/CustomSettings";
+
+const contactList = [
+  {
+    serviceName: "gmail",
+    serviceImgURL:
+      "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/contact%2Fgmail.png?alt=media&token=d469221a-6f22-403d-8e51-95da862e9e14",
+    serviceWebsiteURL: "mailto:grantchen2021@gmail.com",
+  },
+  {
+    serviceName: "github",
+    serviceImgURL:
+      "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/contact%2Fgithub.png?alt=media&token=6ef523e4-4f86-4ae7-9d67-4c4a8368b122",
+    serviceWebsiteURL: "https://github.com/ChenGrant",
+  },
+  {
+    serviceName: "linkedin",
+    serviceImgURL:
+      "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/contact%2Flinkedin.png?alt=media&token=ca193b60-8863-48d1-85c8-17c1eeca100f",
+    serviceWebsiteURL: "https://www.linkedin.com/in/grant-chen-1a96ba210/",
+  },
+];
 
 const Contact = () => {
   const mb = "20px";
   const fontHeight = "24px";
-  const { contacts } = useContext(CustomSettingsContext);
 
   const [sendingEmail, setSendingEmail] = useState(false);
   const [sendingEmailSuccess, setSendingEmailSuccess] = useState(false);
   const [sendingEmailFailure, setSendingEmailFailure] = useState(false);
 
   const getGmail = () => {
-    return contacts.filter((item) => item.serviceName === "gmail")[0]
+    return contactList.filter((item) => item.serviceName === "gmail")[0]
       .serviceWebsiteURL;
   };
 
@@ -115,7 +134,7 @@ const Contact = () => {
                     sendingEmail={sendingEmail}
                   />
                 </AnimateOnScroll>
-                <AnimateOnScroll animation = 'fade-left'>
+                <AnimateOnScroll animation="fade-left">
                   <FormikControl
                     control="textarea"
                     label="Message"
@@ -136,7 +155,7 @@ const Contact = () => {
                   ) : sendingEmailFailure ? (
                     <ErrorIcon color="error" sx={{ fontSize: 50 }} />
                   ) : (
-                    <AnimateOnScroll animation = 'fade-left' >
+                    <AnimateOnScroll animation="fade-left">
                       <Button
                         variant="contained"
                         color="secondary"
@@ -154,7 +173,7 @@ const Contact = () => {
         }}
       </Formik>
       <Box my={4} mt={10} height="40px" display="flex" gap="50px">
-        {contacts.map((contact) => {
+        {contactList.map((contact) => {
           const { serviceName, serviceImgURL, serviceWebsiteURL } = contact;
           return (
             <Box

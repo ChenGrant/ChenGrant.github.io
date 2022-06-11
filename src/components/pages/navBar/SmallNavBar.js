@@ -3,14 +3,13 @@ import { Box, IconButton, Slide } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Clear";
 import { v4 as uuidv4 } from "uuid";
-import { CustomSettingsContext } from "../../../contexts/CustomSettings";
+import { StylingValuesContext } from "../../../contexts/StylingValues";
 import useScreenSize from "../../../hooks/useScreenSize";
 import NavBarItem from "./NavBarItem";
 
 const SmallNavBar = ({ navBarItems }) => {
-  const { resume, background, navBarHeight, navBarZIndex } = useContext(
-    CustomSettingsContext
-  );
+  const { background, navBarHeight, navBarZIndex } =
+    useContext(StylingValuesContext);
   const { tablet } = useScreenSize();
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
@@ -60,10 +59,7 @@ const SmallNavBar = ({ navBarItems }) => {
             </Box>
           ))}
           <Box display="flex" mt={2.5} key={uuidv4()}>
-            <NavBarItem
-              resume={resume}
-              closeMenu={() => setMenuIsOpen(false)}
-            >
+            <NavBarItem resume closeMenu={() => setMenuIsOpen(false)}>
               RESUME
             </NavBarItem>
           </Box>

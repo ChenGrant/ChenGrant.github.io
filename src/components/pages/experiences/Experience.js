@@ -1,14 +1,32 @@
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useContext } from "react";
+import React from "react";
 import { v4 as uuidv4 } from "uuid";
-import { CustomSettingsContext } from "../../../contexts/CustomSettings";
 import AnimateOnScroll from "../../shared/AnimateOnScroll";
 
+const experiencesList = [
+  {
+    companyName: "Spotwork",
+    role: "Full Stack Developer Intern",
+    timePeriod: "May 2022 - Present",
+    techStack: ["React.js", "Redux", "Material UI", "Formik", "Firebase"],
+  },
+  {
+    companyName: "Jin Kuai Zi",
+    role: "Full Stack Developer Freelancer",
+    timePeriod: "June 2021 - August 2021",
+    techStack: ["Django", "jQuery", "Sass", "MySQL"],
+  },
+  {
+    companyName: "Code Ninjas",
+    role: "Lead Coding Instructor",
+    timePeriod: "June 2020 - August 2020",
+  },
+];
+
 const Experience = () => {
-  const { experiences } = useContext(CustomSettingsContext);
   const isNotFirstItem = (index) => index !== 0;
-  const isNotLastItem = (index) => index !== experiences.length - 1;
+  const isNotLastItem = (index) => index !== experiencesList.length - 1;
 
   return (
     <Box
@@ -22,7 +40,7 @@ const Experience = () => {
     >
       <Typography variant="h1">experiences</Typography>
       <Box p={1}>
-        {experiences.map((experience, index) => {
+        {experiencesList.map((experience, index) => {
           return (
             <Box display="flex" flexDirection="row" key={uuidv4()}>
               <Box display="flex" flexDirection="column" width="20px">

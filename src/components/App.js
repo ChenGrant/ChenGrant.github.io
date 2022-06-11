@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import Hero from "./hero/Hero";
-import NavBar from "./navBar/NavBar";
-import Skills from "./skills/Skills";
 import customSettings, { CustomSettingsProvider } from "./context/CustomSettings";
-import Experience from "./experiences/Experience";
-import Projects from "./projects/Projects";
-import Contact from "./contact/Contact";
+import Hero from "./pages/hero/Hero";
+import NavBar from "./pages/navBar/NavBar";
+import Skills from "./pages/skills/Skills";
+import Experience from "./pages/experiences/Experience";
+import Projects from "./pages/projects/Projects";
+import Contact from "./pages/contact/Contact";
 import themeMUI from "../ThemeMUI";
 import { ThemeProvider } from "@mui/material";
 import AOS from "aos";

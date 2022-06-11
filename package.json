@@ -52,7 +52,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "randomcolor": "^0.6.2"
-  }
+  "devDependencies": {}
 }

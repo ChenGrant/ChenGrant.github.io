@@ -4,7 +4,7 @@ import { ErrorMessage, Field } from "formik";
 import React from "react";
 import InputError from "./InputError";
 
-const Input = ({ label, name, type, sendingEmail, ...rest }) => {
+const Input = ({ label, name, type, sendingEmail, textareaProps, ...rest }) => {
   const theme = useTheme();
   return (
     <Box width="100%" {...rest}>
@@ -40,6 +40,7 @@ const Input = ({ label, name, type, sendingEmail, ...rest }) => {
                   },
                 }}
                 {...field}
+                {...textareaProps}
               />
             </Box>
           );

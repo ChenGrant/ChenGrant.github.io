@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 import useScreenSize from "../../../hooks/useScreenSize";
 import AnimateOnScroll from "../../shared/AnimateOnScroll";
 
+// icons obtained from https://devicon.dev/
 export const allSkills = {
   languages: {
     JavaScript:
@@ -36,10 +37,12 @@ export const allSkills = {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     Django:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
-    MySQL:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
     Firebase:
       "https://www.gstatic.com/mobilesdk/160503_mobilesdk/logo/2x/firebase_28dp.png",
+    MongoDB:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    MySQL:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
   },
   other: {
     Git: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",

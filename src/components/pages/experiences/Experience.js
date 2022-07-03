@@ -9,7 +9,14 @@ const experiencesList = [
     companyName: "Spotwork",
     role: "Full Stack Developer Intern",
     timePeriod: "May 2022 - Present",
-    techStack: ["React.js", "Redux", "Material UI", "Formik", "Firebase"],
+    techStack: [
+      "React.js",
+      "Redux",
+      "Material UI",
+      "Formik",
+      "Node.js",
+      "Firebase",
+    ],
   },
   {
     companyName: "Jin Kuai Zi",
@@ -65,7 +72,7 @@ const Experience = () => {
                   borderRadius="5px 5px 0px 0px"
                 />
               </Box>
-              <AnimateOnScroll animation = 'fade-left' >
+              <AnimateOnScroll animation="fade-left">
                 <Box py={5} pl={3}>
                   <Typography variant="h4" color="secondary.main">
                     {experience.companyName}
@@ -74,7 +81,7 @@ const Experience = () => {
                     {experience.role}
                   </Typography>
                   {experience.techStack && (
-                    <Box>
+                    <Box maxWidth="350px">
                       {experience.techStack.map((technology, index) => (
                         <React.Fragment key={uuidv4()}>
                           {index !== 0 && (

@@ -4,6 +4,6 @@ I'm a **full stack developer** at Spotwork and a **Computer Science** student at
 
 Learn more about me at: https://grantchen.me/
 
-Version: 2.2.12
+Version: 2.2.13
 
-Last Edited: July 3, 2022
+Last Edited: July 4, 2022

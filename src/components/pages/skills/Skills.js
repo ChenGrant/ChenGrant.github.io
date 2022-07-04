@@ -53,8 +53,8 @@ export const allSkills = {
     Jira: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
     Heroku:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg",
-    "VS Code":
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+    Figma:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
   },
 };
 

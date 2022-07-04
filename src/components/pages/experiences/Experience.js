@@ -11,11 +11,12 @@ const experiencesList = [
     timePeriod: "May 2022 - Present",
     techStack: [
       "React.js",
+      "Node.js",
+      "Firebase",
       "Redux",
       "Material UI",
       "Formik",
-      "Node.js",
-      "Firebase",
+      "Figma",
     ],
   },
   {
@@ -81,13 +82,13 @@ const Experience = () => {
                     {experience.role}
                   </Typography>
                   {experience.techStack && (
-                    <Box maxWidth="350px">
+                    <Box maxWidth="350px" mb={1.5}>
                       {experience.techStack.map((technology, index) => (
                         <React.Fragment key={uuidv4()}>
                           {index !== 0 && (
                             <Typography display="inline">, </Typography>
                           )}
-                          <Typography display="inline">{technology}</Typography>
+                          <Typography display="inline" noWrap>{technology}</Typography>
                         </React.Fragment>
                       ))}
                     </Box>

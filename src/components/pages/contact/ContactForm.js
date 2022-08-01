@@ -20,9 +20,9 @@ const ContactForm = () => {
   };
 
   const contactFormValidationSchema = Yup.object({
-    name: Yup.string().required("Required"),
-    email: Yup.string().required("Required").email("Invalid Email"),
-    message: Yup.string().required("Required"),
+    name: Yup.string().trim().required("Required"),
+    email: Yup.string().trim().required("Required").email("Invalid Email"),
+    message: Yup.string().trim().required("Required"),
   });
 
   const contactFormOnSubmit = async (values, formik) => {

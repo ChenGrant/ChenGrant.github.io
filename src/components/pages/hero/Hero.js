@@ -123,7 +123,7 @@ const Hero = () => {
             onLoad={() =>
               backgroundImage === "" && setBackgroundImage(backgroundImageSrc)
             }
-            height={desktop ? "50%" : tablet ? "100%" : "auto"}
+            height={phone ? "auto" : "400px"}
             width={phone ? "90%" : "auto"}
             style={{
               display: "block",

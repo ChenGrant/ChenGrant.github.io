@@ -124,7 +124,7 @@ const Hero = () => {
               backgroundImage === "" && setBackgroundImage(backgroundImageSrc)
             }
             height={phone ? "auto" : "400px"}
-            width={phone ? "90%" : "auto"}
+            width={phone ? "90%" : "474px"}
             style={{
               display: "block",
               marginLeft: "auto",

@@ -20,7 +20,7 @@ const experiencesList = [
     ],
   },
   {
-    companyName: "Lan Zhou Ramen",
+    companyName: "1915 Lan Zhou Ramen",
     role: "Full Stack Web Developer",
     timePeriod: "June 2021 - August 2021",
     techStack: ["Django", "jQuery", "Sass", "MySQL", "Heroku"],

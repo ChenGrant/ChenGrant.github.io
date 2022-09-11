@@ -8,6 +8,25 @@ import useScreenSize from "../../../hooks/useScreenSize";
 
 const projects = [
   {
+    name: "fitcountr",
+    description:
+      "ficountr is a calorie-tracking web app that graphically visualizes data about user-recorded foods, weights, and steps.",
+    techStack: [
+      "React.js",
+      "Express",
+      "MongoDB",
+      "Firebase",
+      "Redux",
+      "Material UI",
+      "Formik",
+      "Heroku",
+    ],
+    websiteURL: "https://www.fitcountr.com",
+    githubURL: "https://github.com/ChenGrant/fitcountr",
+    desktopImgSrc:
+      "https://firebasestorage.googleapis.com/v0/b/fitcountr-c2a46.appspot.com/o/fitcountr.gif?alt=media&token=ee5d315e-e07c-4d87-b7c2-44cf5eb3999a",
+  },
+  {
     name: "Chatify",
     description:
       "Chatify is a web messaging app that allows for instant group messaging and sharing of media files between authenticated users.",
@@ -40,7 +59,7 @@ const projects = [
 const Projects = () => {
   const theme = useTheme();
   const { desktop } = useScreenSize();
-  
+
   return (
     <Box
       display="flex"
@@ -55,7 +74,7 @@ const Projects = () => {
       {projects.map((project, index) => {
         return (
           <AnimateOnScroll
-            animation = {index % 2 === 1 ? 'fade-left' : 'fade-right' }
+            animation={index % 2 === 1 ? "fade-left" : "fade-right"}
             key={uuidv4()}
             display="grid"
             sx={{ placeItems: "center" }}

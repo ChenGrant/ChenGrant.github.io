@@ -7,8 +7,8 @@ import AnimateOnScroll from "../../shared/AnimateOnScroll";
 const experiencesList = [
   {
     companyName: "Spotwork",
-    role: "Full Stack Developer Intern",
-    timePeriod: "May 2022 - Present",
+    role: "Full Stack Web Developer",
+    timePeriod: "May 2022 - August 2022",
     techStack: [
       "React.js",
       "Node.js",
@@ -20,10 +20,10 @@ const experiencesList = [
     ],
   },
   {
-    companyName: "Jin Kuai Zi",
-    role: "Full Stack Developer Freelancer",
+    companyName: "Lan Zhou Ramen",
+    role: "Full Stack Web Developer",
     timePeriod: "June 2021 - August 2021",
-    techStack: ["Django", "jQuery", "Sass", "MySQL"],
+    techStack: ["Django", "jQuery", "Sass", "MySQL", "Heroku"],
   },
   {
     companyName: "Code Ninjas",
@@ -88,7 +88,9 @@ const Experience = () => {
                           {index !== 0 && (
                             <Typography display="inline">, </Typography>
                           )}
-                          <Typography display="inline" noWrap>{technology}</Typography>
+                          <Typography display="inline" noWrap>
+                            {technology}
+                          </Typography>
                         </React.Fragment>
                       ))}
                     </Box>

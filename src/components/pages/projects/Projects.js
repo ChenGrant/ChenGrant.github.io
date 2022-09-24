@@ -10,7 +10,7 @@ const projects = [
   {
     name: "fitcountr",
     description:
-      "ficountr is a calorie-tracking web app that graphically visualizes data about user-recorded foods, weights, and steps.",
+      "fitcountr is a calorie-tracking web app that graphically visualizes data about user-recorded foods, weights, and steps.",
     techStack: [
       "React.js",
       "Express",

@@ -31,7 +31,7 @@ const projects = [
     description:
       "Chatify is a web messaging app that allows for instant group messaging and sharing of media files between authenticated users.",
     techStack: ["React.js", "Firebase", "ChatEngine.io REST API", "Heroku"],
-    websiteURL: "https://chatify-reactjs.herokuapp.com/",
+    //websiteURL: "https://chatify-reactjs.herokuapp.com/",
     githubURL: "https://github.com/ChenGrant/Chatify-Public",
     desktopImgSrc:
       "https://raw.githubusercontent.com/ChenGrant/Chatify-Public/2bfaaf7f78d4795033a2a7b89b74d634202e0333/about/gif.gif",

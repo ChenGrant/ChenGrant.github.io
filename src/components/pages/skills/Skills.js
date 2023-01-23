@@ -13,13 +13,13 @@ export const allSkills = {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     Python:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-    "C#": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+    //"C#": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
     "C++":
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
     C: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
     Java: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-    //HTML: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-    //CSS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    HTML: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    CSS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
   },
   frontend: {
     "React.js":
@@ -40,8 +40,8 @@ export const allSkills = {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     Django:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
-    ".NET":
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg",
+    // ".NET":
+    //   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg",
     Firebase:
       "https://www.gstatic.com/mobilesdk/160503_mobilesdk/logo/2x/firebase_28dp.png",
     MongoDB:

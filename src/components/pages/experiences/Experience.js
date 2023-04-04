@@ -6,6 +6,19 @@ import AnimateOnScroll from "../../shared/AnimateOnScroll";
 
 const experiencesList = [
   {
+    companyName: "University Health Network",
+    role: "Web Developer",
+    timePeriod: "February 2023 - April 2023",
+    techStack: [
+      "Bootstrap",
+      "jQuery",
+      "dotCMS",
+      "Apache Velocity",
+      "GitLab",
+      "Asana",
+    ],
+  },
+  {
     companyName: "Spotwork",
     role: "Full Stack Web Developer",
     timePeriod: "May 2022 - August 2022",

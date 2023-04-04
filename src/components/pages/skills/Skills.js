@@ -13,11 +13,11 @@ export const allSkills = {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     Python:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-    //"C#": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+    "C#": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
     "C++":
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
-    C: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
     Java: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+    C: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
     HTML: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
     CSS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
   },
@@ -29,6 +29,8 @@ export const allSkills = {
     "Material UI":
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
     Sass: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+    Bootstrap:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
     jQuery:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
     Formik: "https://img.stackshare.io/service/8846/preview.png",
@@ -48,13 +50,18 @@ export const allSkills = {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
     MySQL:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
+    AWS: "https://img.icons8.com/color/512/amazon-web-services.png",
+    dotCMS: "https://avatars.githubusercontent.com/u/1005263?s=280&v=4",
   },
   other: {
     Git: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     GitHub:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    GitLab:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg",
     Bitbucket:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bitbucket/bitbucket-original.svg",
+    Bash: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg",
     Jira: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
     Heroku:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg",

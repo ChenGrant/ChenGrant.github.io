@@ -20,6 +20,7 @@ const projects = [
       "Material UI",
       "Formik",
       "Heroku",
+      "Render"
     ],
     websiteURL: "https://www.fitcountr.com",
     githubURL: "https://github.com/ChenGrant/fitcountr",

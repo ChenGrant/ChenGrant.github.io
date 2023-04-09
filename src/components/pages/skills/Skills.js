@@ -26,13 +26,13 @@ export const allSkills = {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     Redux:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
-    "Material UI":
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
-    Sass: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
     Bootstrap:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
     jQuery:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
+    "Material UI":
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
+    Sass: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
     Formik: "https://img.stackshare.io/service/8846/preview.png",
   },
   backend: {
@@ -50,6 +50,8 @@ export const allSkills = {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
     MySQL:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
+    SQLite:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
     AWS: "https://img.icons8.com/color/512/amazon-web-services.png",
     dotCMS: "https://avatars.githubusercontent.com/u/1005263?s=280&v=4",
   },

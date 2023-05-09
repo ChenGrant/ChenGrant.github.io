@@ -15,7 +15,7 @@ const projects = [
       "React.js",
       "Express",
       "MongoDB",
-      "Firebase",
+      "GCP",
       "Redux",
       "Material UI",
       "Formik",

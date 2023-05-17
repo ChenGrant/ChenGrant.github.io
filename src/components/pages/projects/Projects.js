@@ -12,15 +12,16 @@ const projects = [
     description:
       "fitcountr is a calorie-tracking web app that graphically visualizes data about user-recorded foods, weights, and steps.",
     techStack: [
-      "React.js",
       "Express",
       "MongoDB",
-      "GCP",
+      "AWS",
+      "Firebase",
+      "React.js",
       "Redux",
       "Material UI",
       "Formik",
       "Heroku",
-      "Render"
+      "Render",
     ],
     websiteURL: "https://www.fitcountr.com",
     githubURL: "https://github.com/ChenGrant/fitcountr",

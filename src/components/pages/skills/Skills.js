@@ -13,6 +13,8 @@ export const allSkills = {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     JavaScript:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    "Node.js":
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     Java: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
     "C++":
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
@@ -22,15 +24,13 @@ export const allSkills = {
     HTML: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
     CSS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
   },
-  framework: {
-    "React.js":
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    "Node.js":
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    "Express.js":
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+  frameworks: {
     Django:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+    "Express.js":
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    "React.js":
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     Redux:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
     Bootstrap:
@@ -43,6 +43,7 @@ export const allSkills = {
     Formik: "https://img.stackshare.io/service/8846/preview.png",
   },
   technologies: {
+    AWS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
     PostgreSQL:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
     MySQL:
@@ -51,18 +52,11 @@ export const allSkills = {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
     MongoDB:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-    GCP: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
-    AWS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+    Firebase:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+    Linux:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
     Git: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-    GitHub:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-    GitLab:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg",
-    Bitbucket:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bitbucket/bitbucket-original.svg",
-    Unity:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg",
-    dotCMS: "https://avatars.githubusercontent.com/u/1005263?s=280&v=4",
   },
 };
 

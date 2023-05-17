@@ -17,12 +17,12 @@ const contactList = [
       "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/contact%2Fgithub.png?alt=media&token=6ef523e4-4f86-4ae7-9d67-4c4a8368b122",
     websiteURL: "https://github.com/ChenGrant",
   },
-  {
-    name: "linkedin",
-    imageURL:
-      "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/contact%2Flinkedin.png?alt=media&token=ca193b60-8863-48d1-85c8-17c1eeca100f",
-    websiteURL: "https://www.linkedin.com/in/grant-chen-1a96ba210/",
-  },
+  // {
+  //   name: "linkedin",
+  //   imageURL:
+  //     "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/contact%2Flinkedin.png?alt=media&token=ca193b60-8863-48d1-85c8-17c1eeca100f",
+  //   websiteURL: "https://www.linkedin.com/in/grant-chen-1a96ba210/",
+  // },
 ];
 
 const Contact = () => {

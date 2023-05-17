@@ -10,7 +10,7 @@ const grow = keyframes({ from: { width: "0%" }, to: { width: "100%" } });
 const shrink = keyframes({ from: { width: "100%" }, to: { width: "0%" } });
 
 const resumeSrc =
-  "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/resume%2FGrant%20Chen%20Resume.pdf?alt=media&token=384faee7-1df2-479a-9103-627dbc2893bc";
+  "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/resume%2FGrant%20Chen%20Resume.pdf?alt=media&token=0071bcf6-6921-4735-a183-cfb0c9cd639e";
 
 const NavBarItem = ({ children, link, resume, closeMenu }) => {
   const [navBarItemIsHovered, setNavBarItemIsHovered] = useState(false);

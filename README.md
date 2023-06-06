@@ -4,6 +4,6 @@ I'm a **full stack developer** and a **Computer Science** student at the Univers
 
 Learn more about me at: https://grantchen.site
 
-Version: 2.3.7
+Version: 2.4.0
 
-Last Edited: May 19, 2023
+Last Edited: June 6, 2023

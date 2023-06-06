@@ -85,7 +85,7 @@ const Experience = () => {
         {experiencesList.map((experience, index) => {
           return (
             <Box display="flex" flexDirection="row" key={uuidv4()}>
-              <Box display="flex" flexDirection="column" width="20px">
+              <Box display="flex" flexDirection="column" alignItems="center" width="20px">
                 <Box
                   width="5px"
                   flex={2}

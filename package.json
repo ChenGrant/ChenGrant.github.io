@@ -1,7 +1,7 @@
 {
   "name": "portfolio-website",
   "version": "0.1.0",
-  "homepage": "https://grantchen.site",
+  "homepage": "https://grantchen.me",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.0",

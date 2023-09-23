@@ -7,21 +7,35 @@ import { useTheme } from "@mui/styles";
 import useScreenSize from "../../../hooks/useScreenSize";
 
 const projects = [
+  // {
+  //   name: "instapix",
+  //   description:
+  //     "AI generate Instagram posts and skip the hassle of deciding what to post.",
+  //   techStack: [
+  //     "GCP",
+  //     "MySQL",
+  //     "Django",
+  //     "Docker",
+  //     "gRPC",
+  //     "Nginx",
+  //     "React.js",
+  //     "Material UI",
+  //   ],
+  //   websiteURL: "https://instapix.ca/",
+  //   githubURL: "https://github.com/ChenGrant/instapix",
+  //   desktopImgSrc: "",
+  // },
   {
     name: "fitcountr",
-    description:
-      "fitcountr is a calorie-tracking web app that graphically visualizes data about user-recorded foods, weights, and steps.",
+    description: "Track your fitness and graphically visualize your progress.",
     techStack: [
       "Express",
       "MongoDB",
-      "AWS",
       "Firebase",
       "React.js",
       "Redux",
       "Material UI",
       "Formik",
-      "Heroku",
-      "Render",
     ],
     websiteURL: "https://www.fitcountr.com",
     githubURL: "https://github.com/ChenGrant/fitcountr",
@@ -30,9 +44,8 @@ const projects = [
   },
   {
     name: "Chatify",
-    description:
-      "Chatify is a web messaging app that allows for instant group messaging and sharing of media files between authenticated users.",
-    techStack: ["React.js", "Firebase", "ChatEngine.io REST API", "Heroku"],
+    description: "Instantly message your friends and send funny memes.",
+    techStack: ["React.js", "Firebase", "ChatEngine.io REST API"],
     //websiteURL: "https://chatify-reactjs.herokuapp.com/",
     githubURL: "https://github.com/ChenGrant/Chatify-Public",
     desktopImgSrc:
@@ -41,7 +54,7 @@ const projects = [
   {
     name: "Graphing Calculator",
     description:
-      "This project creates a mathematical graphing calculator that graphs any function constructed from any combination of any elementary function.",
+      "Graph any function constructed from any combination of any elementary functions.",
     techStack: ["Java"],
     githubURL: "https://github.com/ChenGrant/Math-Graphing-Calculator",
     desktopImgSrc:
@@ -50,7 +63,7 @@ const projects = [
   {
     name: "Sorting Algorithm Visualizer",
     description:
-      "This project visualizes selection, insertion, bubble, and merge sort and displays their respective best, average, and worst time complexity.",
+      "Visualize selection, insertion, bubble, and merge sort while learning about their time complexities.",
     techStack: ["Java"],
     githubURL: "https://github.com/ChenGrant/Sorting-Algorithm-Visualizer",
     desktopImgSrc:

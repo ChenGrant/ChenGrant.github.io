@@ -6,17 +6,22 @@ import AnimateOnScroll from "../../shared/AnimateOnScroll";
 
 const experiencesList = [
   {
+    companyName: "Polaris Intelligence",
+    role: "Full Stack Developer",
+    timePeriod: "Sept 2023 - December 2023",
+    techStack: ["PostgreSQL", "Python", "PHP", "Symfony", "React.js", "jQuery"],
+  },
+  {
     companyName: "University Health Network",
-    role: "Web Developer",
+    role: "Full Stack Developer",
     timePeriod: "February 2023 - April 2023",
     techStack: [
+      "Java",
+      "MySQL",
       "jQuery",
       "Bootstrap",
       "dotCMS",
       "Apache Velocity",
-      "GitLab",
-      "Bitbucket",
-      "Asana",
     ],
   },
   {
@@ -30,9 +35,6 @@ const experiencesList = [
       "Redux",
       "Material UI",
       "Formik",
-      "Figma",
-      "Bitbucket",
-      "Jira",
     ],
   },
   {
@@ -41,12 +43,10 @@ const experiencesList = [
     timePeriod: "June 2021 - August 2021",
     techStack: [
       "AWS",
-      "PostgreSQL",
       "Django",
+      "PostgreSQL",
       "jQuery",
       "Sass",
-      "GitHub",
-      "Heroku",
     ],
   },
   {
@@ -85,7 +85,12 @@ const Experience = () => {
         {experiencesList.map((experience, index) => {
           return (
             <Box display="flex" flexDirection="row" key={uuidv4()}>
-              <Box display="flex" flexDirection="column" alignItems="center" width="20px">
+              <Box
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                width="20px"
+              >
                 <Box
                   width="5px"
                   flex={2}
@@ -110,10 +115,10 @@ const Experience = () => {
               <AnimateOnScroll animation="fade-left">
                 <Box py={5} pl={3}>
                   <Typography variant="h4" color="secondary.main">
-                    {experience.companyName}
+                    {experience.role}
                   </Typography>
                   <Typography sx={{ fontWeight: 700 }}>
-                    {experience.role}
+                    {experience.companyName}
                   </Typography>
                   {experience.techStack && (
                     <Box maxWidth="350px" mb={1.5}>

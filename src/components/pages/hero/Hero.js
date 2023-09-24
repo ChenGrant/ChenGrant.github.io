@@ -9,9 +9,6 @@ import InternalLink from "../../shared/InternalLink";
 import { useTheme } from "@mui/styles";
 import AnimateOnScroll from "../../shared/AnimateOnScroll";
 
-const heroImageSrc =
-  "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/hero%2Fhero.png?alt=media&token=6f806aee-a1e1-4061-a0af-b42a18371b14";
-
 const backgroundImageSrc =
   "https://firebasestorage.googleapis.com/v0/b/personal-website-dc932.appspot.com/o/background%2Fbackground.png?alt=media&token=8dc3c778-0e09-4653-8612-45ea605f294d";
 
@@ -119,12 +116,11 @@ const Hero = () => {
         >
           <img
             alt="hero"
-            src={heroImageSrc}
+            src={process.env.REACT_APP_HERO_IMAGE_SRC}
             onLoad={() =>
               backgroundImage === "" && setBackgroundImage(backgroundImageSrc)
             }
-            height={phone ? "auto" : "400px"}
-            width={phone ? "90%" : "474px"}
+            width={phone ? "90%" : tablet ? "300px" : "474px"}
             style={{
               display: "block",
               marginLeft: "auto",

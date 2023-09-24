@@ -44,7 +44,7 @@ const experiencesList = [
     techStack: [
       "AWS",
       "Django",
-      "PostgreSQL",
+      "MySQL",
       "jQuery",
       "Sass",
     ],

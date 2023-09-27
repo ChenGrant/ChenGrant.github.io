@@ -7,24 +7,25 @@ import { useTheme } from "@mui/styles";
 import useScreenSize from "../../../hooks/useScreenSize";
 
 const projects = [
-  // {
-  //   name: "instapix",
-  //   description:
-  //     "AI generate Instagram posts and skip the hassle of deciding what to post.",
-  //   techStack: [
-  //     "GCP",
-  //     "MySQL",
-  //     "Django",
-  //     "Docker",
-  //     "gRPC",
-  //     "Nginx",
-  //     "React.js",
-  //     "Material UI",
-  //   ],
-  //   websiteURL: "https://instapix.ca/",
-  //   githubURL: "https://github.com/ChenGrant/instapix",
-  //   desktopImgSrc: "",
-  // },
+  {
+    name: "instapix",
+    description:
+      "AI generate Instagram posts and skip the hassle of deciding what to post.",
+    techStack: [
+      "GCP",
+      "MySQL",
+      "Django",
+      "Docker",
+      "gRPC",
+      "Nginx",
+      "React.js",
+      "Material UI",
+    ],
+    websiteURL: "https://instapix.ca/",
+    githubURL: "https://github.com/ChenGrant/instapix",
+    desktopImgSrc:
+      "https://firebasestorage.googleapis.com/v0/b/instapix-c6006.appspot.com/o/instapix-gif.gif?alt=media&token=6e4038dd-c66d-4d0a-a674-d56a26ab2fb9",
+  },
   {
     name: "fitcountr",
     description: "Track your fitness and graphically visualize your progress.",

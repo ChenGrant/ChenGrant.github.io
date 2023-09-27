@@ -42,9 +42,9 @@ export const allSkills = {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
     jQuery:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
+    Sass: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
     "Material UI":
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
-    Sass: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
     Formik: "https://img.stackshare.io/service/8846/preview.png",
   },
   technologies: {

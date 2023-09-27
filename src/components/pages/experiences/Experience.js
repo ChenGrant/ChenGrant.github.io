@@ -17,7 +17,9 @@ const experiencesList = [
     timePeriod: "February 2023 - April 2023",
     techStack: [
       "Java",
+      "JavaScript",
       "MySQL",
+      "React.js",
       "jQuery",
       "Bootstrap",
       "dotCMS",
@@ -41,13 +43,7 @@ const experiencesList = [
     companyName: "1915 Lan Zhou Ramen",
     role: "Full Stack Engineer",
     timePeriod: "June 2021 - August 2021",
-    techStack: [
-      "AWS",
-      "Django",
-      "MySQL",
-      "jQuery",
-      "Sass",
-    ],
+    techStack: ["AWS", "Django", "MySQL", "jQuery", "Sass"],
   },
   {
     companyName: "Code Ninjas",

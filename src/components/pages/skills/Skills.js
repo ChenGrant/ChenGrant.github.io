@@ -38,10 +38,10 @@ export const allSkills = {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     Redux:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
-    Bootstrap:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
     jQuery:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
+    Bootstrap:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
     Sass: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
     "Material UI":
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",

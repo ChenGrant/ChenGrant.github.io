@@ -13,25 +13,24 @@ export const allSkills = {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     JavaScript:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    "Node.js":
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    SQL: "https://www.freepnglogos.com/uploads/logo-mysql-png/logo-mysql-part-azure-sql-database-with-azure-active-directory-17.png",
     Java: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
     "C++":
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
-    "C#": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
     C: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
+    Go: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg",
+    "C#": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
     PHP: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
     HTML: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
     CSS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
     Bash: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg",
-    Assembly: "https://static.thenounproject.com/png/5151631-200.png",
   },
   frameworks: {
     "Express.js":
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    Flask: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
     Django:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+    Gin: "https://raw.githubusercontent.com/gin-gonic/logo/master/color.svg",
     Symfony:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg",
     "React.js":
@@ -40,12 +39,9 @@ export const allSkills = {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
     jQuery:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
-    Bootstrap:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-    Sass: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
     "Material UI":
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
-    Formik: "https://img.stackshare.io/service/8846/preview.png",
+    Sass: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
   },
   technologies: {
     AWS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",

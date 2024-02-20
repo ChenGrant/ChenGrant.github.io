@@ -13,19 +13,16 @@ export const allSkills = {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     JavaScript:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    "Node.js":
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    SQL: "https://www.freepnglogos.com/uploads/logo-mysql-png/logo-mysql-part-azure-sql-database-with-azure-active-directory-17.png",
     Java: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+    Go: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg",
     "C++":
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
-    "C#": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
     C: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
+    "C#": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
     PHP: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
     HTML: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
     CSS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    Bash: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg",
-    Assembly: "https://static.thenounproject.com/png/5151631-200.png",
+    Bash: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"
   },
   frameworks: {
     "Express.js":
@@ -48,7 +45,7 @@ export const allSkills = {
     Formik: "https://img.stackshare.io/service/8846/preview.png",
   },
   technologies: {
-    AWS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+    AWS: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
     GCP: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
     PostgreSQL:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
@@ -60,6 +57,7 @@ export const allSkills = {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
     Firebase:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+    Redis: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg",
     Docker:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
     gRPC: "https://grpc.io/img/logos/grpc-icon-color.png",

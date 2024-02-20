@@ -27,8 +27,10 @@ export const allSkills = {
   frameworks: {
     "Express.js":
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    Flask: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
     Django:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+    Gin: "https://raw.githubusercontent.com/gin-gonic/logo/master/color.svg",
     Symfony:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg",
     "React.js":
@@ -37,12 +39,9 @@ export const allSkills = {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
     jQuery:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
-    Bootstrap:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-    Sass: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
     "Material UI":
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
-    Formik: "https://img.stackshare.io/service/8846/preview.png",
+    Sass: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
   },
   technologies: {
     AWS: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
@@ -51,8 +50,6 @@ export const allSkills = {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
     MySQL:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
-    SQLite:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
     MongoDB:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
     Firebase:

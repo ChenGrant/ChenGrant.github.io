@@ -9,7 +9,7 @@ const experiencesList = [
     companyName: "Polaris Intelligence",
     role: "Full Stack Developer",
     timePeriod: "September 2023 - December 2023",
-    techStack: ["PostgreSQL", "Python", "PHP", "Symfony", "React.js", "jQuery"],
+    techStack: ["PostgreSQL", "Python", "PHP", "Symfony", "React.js", "jQuery", "Sass"],
   },
   {
     companyName: "University Health Network",

@@ -32,7 +32,7 @@ const projects = [
     name: "fitcountr",
     description: "Track your fitness and graphically visualize your progress.",
     techStack: [
-      "Express",
+      "Express.js",
       "MongoDB",
       "Firebase",
       "React.js",

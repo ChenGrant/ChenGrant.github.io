@@ -8,21 +8,23 @@ import useScreenSize from "../../../hooks/useScreenSize";
 
 const projects = [
   {
-    name: "instapix",
-    description:
-      "AI generate Instagram posts and skip the hassle of deciding what to post.",
+    name: "insight",
+    description: "A CLI search engine to semantically search Python codebases.",
     techStack: [
-      "GCP",
-      "MySQL",
-      "Django",
+      "Go",
+      "Python",
+      "AWS",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "ChromaDB",
       "Docker",
       "gRPC",
       "Nginx",
-      "React.js",
-      "Material UI",
+      "Bash",
     ],
-    websiteURL: "https://instapix.ca/",
-    githubURL: "https://github.com/ChenGrant/instapix",
+    websiteURL: "https://pypi.org/project/insight-cli/",
+    githubURL: "https://github.com/grantchen2003/insight-cli",
     desktopImgSrc:
       "https://firebasestorage.googleapis.com/v0/b/instapix-c6006.appspot.com/o/instapix-gif.gif?alt=media&token=6e4038dd-c66d-4d0a-a674-d56a26ab2fb9",
   },
@@ -42,33 +44,6 @@ const projects = [
     githubURL: "https://github.com/ChenGrant/fitcountr",
     desktopImgSrc:
       "https://firebasestorage.googleapis.com/v0/b/fitcountr-c2a46.appspot.com/o/fitcountr.gif?alt=media&token=ee5d315e-e07c-4d87-b7c2-44cf5eb3999a",
-  },
-  {
-    name: "Chatify",
-    description: "Instantly message your friends and send funny memes.",
-    techStack: ["React.js", "Firebase", "ChatEngine.io REST API"],
-    //websiteURL: "https://chatify-reactjs.herokuapp.com/",
-    githubURL: "https://github.com/ChenGrant/Chatify-Public",
-    desktopImgSrc:
-      "https://raw.githubusercontent.com/ChenGrant/Chatify-Public/2bfaaf7f78d4795033a2a7b89b74d634202e0333/about/gif.gif",
-  },
-  {
-    name: "Graphing Calculator",
-    description:
-      "Graph any function constructed from any combination of any elementary functions.",
-    techStack: ["Java"],
-    githubURL: "https://github.com/ChenGrant/Math-Graphing-Calculator",
-    desktopImgSrc:
-      "https://raw.githubusercontent.com/ChenGrant/Math-Graphing-Calculator/main/about/gif.gif",
-  },
-  {
-    name: "Sorting Algorithm Visualizer",
-    description:
-      "Visualize selection, insertion, bubble, and merge sort while learning about their time complexities.",
-    techStack: ["Java"],
-    githubURL: "https://github.com/ChenGrant/Sorting-Algorithm-Visualizer",
-    desktopImgSrc:
-      "https://github.com/ChenGrant/Sorting-Algorithm-Visualizer/raw/956209d1caae8aa4bfea950299804ff28edc30d1/about/gif.gif",
   },
 ];
 
@@ -97,15 +72,20 @@ const Projects = () => {
           >
             <Box
               display="flex"
-              flexDirection={
-                desktop ? index % 2 === 1 && "row-reverse" : "column"
-              }
+              flexDirection="column"
               width={desktop ? "1000px" : "min(500px, 90%)"}
               alignItems="center"
               gap={desktop ? "50px" : "30px"}
               mt="100px"
             >
-              <Box flex="1" display="flex" flexDirection="column" gap="15px">
+              <Box
+                flex="1"
+                display="flex"
+                flexDirection="column"
+                gap="15px"
+                alignItems="center"
+                textAlign="center"
+              >
                 <Typography variant="h4">{project.name}</Typography>
                 <Typography>{project.description}</Typography>
                 {project.techStack && (
@@ -145,17 +125,6 @@ const Projects = () => {
                     <GitHubIcon fontSize="inherit" sx={{ color: "black" }} />
                   </IconButton>
                 </Box>
-              </Box>
-              <Box flex="1" display="grid" sx={{ placeItems: "center" }}>
-                <img
-                  loading="lazy"
-                  src={project.desktopImgSrc}
-                  alt={project.name}
-                  width="100%"
-                  style={{
-                    boxShadow: theme.shadows[10],
-                  }}
-                />
               </Box>
             </Box>
           </AnimateOnScroll>

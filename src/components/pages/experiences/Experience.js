@@ -6,6 +6,12 @@ import AnimateOnScroll from "../../shared/AnimateOnScroll";
 
 const experiencesList = [
   {
+    companyName: "Ford Motor Company",
+    role: "Software Engineer",
+    timePeriod: "May 2024 - August 2024",
+    techStack: ["Java", "Azure", "Spring Boot", "GraphQL", "Redis", "MySQL", "PostgreSQL", "MongoDB", "Docker", "Terraform"]
+  },
+  {
     companyName: "Polaris Intelligence",
     role: "Full Stack Developer",
     timePeriod: "September 2023 - December 2023",
@@ -32,7 +38,7 @@ const experiencesList = [
     timePeriod: "May 2022 - August 2022",
     techStack: [
       "React.js",
-      "Firebase",
+      "GCP",
       "Node.js",
       "Redux",
       "Material UI",

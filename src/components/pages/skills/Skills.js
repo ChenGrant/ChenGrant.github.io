@@ -27,6 +27,7 @@ export const allSkills = {
   frameworks: {
     "Express.js":
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    "Spring Boot": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg",
     Flask: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
     Django:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
@@ -46,14 +47,13 @@ export const allSkills = {
   technologies: {
     AWS: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
     GCP: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+    Azure: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg",
     PostgreSQL:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
     MySQL:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
     MongoDB:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-    Firebase:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
     Redis: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg",
     Docker:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
